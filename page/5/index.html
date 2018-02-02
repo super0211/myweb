@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>个人博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="个人博客">
+<meta property="og:url" content="http://yoursite.com/page/5/index.html">
+<meta property="og:site_name" content="个人博客">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="个人博客">
+  
+    <link rel="alternate" href="/atom.xml" title="个人博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">个人博客</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-如何积-1-ln-x-？" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/02/02/如何积-1-ln-x-？/" class="article-date">
+  <time datetime="2018-02-01T23:00:19.000Z" itemprop="datePublished">2018-02-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/02/02/如何积-1-ln-x-？/">如何积 1/ln(x)？</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>欧拉他比题主你高到不知道哪里去了, 他想了半天, 直接钦点 <img src="//www.zhihu.com/equation?tex=%5Cint_2%5Ex+%5Cfrac%7B1%7D%7B%5Clog+%28t%29%7D+%5C%2C+%5Cmathrm%7Bd%7Dt%3D%5Ctext%7BLi%7D%28x%29" alt="\int_2^x \frac{1}{\log (t)} \, \mathrm{d}t=\text{Li}(x)"></p>
+<p>你问我支持不支持, 我当然是支持的, 因为这个没法按照积分的基本方法积出来…</p>
+<hr>
+<p>杀鸡焉用牛刀, 这也用不到完全体的刘伟尔定理, 用一个特化情形就行了.</p>
+<p>好好体会这种思想</p>
+<p>考虑积分 <img src="//www.zhihu.com/equation?tex=%5Cint+f%28x%29e%5E%7Bg%28x%29%7D%5Cmathrm%7Bd%7Dx" alt="\int f(x)e^{g(x)}\mathrm{d}x"> , 其中 <img src="//www.zhihu.com/equation?tex=g%28x%29+" alt="g(x) "> 为多项式.</p>
+<p>那它的积分是不是应该是 <img src="//www.zhihu.com/equation?tex=R%28x%29e%5E%7Bg%28x%29%7D" alt="R(x)e^{g(x)}"> 的形式?</p>
+<p><img src="//www.zhihu.com/equation?tex=%5Cint+f%28x%29e%5E%7Bg%28x%29%7D%5Cmathrm%7Bd%7Dx+%3D+R%28x%29e%5E%7Bg%28x%29%7D" alt="\int f(x)e^{g(x)}\mathrm{d}x = R(x)e^{g(x)}"></p>
+<p>很容易验证的呀, 两边求导:</p>
+<p><img src="//www.zhihu.com/equation?tex=%28R%28x%29e%5E%7Bg%28x%29%7D%29%27%3D+e%5E%7Bg%28x%29%7D+%5Cleft%28R%28x%29+g%27%28x%29%2BR%27%28x%29%5Cright%29+%3D+f%28x%29e%5E%7Bg%28x%29%7D" alt="(R(x)e^{g(x)})"></p>
+<p><img src="//www.zhihu.com/equation?tex=e%5E%7Bg%28x%29%7D" alt="e^{g(x)}"> 怎么着也非零吧, 消掉</p>
+<p><img src="//www.zhihu.com/equation?tex=R%28x%29+g%27%28x%29%2BR%27%28x%29%3D+f%28x%29" alt="R(x) g"></p>
+<p>如果 <img src="//www.zhihu.com/equation?tex=+f%28x%29+" alt=" f(x) "> 是个有理函数, 那么我们也期望 <img src="//www.zhihu.com/equation?tex=+R%28x%29+" alt=" R(x) "> 也是个有理函数</p>
+<p>设 <img src="//www.zhihu.com/equation?tex=R%28x%29%3A%3D%5Cfrac%7BP%28x%29%7D%7BQ%28x%29%7D" alt="R(x):=\frac{P(x)}{Q(x)}"> , 其中 <img src="//www.zhihu.com/equation?tex=P%28x%29%2CQ%28x%29" alt="P(x),Q(x)"> 为互质多项式函数, 代入得</p>
+<p><img src="//www.zhihu.com/equation?tex=f%28x%29%3D%5Cleft%28%5Cfrac%7BP%28x%29%7D%7BQ%28x%29%7D%5Cright%29%27%2B%5Cfrac%7BP%28x%29%7D%7BQ%28x%29%7Dg%27%28x%29" alt="f(x)=\left(\frac{P(x)}{Q(x)}\right)"></p>
+<p>整理下也就是</p>
+<p>![Q(x)<a href="//www.zhihu.com/equation?tex=Q%28x%29%5BQ%28x%29f%28x%29-P%27%28x%29-P%28x%29g%27%28x%29%5D%3D-P%28x%29Q%27%28x%29">Q(x)f(x)-P</a></p>
+<hr>
+<blockquote>
+<p>综上所述:<br>若 <img src="//www.zhihu.com/equation?tex=f%28x%29" alt="f(x)"> 是有理函数, <img src="//www.zhihu.com/equation?tex=+g%28x%29" alt=" g(x)"> 是多项式函数, 那么 <img src="//www.zhihu.com/equation?tex=%5Cint+f%28x%29e%5E%7Bg%28x%29%7D%5Cmathrm%7Bd%7Dx+" alt="\int f(x)e^{g(x)}\mathrm{d}x "> 初等的充要条件就是:<br>存在互质多项式 <img src="//www.zhihu.com/equation?tex=+P%28x%29%2CQ%28x%29+" alt=" P(x),Q(x) "> 使得 ![ Q(x)<a href="//www.zhihu.com/equation?tex=+Q%28x%29%5BQ%28x%29f%28x%29-P%27%28x%29-P%28x%29g%27%28x%29%5D%3D-P%28x%29Q%27%28x%29+">Q(x)f(x)-P</a> 成立.</p>
+</blockquote>
+<p>于是我们就证明了刘伟尔定理的指数多项式情形, 其实也可以从刘伟尔定理特化得到, 就这样已经很强大了…</p>
+<p>我们来考虑积分 <img src="//www.zhihu.com/equation?tex=+%5Cint%5Cfrac%7Be%5Ex%7D%7Bx%7D%5Cmathrm%7Bd%7Dx" alt=" \int\frac{e^x}{x}\mathrm{d}x"> …</p>
+<p>什么, 你问为什么不直接做题要考虑这个?</p>
+<p>笨啊,变量替换啊</p>
+<p><img src="//www.zhihu.com/equation?tex=%5Cint+e%5E%7Be%5Ex%7D%5Cmathrm%7Bd%7Dx%5CLeftrightarrow%5Cint%5Cfrac%7Be%5Ex%7D%7Bx%7D%5Cmathrm%7Bd%7Dx%5CLeftrightarrow%5Cint%5Cfrac%7B%5Cmathrm%7Bd%7Dx%7D%7B%5Cln+x%7D" alt="\int e^{e^x}\mathrm{d}x\Leftrightarrow\int\frac{e^x}{x}\mathrm{d}x\Leftrightarrow\int\frac{\mathrm{d}x}{\ln x}"></p>
+<p>选取 <img src="//www.zhihu.com/equation?tex=+f%28x%29%3D%5Cfrac1x%2Cg%28x%29%3Dx" alt=" f(x)=\frac1x,g(x)=x"> , 代入化简得</p>
+<p>![Q(x)<a href="//www.zhihu.com/equation?tex=Q%28x%29%5BQ%28x%29-x+P%27%28x%29-xP%28x%29%5D%3D-xP%28x%29Q%27%28x%29">Q(x)-x P</a></p>
+<p><img src="//www.zhihu.com/equation?tex=%5Csmall%7B%5Ccolor%7Bred%7D%7B%E6%B3%A8%E6%84%8F%E6%8E%A5%E4%B8%8B%E6%9D%A5%E7%9A%84%E8%BF%99%E4%B8%80%E6%B3%A2%E6%93%8D%E4%BD%9C%21%7D%7D" alt="\small{\color{red}{注意接下来的这一波操作!}}"></p>
+<p><img src="//www.zhihu.com/equation?tex=%28x-a%29%5Ek%3D0" alt="(x-a)^k=0"> 中 <img src="//www.zhihu.com/equation?tex=+a" alt=" a"> 叫重根或者重点, <img src="//www.zhihu.com/equation?tex=k" alt="k"> 叫重数或者重根数这个懂吧</p>
+<p>因为 <img src="//www.zhihu.com/equation?tex=Q%28x%29" alt="Q(x)"> 为多项式, 所以在复数域中必有零点, 设零点 <img src="//www.zhihu.com/equation?tex=x%3Da" alt="x=a"> , 其重数为  <img src="//www.zhihu.com/equation?tex=r%3E0" alt="r&gt;0"></p>
+<p>由于 <img src="//www.zhihu.com/equation?tex=P%28x%29%2C+Q%28x%29" alt="P(x), Q(x)"> 为互质多项式, 所以 <img src="//www.zhihu.com/equation?tex=P%28a%29%5Cneq+0%2C+Q%27%28x%29" alt="P(a)\neq 0, Q"> 的重数为 <img src="//www.zhihu.com/equation?tex=r-1" alt="r-1"></p>
+<p>若 <img src="//www.zhihu.com/equation?tex=x%3Da%5Cneq0" alt="x=a\neq0"></p>
+<p>则 <img src="//www.zhihu.com/equation?tex=x%3Da" alt="x=a"> 既是 ![Q(x)<a href="//www.zhihu.com/equation?tex=Q%28x%29%5BQ%28x%29-x+P%27%28x%29-xP%28x%29%5D">Q(x)-x P</a> 的重根,重数显然 <img src="//www.zhihu.com/equation?tex=%3E%3Dr" alt="&gt;=r"></p>
+<p>且右边 <img src="//www.zhihu.com/equation?tex=-xP%28x%29Q%27%28x%29" alt="-xP(x)Q"> 的重根重数为 <img src="//www.zhihu.com/equation?tex=r-1" alt="r-1"></p>
+<p><strong>矛盾!</strong></p>
+<p>若 <img src="//www.zhihu.com/equation?tex=x%3Da%3D0" alt="x=a=0"> ,令 <img src="//www.zhihu.com/equation?tex=Q%28x%29%3Dx%5Er+h%28x%29" alt="Q(x)=x^r h(x)"> 好了,代入原式有</p>
+<p>![h(x)x^{r+1}\left<a href="//www.zhihu.com/equation?tex=h%28x%29x%5E%7Br%2B1%7D%5Cleft%5Bh%28x%29x%5E%7Br-1%7D-P%27%28x%29-P%28x%29%5Cright%5D%3D-x%5ErP%28x%29%5Brh%28x%29%2Bxh%27%28x%29%5D">h(x)x^{r-1}-P</a></p>
+<p><img src="//www.zhihu.com/equation?tex=x%3D0" alt="x=0"> 仍然同时是左右两边的重根, 左边重数 <img src="//www.zhihu.com/equation?tex=%3E%3Dr%2B1" alt="&gt;=r+1"> ,右边为 <img src="//www.zhihu.com/equation?tex=r" alt="r"> ..GG</p>
+<p><strong>还是矛盾!</strong></p>
+<p>好吧那么假设 <img src="//www.zhihu.com/equation?tex=Q%28x%29" alt="Q(x)"> 不是多项式而是常数 <img src="//www.zhihu.com/equation?tex=k" alt="k"></p>
+<p>于是有 ![ k<a href="//www.zhihu.com/equation?tex=+k%5Bk-x+P%27%28x%29-xP%28x%29%5D%3D0">k-x P</a>, 由上可知同样不行</p>
+<p><strong>重数还是矛盾!</strong></p>
+<hr>
+<p>于是综上所述 <img src="//www.zhihu.com/equation?tex=+%5Cint%5Cfrac%7Be%5Ex%7D%7Bx%7D%5Cmathrm%7Bd%7Dx+" alt=" \int\frac{e^x}{x}\mathrm{d}x "> 非初等, 不能按照积分的基本法来….</p>
+<p>那么就只能钦定 <img src="//www.zhihu.com/equation?tex=%5Cint+%5Cfrac%7B1%7D%7B%5Clog+%28x%29%7D+%5C%2C+dx%3D%5Ctext%7Bli%7D%28x%29" alt="\int \frac{1}{\log (x)} \, dx=\text{li}(x)"> 了啊…</p>
+<p>題主儂識得唔識得噶?</p>
+<p>来源：知乎 www.zhihu.com</p>
+<p>作者：<a href="http://www.zhihu.com/people/GalAster?utm_campaign=rss&amp;utm_medium=rss&amp;utm_source=rss&amp;utm_content=author" target="_blank" rel="noopener">酱紫君</a></p>
+<p>【知乎日报】千万用户的选择，做朋友圈里的新鲜事分享大牛。<br>        <a href="http://daily.zhihu.com?utm_source=rssyanwenzi&amp;utm_campaign=tuijian&amp;utm_medium=rssnormal" target="_blank" rel="noopener">点击下载</a></p>
+<p>此问题还有 <a href="http://www.zhihu.com/question/266317634/answer/306550276?utm_campaign=rss&amp;utm_medium=rss&amp;utm_source=rss&amp;utm_content=title" target="_blank" rel="noopener">3 个回答，查看全部。</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/02/02/如何积-1-ln-x-？/" data-id="cjd63ql2g000y84fhxtilh59d" class="article-share-link">Teilen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-世界杯讲古-I-亚洲之光，英伦绽放——记1966年朝鲜队" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/02/02/世界杯讲古-I-亚洲之光，英伦绽放——记1966年朝鲜队/" class="article-date">
+  <time datetime="2018-02-01T22:30:09.000Z" itemprop="datePublished">2018-02-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/02/02/世界杯讲古-I-亚洲之光，英伦绽放——记1966年朝鲜队/">世界杯讲古 I 亚洲之光，英伦绽放——记1966年朝鲜队</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure><img src="https://pic1.zhimg.com/v2-9ce40e9f3efce7b8597cba370fee1fe8_b.jpg" alt=""></figure>
+
+<p><em>写在开篇：本系列文章隶属于《世界杯讲古》栏目，作为节目的补充和扩展，旨在更加全面地展现每一期节目的背景故事，在世界杯年，带你回到历史的各个角落，去触碰尘埃中熠熠生辉的往事。</em></p>
+<p>亚洲足球，从来都不是世界瞩目的焦点，也从未在哪一个时代，引领过这项运动的新风潮。在世界杯的记忆之中，亚洲人最早是以被殖民的方式，站上了1938年世界杯的舞台。荷属东印度，一个在今天被叫做印度尼西亚的地方，成为了东方的世界杯先驱。</p>
+<figure><img src="https://pic3.zhimg.com/v2-063900d9555bf2915447ec77918c3896_b.jpg" alt=""><figcaption>1938年的荷属东印度队</figcaption></figure>
+
+<p>一场0-6的惨败，结束了亚洲人的首次世界杯之旅，二战的烽火随即而至，数年的生灵涂炭之后，世界满目疮痍，一切重头再来。1954年，韩国队成为了战后，第一个代表亚洲参加世界杯的国家，然而两场比赛，没有进球，迎接他们的是0-9惨败匈牙利，0-7完败土耳其，实力的鸿沟，不需要我们过多了解过去的足球，就能显而易见地看出差距。</p>
+<p>1958年和1962年，代表亚洲在预选赛突围的以色列（那时候还跟亚洲队伍一块比赛）和韩国，都在附加赛中被欧洲球队淘汰，这两届世界杯，没有一支亚洲球队入围正赛。当然那时候大部分名额是给欧洲的，亚非这些第三世界的国家，名额本来就少，最后还跟欧洲打附加赛，输球也属于正常。</p>
+<p>至此，在1966年世界杯之前，亚洲足球在世界杯的舞台上，没有获得一场胜利，甚至，没能取得一个进球。在这样的大背景下，1966年世界杯预选赛，朝鲜队报名了。</p>
+<h2 id="一-神奇的出线之旅"><a href="#一-神奇的出线之旅" class="headerlink" title="一.    神奇的出线之旅"></a><strong>一.    神奇的出线之旅</strong></h2><p>这是朝鲜战争之后，（北）朝鲜队第一次报名参加世预赛，那时候由于一些大洲足联还没有成立，很多大洲报名参赛球队太少，所以大洲之间混编参加世界杯预赛的情况，时有发生。1966年的预选赛，亚洲、非洲和大洋洲，就被分在一起，争夺2个世界杯正赛名额。</p>
+<p>当时非洲有17个国家报名参赛，但是南非因为种族隔离问题，被FIFA禁赛了，刚果因为报名迟了，也未能获得参赛资格。</p>
+<p>亚洲有5支球队报名，不过以色列和叙利亚，被划分到欧洲区参赛了，菲律宾因为支付相关费用延迟，被剥夺参赛资格，最后这边就剩下（北）朝鲜和韩国（南朝鲜）两支球队。</p>
+<p>大洋洲那边，派出了澳大利亚一支球队，跟大家一块打比赛。</p>
+<p>实际上，就是三个大洲，21个球队报名参加了这个大区域的预选赛，可是在南非被禁赛之后，FIFA把原本属于三大洲的2个正赛名额，削减到了1个，非洲球队群情激愤，坚决抗议这一结果，最终在两个月内，陆续宣布退出本届世预赛，最终全员抵制，无一参赛。</p>
+<p>亚洲这边，本来韩国成功报名了，比赛本身，最早被安排在日本踢，但是由于一些历史遗留问题，最终被放到了柬埔寨举行，这下韩国也不干了，因为政治方面的干涉，宣布退出。</p>
+<figure><img src="https://pic4.zhimg.com/v2-9cde753a242f47c7bd6ce745de3b6149_b.jpg" alt=""><figcaption>朝鲜与澳大利亚比赛海报 </figcaption></figure>
+
+<p>就这样，21支球队，只剩下朝鲜和澳大利亚，争夺这唯一的出线权。他们一场正式比赛没打，却发现，世界杯已经咫尺之遥。</p>
+<p>对于当时的世界足坛来说，朝鲜和澳大利亚都是陌生的名字，据朝鲜队中卫林重善后来回忆，他们到达比赛地之后，看完澳大利亚的情况，觉得他们个人的脚下技术相对不错，体格方面也有优势，但是也找到了他们的弱点，那就是整体性差且速度偏慢，为此朝鲜队针对性做了战术布置。</p>
+<figure><img src="https://pic2.zhimg.com/v2-83c27ce6480657faf45544aaa2e68df3_b.gif" alt=""><figcaption>朝鲜队预选赛进球瞬间</figcaption></figure>
+
+<p>最终朝鲜队两回合出奇地顺利，第一回合6-1，第二回合3-1，总比分9-2双杀澳大利亚晋级。朝鲜队在经历了一届奇葩的世预赛之后，戏剧性地杀进了世界杯正赛。</p>
+<p>但是当时复杂的国际形势，让朝鲜队出征世界杯的道路一波三折。1966年世界杯在英格兰举办，但是英国参与了朝鲜战争，相当于是（北）朝鲜队的敌人。当时英国政府拒绝承认朝鲜的合法政权，不愿意给他们发放签证。这有点明哲保身的意思，怕得罪韩国，进而得罪美国，在国际事务上处于被动局面。</p>
+<p>但是这事被FIFA知道以后，他们非常严肃地指出，朝鲜队是通过正当预选赛晋级的，如果不让他们来参加，就将剥夺英格兰主办世界杯的资格。这下英国人只得妥协，他们费了这么大劲办世界杯，正准备展现一下日不落帝国的余晖尚存，一下不让办了，损失太大。就这么，朝鲜队最终获得了来英国参赛的许可。</p>
+<h2 id="二-神秘的东方之师"><a href="#二-神秘的东方之师" class="headerlink" title="二. 神秘的东方之师"></a><strong>二. 神秘的东方之师</strong></h2><p>在具体介绍朝鲜队世界杯征程之前，有必要详细介绍一下球队的具体情况，以便于球迷们更好地理解之后的比赛。这只朝鲜队非常年轻，平均年龄只有22.4岁，是当届世界杯，平均年龄最小的一支球队。</p>
+<p>当时的球队，有以下几名关键球员，是球队最为倚重的绝对核心：</p>
+<figure><img src="https://pic4.zhimg.com/v2-13da9ca7c7f863f0badc947d04dbf2cc_b.jpg" alt=""><figcaption>队长朴承振 </figcaption></figure>
+
+<p>朴承振（Pak Sung-Jin），球队的队长，司职右中场，是球队攻防转换的核心。他进攻参与度很高，往返跑动能力强，持球推进极富攻击性，同时插上远射是他的绝活，腿部力量尤其好，据传每天用橡皮绳绑在腿上，反复加练力量。在防守端他也有一定贡献，在体能充沛的基础上，擅长长距离贴身盯防。缺点宏观梳理能力不强，送出威胁传球的能力偏弱，更多的是自己完成进攻的终结。</p>
+<figure><img src="https://pic3.zhimg.com/v2-6642ddc183799fe8fd5bfa21ddbdf654_b.jpg" alt=""><figcaption>边路快马韩奉镇</figcaption></figure>
+
+<p>韩奉镇（Han Bong-Jin），球队的右边锋，速度奇快，脚下技术细腻，具备传统边锋撕裂防线的能力，同时喜欢在中路游弋，回撤幅度大，是球队冲击对手防线的一把剪刀。</p>
+<figure><img src="https://pic2.zhimg.com/v2-59a7bd0d84cc3e38dda42d46d4744ac8_b.jpg" alt=""><figcaption>流芳百世的朴斗翼</figcaption></figure>
+
+<p>朴斗翼（Pak Doo-ik），埋伏在前锋身后的攻击型中场，是衔接锋线和中场的一枚重要棋子，他的活动范围很大，横跨两个禁区，脚下能力一般，但是善于跑位，时常能在禁区腹地觅得机会，也能及时收缩帮助球队的防守。</p>
+<figure><img src="https://pic2.zhimg.com/v2-99e343006e5a29af85173d7560a18b76_b.jpg" alt=""><figcaption>中场铁腰任成辉</figcaption></figure>
+
+<p>任成辉（Im Song-Hwi），球队的左中场，侧重防守，属于勤勤恳恳、扎实难缠的那种类型，偶尔也能完成持球推进，但是处理球精度不高，射门时机选择也不好，浪费机会较多。</p>
+<figure><img src="https://pic4.zhimg.com/v2-c96e7d0c55a29050ea5d6031bd13927c_b.jpg" alt=""><figcaption>后防领袖林重善</figcaption></figure>
+
+<p>林重善（ Rim Jung-Son），后防核心，身体对抗不俗，落点判断能力较强，是一名出色的正面防守球员。同时具备不错的速度和出球能力，能够客串边后卫，偶尔担任球队的定位球主罚手。</p>
+<figure><img src="https://pic3.zhimg.com/v2-43900b778c2152f25f0f0c640f2e431a_b.jpg" alt=""><figcaption>国宝门神李赞明</figcaption></figure>
+
+<p>李赞明（Ri Chan-Myong），被称之为“国宝级”门将，没有查到他的具体身高，但是根据日后他自己回忆，李赞明属于身高不高，但是爆发力好、身手敏捷的类型，瞬时弹速和起跳高度惊人，经常能够在电光火石之间作出神扑。</p>
+<figure><img src="https://pic3.zhimg.com/v2-6d3798305528cf871036ae5a7dae2d1d_b.jpg" alt=""><figcaption>主帅明礼岘</figcaption></figure>
+
+<p>球队在主帅明礼岘（Myong Rye-hyun）的率领下，主打一个类似433的阵型，当然由于比赛录像有限，可能实际站位更加丰富。球队的特点是整体性强，中场推进速度快，打法简洁追求效率。主要依靠朴承振的持续输出，朴斗翼不停的穿插跑动，以及韩奉镇的个人能力创造机会。往往后场获得球权之后，就通过以上几人的发挥，迅速给对方防线施加压力。</p>
+<figure><img src="https://pic1.zhimg.com/v2-76add397dbb5abfca2a5bd61532bc5ee_b.jpg" alt=""><figcaption>1966年世界杯朝鲜队主力阵容（部分位置有轮换）</figcaption></figure>
+
+<p>不过他们的局部渗透能力有限，受限于身型（平均身高1米67），高空球也不占优势，往往还是靠地面的个人冲击制造机会，进攻的全面性上受到限制。</p>
+<p>防守端，朝鲜队一般采用四人防线，以区域防守为主，不是传统的人盯人。不过</p>
+<p>有林重善坐镇，他们具备不错的抗击打能力，同时出球方面也有保障。</p>
+<p>在那个信息极度匮乏的年代，他们在长时间的集体备战之后，带着这样一套神秘的阵容，踏上了世界杯的赛场。</p>
+<h2 id="三-震惊世界的亚洲之光"><a href="#三-震惊世界的亚洲之光" class="headerlink" title="三.  震惊世界的亚洲之光"></a><strong>三.  震惊世界的亚洲之光</strong></h2><p>在全队出征英格兰之前，1966年6月10日，朝鲜全队受到了最高领导人金日成的接见，这位领袖希望朝鲜队要敢于和欧美强敌对抗，至少赢下1到2场比赛，全队表态，要为了伟大领袖、为了祖国和人民而战。</p>
+<figure><img src="https://pic4.zhimg.com/v2-ae9086c7ef183ea964b8d28957cee6e1_b.jpg" alt=""><figcaption>1966年朝鲜队合影</figcaption></figure>
+
+<p>不过球队的分组堪称灾难，他们同意大利、苏联和智利被分到了D组。苏联是1960年欧洲杯冠军、1964年欧洲杯亚军，除去上世纪50年代的匈牙利黄金一代，他们就是社会主义阵营足球的代表。</p>
+<p>智利是1962年世界杯的季军，知名球星L-桑切斯（国内声望不亚于现在的桑切斯）正值黄金年龄，另外初出茅庐的菲格罗亚，当时也在队中，他是日后南美历史最佳中卫，与贝肯鲍尔齐名的顶级自由人。</p>
+<p>意大利队在经历了苏佩加空难之后，在60年代已经有所复苏，米兰双雄接连拿下欧冠冠军，涌现了诸如里维拉、桑德罗-马佐拉、法切蒂等一批知名球星。朝鲜队在这样的小组，似乎就是陪太子读书的角色，感受一下氛围就不错了。</p>
+<p>他们的驻地是英格兰的米德尔斯堡，一个英格兰东北部的工业城市，这里有一支同名的英格兰老牌球队，跟朝鲜队一样，着一身红色球衣。他们下榻在米堡的圣乔治航空酒店，由于担心意识形态对立造成的冲突，当地人与朝鲜队，一开始并没有什么过多的接触。</p>
+<figure><img src="https://pic3.zhimg.com/v2-d82a67769484e97c5f98fd8e6b2755b2_b.jpg" alt=""><figcaption>朝鲜队在米德尔斯堡训练</figcaption></figure>
+
+<p>不过人类总是有好奇心的，朝鲜队训练的时候，还是引来了不少球迷围观，摄影记者更是群体出动，记录下了他们的日常。很快，首场比赛来临了，这支来自东方的“千里马”，终于要揭开自己的神秘面纱。</p>
+<p>不过第一场，朝鲜队因为缺乏大赛经验，输的没有脾气。苏联队身体处于碾压级别，个人能力也相对较强。比赛中双方的对抗很激烈，场上动作很大，几度爆发冲突，苏联队在上半场很短的时间内连入两球，一举奠定了优势，最终以3-0轻松取胜。朝鲜队这边倒也展现出了自己的一些特色，他们作风顽强，敢于做动作，体能充沛，跑动能力极强。</p>
+<figure><img src="https://pic3.zhimg.com/v2-b722eb542466b65b40deddcd4221cf5b_b.gif" alt=""><figcaption>朝鲜队与苏联发生冲突</figcaption></figure>
+
+<p>最重要的是，面对强敌，他们没有一味退防，三线距离保持的不错，始终是以一个游刃有余的弹性姿态，来跟对手周旋。这与当下一些弱队的策略不太相同，一定程度上能够展现他们的大无畏气势。</p>
+<p>第二场对阵智利，对于朝鲜队来说是生死战，如果输球，他们就将小组出局，无法完成伟大领袖的最高指示，这对于朝鲜队众将士来说，无异于天崩地裂。</p>
+<p>然而智利队贵为世界杯季军，虽然当年是借助东道主之利，但肯定是有几把刷子的。他们和苏联不同，不依赖身体对抗，主打地面技术流，个人能力继承了南美人的优良传统。但是比赛开始后，朝鲜队还是不保守，以整体的姿态对抗，在很长一段内，双方打得有来有回，朝鲜人丝毫不落下风。</p>
+<p>不过上班时智利队还是凭借一粒点球领先了，L-桑切斯在左路也持续制造威胁，不过朝鲜队依旧不慌乱，这是他们纵观整届赛事的一大优点。在逆境中，该怎么踢还是怎么踢，坚定的信仰、严明的纪律，让他们一直没有丧失希望。</p>
+<figure><img src="https://pic4.zhimg.com/v2-5966125a29e31b88a95b4b0af5e0c746_b.gif" alt=""><figcaption>朴承振打进亚洲球队的世界杯首球</figcaption></figure>
+
+<p>终于在比赛第88分钟，世界杯历史上，第一个属于亚洲足球的伟大瞬间出现了，林重善半场开出任意球，智利队解围不远，跟上的队长朴承振一脚爆射破门，淋漓尽致地展现了他的力量之美。这是亚洲球队，在世界杯历史上的第一个进球，这粒进球挽救了朝鲜队，朴承振的名字，也被永久载入了世界杯的史册。</p>
+<p>最终双方1-1握手言和，朝鲜队保留了出线希望，更重要的是，同样身着红色球衣的他们，赢得了米德尔斯堡球迷的心。在他们打进扳平球的时候，现场的米堡球迷陷入疯狂，BBC的当场评论员直言，当地的球迷已经很久，没有为主队米德尔斯堡这样欢呼了。</p>
+<figure><img src="https://pic1.zhimg.com/v2-cf99529d555b6b70334e3a2bbc904707_b.jpg" alt=""><figcaption>英国小球迷声援朝鲜队</figcaption></figure>
+
+<p>赛场之外，朝鲜队在异国他乡成为了众人膜拜的偶像，签名合影成为了常态，在社会主义熏陶下的国脚们，第一次在一个陌生的世界，一个与之在各方面对立的世界，受到了超乎寻常的追捧。也许，英国人真的热爱足球吧，英雄，不问出处。</p>
+<p>在当地球迷的热捧中，朝鲜队迎来了生死战，对面是两届世界杯冠军意大利队，是一个个叱咤足球世界的闪亮名字。但是据朝鲜队球员日后回忆，在那一刻，他们的求胜欲望无比强烈，伟大领袖的叮嘱时刻在耳畔响起，他们肩负着人民的期许。而在这时，看台上，多了无数为他们呐喊欢呼的米德尔斯堡球迷。同样的红衣，换了肤色，依旧深情。</p>
+<figure><img src="https://pic2.zhimg.com/v2-545f4190da682c247da85a1499e4be10_b.gif" alt=""><figcaption>李赞明“德赫亚”式神扑拯救球队</figcaption></figure>
+
+<p>意大利队打平即可出线，朝鲜人不胜就将回家，不过一开场，意大利人率先发起猛攻，他们的三板斧差一点叩开朝鲜队的球门，但是李赞明的多次神扑力保球门不失，这正是“国宝”的价值所在。潮水之后，朝鲜人缓过劲来，也开始发起一些攻势，毕竟他们要赢球才能晋级。</p>
+<p>比赛的均衡在上半时34分钟被打破，意大利中场核心布尔加雷利，在一次拼抢中受伤下场，那时候世界杯还不允许换人，受伤下场球队就是10打11，意大利人陷入被动。</p>
+<figure><img src="https://pic4.zhimg.com/v2-7957c0266e7e2ca7df0e3d2d0813a018_b.gif" alt=""><figcaption>朴斗翼世纪进球击败意大利</figcaption></figure>
+
+<p>就在意大利队没缓过劲来的时候，比赛第42分钟，亚洲足球史上（可能是）最伟大的瞬间出现了，朝鲜队中场长距离头球顶入禁区，意大利球员瓜尔内里盯人不紧，插上的朴斗翼一蹴而就，朝鲜队奇迹般地取得了领先！</p>
+<p>这一球，永远成为了奇迹的代名词，而朴斗翼本人，因此名垂青史，当我们每次回溯亚洲足球的历史，他都是那个值得后辈敬仰的上古传说。</p>
+<figure><img src="https://pic3.zhimg.com/v2-9353a5140e41ab241262e0df180a7150_b.gif" alt=""><figcaption>朴斗翼进球特写</figcaption></figure>
+
+<p>据门将李赞明回忆，半场休息时，全队情绪高涨，他本人发誓要拿生命捍卫球门，因为他身后的不是球网，是全朝鲜人民殷切的期望。而参加了当场比赛的桑德罗-马佐拉回忆到，丢球后，意大利人慌了，他们开始陷入各自为战的局面，球队趋于一盘散沙。</p>
+<p>整个下半场，就是两位球员回忆的写照，朝鲜队众志成城，拿出了毕生的血性在战斗，而意大利队，显得非常急躁，里维拉等人，总是希望靠着一己之力扭转战局。最终比赛结束，朝鲜队1-0获胜，亚洲球队第一次杀进世界杯淘汰赛，这是世界杯历史最有名的惊天冷门之一！</p>
+<p>朝鲜的民众疯了，举国陷入沸腾，据一名火车司机回忆，比赛中他在开车，中途无法收听广播，结束工作后，听说球队赢了，他激动得泪流满面，之后的工作更加卖力了，他为自己的祖国感到骄傲。</p>
+<p>而此时的米德尔斯堡球迷，已经把朝鲜队奉若神明，球队出没的大街小巷，总是围满了前来一睹风采的当地球迷，这在世界杯的历史上，都是不多见的。</p>
+<figure><img src="https://pic4.zhimg.com/v2-e7f38ebf85c7079d7f0f77591e182ffc_b.jpg" alt=""><figcaption>朝鲜队员给米堡球迷签名</figcaption></figure>
+
+<p>8强战，朝鲜队遇到了尤西比奥率领的葡萄牙队，比赛在利物浦的古迪逊公园进行。米堡人民拿出了实际行动，来支持朝鲜队，两地相距173公里，坐火车至少需要三个半小时才能抵达，但是在这个人口只有16万人的城市，3000名米堡球迷组成了远征团，与朝鲜队一路同行。</p>
+<p>不过朝鲜队在赛前遭遇了不利因素，球队被安排在了利物浦当地的一个叫做loyalo hall的酒店，是一个基督教氛围浓厚的地方。每个球员一个独立单间，房间内墙上挂着十字架，上面有一个被绑起来的半裸人像，这让来自东方的朝鲜队坐立不安，他们从未见过这样的场景，屋外教堂的种种异常也让他们无所适从。</p>
+<figure><img src="https://pic1.zhimg.com/v2-af2edab26558ba7c94519607ed1b1a44_b.jpg" alt=""><figcaption>朝鲜队下榻酒店内景</figcaption></figure>
+
+<p>据朴斗翼回忆，他感到害怕无法入睡，最后被允许和队友一个屋，但是朝鲜队多人受此困扰，比赛前夜没有休息好。</p>
+<p>这一天的比赛，日后已经被无数次提起，是世界杯历史上，一场无与伦比的大逆转之战。朝鲜队虽然休息不好，一开场却把葡萄牙打蒙了，队长朴承振是势大力沉的左脚抽射，不到一分钟就帮助球队取得领先。随后球队多点开花，不到半小时已经3-0领先，现场球迷疯了，朝鲜人民疯了，一切朝着不可思议的方向发展。</p>
+<figure><img src="https://pic3.zhimg.com/v2-0a88b4a6536ef3e41a88bddb156b02d1_b.gif" alt=""><figcaption>朴承振开场破门</figcaption></figure>
+
+<p>但是之前提到的一个优点，在此刻成为了朝鲜队致命缺陷。他们一直都没有采取保守的策略作战，用今天的话说，不会摆大巴。根据中卫朴重善日后回忆，球队经验不足，缺乏对场面的掌控力，利用冲劲迅速大比分领先后，不懂得如何掌控局势，采取得当的策略，消耗剩下的时间。</p>
+<p>如果觉得不太明白，参考一下最近利物浦4-3曼城的比赛你就懂了。</p>
+<p>话说回来，葡萄牙之后的绝地反击，还是因为他们有尤西比奥，这位前一年的金球先生，实在是无所不能。幽灵般跑位后的插上破门，禁区外的重炮远射，边路以一敌众的犀利突破，几乎无所不能。他在32分钟内连入4球，将朝鲜人的幻想击破。</p>
+<figure><img src="https://pic2.zhimg.com/v2-a6f81f3d5046a7f12edb5403aed3ce34_b.gif" alt=""><figcaption>尤西比奥一条龙突破制造点球</figcaption></figure>
+
+<p>最终朝鲜队3-5惜败，他们为自己的年轻交了学费，但是也可以骄傲地说，他们输给了一个与贝利争锋的巨星，一个葡萄牙历史上，与C罗齐名的男人。</p>
+<figure><img src="https://pic3.zhimg.com/v2-458372e3929c3215c6eee94dab433b24_b.gif" alt=""><figcaption>万千球迷与朝鲜队挥手告别</figcaption></figure>
+
+<p>米堡球迷在场外与朝鲜队依依惜别，他们同球队一样，经历了从天堂到地狱的痛苦，球队的大巴车旁，这群素不相识的西方人，都希望再多看来自东方的英雄一眼。一次简单的再见，可能就是永别。</p>
+<p>朝鲜队创造了亚洲球队在世界杯上的最佳战绩，这一纪录直到2002年，才被韩国队打破。</p>
+<h2 id="四-三十六年后的久别重逢"><a href="#四-三十六年后的久别重逢" class="headerlink" title="四. 三十六年后的久别重逢"></a><strong>四. 三十六年后的久别重逢</strong></h2><p>世界杯之后，那支英姿勃发的朝鲜队，似乎从这个世界上消失了，外界几乎与其绝缘，没有人知道他们具体在哪里，在干什么。</p>
+<p>根据一些公开史料和记者的回忆，他们中的一些人，被扣上了各种帽子，流放到朝鲜各地进行劳动改造。罪行包括：</p>
+<p>1.战胜意大利队之后，聚众饮酒开party，贪恋西方浮华</p>
+<p>2.因为3-5输掉了与葡萄牙的比赛，愧对伟大领袖和朝鲜人民</p>
+<p>3.甚至还涉及出卖国家情报等一些今天听起来无厘头的缘由</p>
+<p>不过关于流放的传闻，日后在一些老球员的回忆采访中，被一一否认，至于事实真相如何，今天看来已经不再重要。</p>
+<p>因为，在万里之外的英格兰，还有人记得他们，米堡人民，还记得他们心目中的东方英雄。</p>
+<figure><img src="https://pic2.zhimg.com/v2-25507703b484b34156949ebe4fe12ae8_b.jpg" alt=""><figcaption>纪录片导演丹尼尔-戈登</figcaption></figure>
+
+<p>上个世纪末，一名叫做丹尼尔-戈登的纪录片导演，想要拍摄一部关于1966年世界杯的纪录片，当然也包括朝鲜队的篇章。他经过多方努力，获准踏上了朝鲜的土地，找到了当年参赛的7名球员，以及他们的主教练。</p>
+<p>也许当年的球员认为世界早已忘了他们，但是，西方人来了。</p>
+<figure><img src="https://pic1.zhimg.com/v2-c5477ecd402ad20c8b30ad52be11180a_b.jpg" alt=""><figcaption>老球员与金日成像合影</figcaption></figure>
+
+<p>他们老了，当众人被带到金日成圣像下拍摄时，老球员们禁不住热泪盈眶，他们的只言片语不够清晰，却依旧能够听出对伟大领袖至高无上的崇敬。他们多希望回到1966年6月10日，金日成同志交给他们光荣任务的那一天，沧海桑田，恍如隔世。</p>
+<p>最后，在完成了朝鲜部分的拍摄之后，2002年10月，这批老球员被带回了米德尔斯堡，36年后重新踏上了当年战斗过的土地。</p>
+<figure><img src="https://pic1.zhimg.com/v2-0e0faa989fde2a3b7b85c44259fb31b1_b.jpg" alt=""><figcaption>朝鲜球员重回米德尔斯堡主场与球迷见面</figcaption></figure>
+
+<p>他们在米堡的主场亮相，与当年的球迷们见面了，那时年少的孩子们老了，有的带着孙子来了，爷爷辈的人哭了，这一面之缘的东方千里马，成了他们半生的羁绊。</p>
+<p>幸好，1966年7月23日，古迪逊公园的那次再见，没有成为永别。</p>
+<p>我们常说爷爷围着壁炉给孙子们讲故事，也许这群米堡球迷的后辈们，印象里会隐约闪现一些东方的面孔吧。</p>
+<h2 id="五-尾声"><a href="#五-尾声" class="headerlink" title="五. 尾声"></a><strong>五. 尾声</strong></h2><p>这部纪录片后来顺利上映，名字叫做《The Game of Their Life》（他们生命中的比赛），片中除了讲述朝鲜队在1966年的世界杯故事，还有很多老球员的现状。朴斗翼成为了当时朝鲜体育部门的一个官员，林重善等人成了足球教练，都有了不错的归宿。</p>
+<figure><img src="https://pic1.zhimg.com/v2-1c13a686d5239470d16b097707be9f35_b.jpg" alt=""><figcaption>朴斗翼高举北京奥运会火炬</figcaption></figure>
+
+<p>2008年，66岁的朴斗翼成为了北京奥运会的火炬手，在东方的故土之上，继续扮演着体育文化传播大使的角色。</p>
+<p>如果你热爱足球，也许你会喜欢这个故事。世界杯之所以神圣，也正因为它不只关乎足球。</p>
+<p><em>本期《世界杯讲古》视频：</em><br><a href="https://link.zhihu.com/?target=https%3A//www.zhihu.com/video/939201992241926144" target="_blank" rel="noopener">              <img src="https://pic2.zhimg.com/80/v2-6960d03db2aebda634b00ab63ded1935_b.jpg" alt="">              <span class="content">                <span class="title"><span class="z-ico-extern-gray"></span><span class="z-ico-extern-blue"></span></span>                <span class="url"><span class="z-ico-video"></span><a href="https://www.zhihu.com/video/939201992241926144" target="_blank" rel="noopener">https://www.zhihu.com/video/939201992241926144</a></span>              </span>            </a>            </p>
+<p><em>更多有料节目、深度文章，请移步微信公众平台</em> <em><strong>爆棚视频</strong>；新浪微博</em> <em><strong>爆棚体育视频</strong>，欢迎关注~</em></p>
+<p>来源：知乎 www.zhihu.com</p>
+<p>作者：<a href="http://www.zhihu.com/people/bao-peng-shi-pin-69?utm_campaign=rss&amp;utm_medium=rss&amp;utm_source=rss&amp;utm_content=author" target="_blank" rel="noopener">爆棚视频</a></p>
+<p>【知乎日报】千万用户的选择，做朋友圈里的新鲜事分享大牛。<br>        <a href="http://daily.zhihu.com?utm_source=rssyanwenzi&amp;utm_campaign=tuijian&amp;utm_medium=rssnormal" target="_blank" rel="noopener">点击下载</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/02/02/世界杯讲古-I-亚洲之光，英伦绽放——记1966年朝鲜队/" data-id="cjd63ql1l000e84fhhof6hdm5" class="article-share-link">Teilen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-快过年了，可以买些什么让过年变得更有意思？" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/02/02/快过年了，可以买些什么让过年变得更有意思？/" class="article-date">
+  <time datetime="2018-02-01T17:00:42.000Z" itemprop="datePublished">2018-02-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/02/02/快过年了，可以买些什么让过年变得更有意思？/">快过年了，可以买些什么让过年变得更有意思？</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>马上要过年啦，意味着即将有一大波聚会赶来上，除了同学会，最重要的<strong>还有相亲会</strong>！</p>
+<p>按照现在的套路，聚会不外乎是<strong>你瞅瞅我、我瞅瞅你地没话找话、炫炫男友老公，吹吹几个亿生意的牛逼</strong>，嗯，最有可能的是全体低头玩<a href="//link.zhihu.com/?target=https%3A//www.smzdm.com/fenlei/zhinengshouji/">手机</a>~</p>
+<p><img src="https://pic4.zhimg.com/v2-5402211b7e63b62b029a3a47f8bba883_b.gif?rss" alt=""></p>
+<p>聚会这一个人的狂欢，够无聊~</p>
+<p>挑挑今天就来解决“无聊”的，推荐几款好玩的<a href="//link.zhihu.com/?target=https%3A//www.smzdm.com/fenlei/zhuoyou/">桌游</a>，让你社交无障碍，瞬间high到爆，不会你就真的尴尬了~</p>
+<h2 id="NO-1-适合一群人的狂欢——破冰欢乐型"><a href="#NO-1-适合一群人的狂欢——破冰欢乐型" class="headerlink" title="NO.1 适合一群人的狂欢——破冰欢乐型"></a>NO.1 适合一群人的狂欢——破冰欢乐型</h2><p>此处应该说UNO的，犹记得每次百般算计却被猪队友毁掉的气愤，眼睁睁快赢的时候又被加一手牌的画面的绝望……</p>
+<p>“陷害”别人的同时，梦里都在被转向、跳过、+2、+4支配着恐惧……</p>
+<p>鉴于UNO的人气之高，挑挑就不多讲了，今天说点别的~</p>
+<h2 id="——矮人矿坑——"><a href="#——矮人矿坑——" class="headerlink" title="——矮人矿坑——"></a>——矮人矿坑——</h2><p><img src="https://pic3.zhimg.com/v2-9c07a99be78710d5234e956338ce8bae_b.jpg?rss" alt=""></p>
+<p><img src="https://pic1.zhimg.com/v2-b6f02cd9ee252fe3326a7aee0e0a2f4c_b.jpg?rss" alt=""></p>
+<p><strong>适合人数：2-10人</strong></p>
+<p><strong>难度：★</strong></p>
+<p>属于拼图身份类游戏，规则很简单，要在几个玩家中要找到同伴一起拼成通道挖到金子即获胜，不过还要防着潜伏的破坏者，人越多越欢乐。</p>
+<p><img src="https://pic1.zhimg.com/v2-e9fbe013d8cca93021800c77885b39ac_b.jpg?rss" alt=""></p>
+<p><img src="https://pic3.zhimg.com/v2-5ee5ae491e035084f6f8d7607073ea26_b.jpg?rss" alt=""></p>
+<p>由于游戏中会自然形成合作关系，所以可以加速大家互相认识，对不认识的朋友初次相识最适合不过。</p>
+<p><strong>一句话：</strong></p>
+<p><strong>在破坏了矮人的道路之后，就忽闪着无辜的大眼说：我真的不是故意的……</strong></p>
+<h2 id="——砸蛋——"><a href="#——砸蛋——" class="headerlink" title="——砸蛋——"></a>——砸蛋——</h2><p><img src="https://pic3.zhimg.com/v2-eefc527b519fb65e6c4deb37a842bc1a_b.jpg?rss" alt=""></p>
+<p><strong>适合人数：5-8人</strong></p>
+<p><strong>难度：★</strong></p>
+<p>也叫猜狐狸，这个游戏的造型极具有喜剧画风，特别容易吸引妹子。</p>
+<p>每位玩家都需要在头上插一个“蛋”（指示卡牌），但是每个人都不知道自己是什么蛋，轮到自己还要选择同意、猜蛋、换蛋，看似这么“没有技术含量”，实际你会发现砸蛋也是蕴含一定的技巧的。</p>
+<p><img src="https://pic1.zhimg.com/v2-4927f7e216f7f71cdee366a9fc756300_b.jpg?rss" alt=""></p>
+<p>真真假假，假假真真，是不是故意骗你入局？一场斗智斗勇的比赛就开始了……</p>
+<p><strong>一句话：看谁不顺眼，就砸TA。</strong></p>
+<h2 id="NO-2-适合联谊聚会——增进感情型"><a href="#NO-2-适合联谊聚会——增进感情型" class="headerlink" title="NO.2 适合联谊聚会——增进感情型"></a>NO.2 适合联谊聚会——增进感情型</h2><p>联谊聚会，问房问车，不如玩游戏看的真~</p>
+<h2 id="——德国心脏病——"><a href="#——德国心脏病——" class="headerlink" title="——德国心脏病——"></a>——德国心脏病——</h2><p><img src="https://pic1.zhimg.com/v2-2de37ffffa994dc64c12dd193ebeb870_b.jpg?rss" alt=""></p>
+<p><strong>适合人数：2-8人</strong></p>
+<p><strong>难度：★</strong></p>
+<p>传说中，摸妹子手的神器。</p>
+<p>游戏的规则是，当桌面上恰好出现5个相同的水果牌时，先拍下铃铛的人赢得桌面上所有的牌，最后获得牌多的人获胜。</p>
+<p><img src="https://pic1.zhimg.com/v2-d254820db91dc238471f599cf805ab88_b.jpg?rss" alt=""></p>
+<p><img src="https://pic2.zhimg.com/v2-0eb38f14c78d0b5d74e209842671c37d_b.jpg?rss" alt=""></p>
+<p>所以常常有N多人同时拍铃，男女之间一不小心的肌肤之亲，就看你们来不来电了。</p>
+<p><strong>忠言警告：小心手被拍肿了。</strong></p>
+<h2 id="—-只言片语-—"><a href="#—-只言片语-—" class="headerlink" title="— 只言片语 —"></a>— 只言片语 —</h2><p><img src="https://pic2.zhimg.com/v2-6d91dc5d5ba5fbd5f892ce7ef6d5d01d_b.jpg?rss" alt=""></p>
+<p><img src="https://pic4.zhimg.com/v2-67ca74d4bbd446e176a93c620f94d23b_b.jpg?rss" alt=""></p>
+<p><strong>适合人数：3-8人
+</strong></p>
+<p><strong>难度：★</strong></p>
+<p>简单讲就是你来比划我们来猜。</p>
+<p>一个人来描述某张牌，其余人选出一张最符合描述的牌。描述可以用一个词语、一种声音、一个表情、一个故事……</p>
+<p>描述的人要带点小心机，不能让大家全猜中，也不能让大家全都猜不中。为此，随着游戏的渐渐深入，你会发现仅凭语言很无力、很苍白，基本到最后比划、唱歌、跳舞……能用的都用上了~</p>
+<p><img src="https://pic2.zhimg.com/v2-a108466670d6b4b89153603624b28849_b.jpg?rss" alt=""></p>
+<p><img src="https://pic4.zhimg.com/v2-7f8381c5fb21918d66a6e57418561767_b.jpg?rss" alt=""></p>
+<p>这个游戏超适合联谊玩，可以看出谁和你更有默契，谁和你心有灵犀，从每个人的描述方法也可以看出点对方的性格，这比相亲更有意义吧！</p>
+<h2 id="NO-3-适合好基友——尔虞我诈型"><a href="#NO-3-适合好基友——尔虞我诈型" class="headerlink" title="NO.3 适合好基友——尔虞我诈型"></a>NO.3 适合好基友——尔虞我诈型</h2><p>考逻辑、刷智商、拼演技的游戏，最适合彼此比较了解的好友一起玩。平时为好友两肋插刀，游戏里插好友两刀的感觉，还是蛮爽的。</p>
+<p>不过容易伤感情，如果太入戏，友谊的小船说翻就翻了。哈哈~</p>
+<p><img src="https://pic1.zhimg.com/v2-5b75549e0e93458057b496ea949373b0_b.jpg?rss" alt=""></p>
+<p>说到这，你以为我要说狼人杀、三国杀？NO！地球人都知道了，无需多言~</p>
+<h2 id="——风声——"><a href="#——风声——" class="headerlink" title="——风声——"></a>——风声——</h2><p><img src="https://pic4.zhimg.com/v2-12133cd1400624961f8c895be236eb63_b.jpg?rss" alt=""></p>
+<p><strong>适合人数：3-9人</strong></p>
+<p><strong>难度：★★★</strong></p>
+<p>根据同名谍战电影《风声》改编，一个有些许猜心成分的团队对抗卡牌游戏，耐玩程度不比三国杀差的好吧！</p>
+<p>游戏分为3个阵营，简单讲就是各自为了获取“情报”，展开了一场激烈的明争暗斗。</p>
+<p><img src="https://pic1.zhimg.com/v2-fc8e3efcd41908ab2835d6251167d928_b.jpg?rss" alt=""></p>
+<p>有趣的是，别人给出的情报有真有假，收与不收，是否能捕捉其他玩家不经意间透露的“蛛丝马迹”，是否能找出暗藏的敌人与同伴，就要凭借你的推理和判断力了。</p>
+<p><img src="https://pic1.zhimg.com/v2-065eb838a0378e7472800f1b705f82a8_b.jpg?rss" alt=""></p>
+<p><img src="https://pic2.zhimg.com/v2-09d310be6312d468b0a536429a017cbd_b.jpg?rss" alt=""></p>
+<p>如果喜欢谍战剧的，可以在现实生活中感受一把步步为营、明争暗斗的感觉了~</p>
+<h2 id="——阿瓦隆——"><a href="#——阿瓦隆——" class="headerlink" title="——阿瓦隆——"></a>——阿瓦隆——</h2><p><img src="https://pic2.zhimg.com/v2-0e2d16e4270343eb95d5198cea42fc05_b.jpg?rss" alt=""></p>
+<p><strong>适合人数：8-10人</strong></p>
+<p><strong>难度：★★★</strong></p>
+<p>这是一场<a href="//link.zhihu.com/?target=http%3A//pinpai.smzdm.com/5635/">梅林</a>代表的正义阵营和莫甘娜代表的邪恶阵营之战。游戏没有裁判，需要根据大家的行动找到反派，且游戏全程不会“死人”，所有玩家全程参与。</p>
+<p><img src="https://pic1.zhimg.com/v2-f501a93445a40761482ded3025e12304_b.jpg?rss" alt=""></p>
+<p>游戏有意思的地方在于隐藏身份、相互欺骗，梅林知道所有坏人，但他要隐藏自己的身份，以免被刺客所杀；而爪牙们则要想尽办法让人相信自己是好人，从而多参加任务……很适合各位嘴炮、“影帝影后”选手。</p>
+<p><strong>一句话包会：人生如戏，全靠演技~</strong></p>
+<h2 id="NO-4-两个人打发时间"><a href="#NO-4-两个人打发时间" class="headerlink" title="NO.4 两个人打发时间"></a>NO.4 两个人打发时间</h2><p>两个人，无论是闺蜜还是恋人，有时候也需要打发下时间，通过游戏增进下感情~</p>
+<h2 id="——拼布——"><a href="#——拼布——" class="headerlink" title="——拼布——"></a>——拼布——</h2><p><img src="https://pic4.zhimg.com/v2-1bb1463222e6b77c936195fa82d2d947_b.jpg?rss" alt=""></p>
+<p><strong>适合人数：2人</strong></p>
+<p><strong>难度：★</strong></p>
+<p>玩家需要收集不同形状的布料来拼满9×9的正方形，谁拼的越完整就越有可能获得游戏的胜利。</p>
+<p>非常适合新手以及不喜欢阅读文字和记忆概念的玩家，而且也不会因为突然降临的霉运造成挫败感，没有运气这一说。</p>
+<p><img src="https://pic4.zhimg.com/v2-55f8e7a04ac2fafc3068bfeb2184a7ab_b.jpg?rss" alt=""></p>
+<p>不过看似简单，但需要消耗“时间”来换取“金钱”或购买布料（A换B和A+B换C的逻辑），这就考验玩家对资源的管理、对每个布料价值的判断、对板块放置的规划等……</p>
+<p>不过，重点在于，颜值高！很森女，陪女朋友玩是个不错的选择～</p>
+<p>提示：比较占地儿，需要大地方摆开，适合在家消遣玩。</p>
+<h2 id="——冷战热斗——"><a href="#——冷战热斗——" class="headerlink" title="——冷战热斗——"></a>——冷战热斗——</h2><p><img src="https://pic1.zhimg.com/v2-e0e7ebf4db0ebbc33ab4aa17fc12938c_b.jpg?rss" alt=""></p>
+<p><strong>适合人数：2人</strong></p>
+<p><strong>难度：★★★</strong></p>
+<p>这是一款以苏联和美国冷战时期为背景的、超级宏大战略游戏，没有之一。</p>
+<p>版图就是世界<a href="//link.zhihu.com/?target=https%3A//www.smzdm.com/fenlei/ditu/">地图</a>，玩家们分别扮演美国或者苏联，在各国可以布置影响力，包括政变以及军事行动，以最后赢取胜利为目的，其中有一系列大量的历史事件。</p>
+<p>100多张不同的卡牌，内容全部是冷战期间真实发生过的事件。试想下历史在你手中重演，世界将会因你而改变，是件多么有成就感的事情~</p>
+<p>一旦你玩进去了，就爱上运筹帷幄的感觉，享受雄途伟略的时刻，但规则非常多，非常细致，上手困难。</p>
+<p><img src="https://pic4.zhimg.com/v2-986be2ae0b85774290080968b5d54f77_b.jpg?rss" alt=""></p>
+<p><strong>必须要看的友情提醒：</strong></p>
+<p>1、第一次玩桌游的不要挑战自己！（会疯）</p>
+<p>2、对历史地理不感兴趣的玩家不要轻易尝试！（会被自己的知识量打击到）</p>
+<p>3、想用来撩妹的不要轻易尝试！</p>
+<p>因为，看说明2小时（自己会疯），解释说明1小时（对方疯）。</p>
+<p>4、适合好基友，消磨时间来的。</p>
+<p>忠言逆耳，信不信就看你的了~</p>
+<h2 id="NO-5-三五知心好友——不伤感情，只消磨时间型"><a href="#NO-5-三五知心好友——不伤感情，只消磨时间型" class="headerlink" title="NO.5 三五知心好友——不伤感情，只消磨时间型"></a>NO.5 三五知心好友——不伤感情，只消磨时间型</h2><h2 id="——农场主——"><a href="#——农场主——" class="headerlink" title="——农场主——"></a>——农场主——</h2><p><img src="https://pic2.zhimg.com/v2-95f498aa41f4ada8ea71e90f7aea27c5_b.jpg?rss" alt=""></p>
+<p><strong>适合人数：1-5人（3或4人好玩）</strong></p>
+<p><strong>难度：★★</strong></p>
+<p>终于有个不是打打杀杀的了，和平一点，不好么~</p>
+<p>每个玩家都是一位农场主，要发展家庭，要圈地圈养家畜，要种种<a href="//link.zhihu.com/?target=https%3A//www.smzdm.com/fenlei/shucai/">蔬菜</a>、养养牛羊、修修房屋、生生娃……</p>
+<p>哈哈，这么和谐的游戏，还有谁？</p>
+<p><img src="https://pic3.zhimg.com/v2-4c4281f59decc8990f69605b83800d56_b.jpg?rss" alt=""></p>
+<p><img src="https://pic1.zhimg.com/v2-e720edcccf9bfc63b455edc21bd5c1bc_b.jpg?rss" alt=""></p>
+<h2 id="——山屋惊魂——"><a href="#——山屋惊魂——" class="headerlink" title="——山屋惊魂——"></a>——山屋惊魂——</h2><p><img src="https://pic4.zhimg.com/v2-20eb0c5d0138ca9637368975ae3fcebb_b.jpg?rss" alt=""></p>
+<p><strong>适合人数：3-6人</strong></p>
+<p><strong>难度：★★★</strong></p>
+<p>又叫小黑屋，玩家扮演人物，在鬼屋中探索，发生随机事件提升或者减弱能力，到最后和大boss对决。</p>
+<p>有意思的是，这个游戏是有50个剧本的，但神奇之处在于：游戏开始时你并不知道游戏的目的…….当“预兆”卡牌掀开后，游戏的剧本和目的才被决定，各个玩家的角色才渐渐揭晓。</p>
+<p><img src="https://pic3.zhimg.com/v2-0a27a638acd2c10e374840668205acf2_b.jpg?rss" alt=""></p>
+<p>这种虽有剧本但常常不按套路出牌的形式，还挺刺激的，非常有氛围，每次玩的时候就感觉：WC，这是个新剧本？不按套路来！</p>
+<p><strong>艾玛，码字真叫一个累，今天就先到这儿吧，有没有你喜欢的款？</strong></p>
+<p><strong>本内容来源于@什么值得买<a href="//link.zhihu.com/?target=https%3A//www.smzdm.com/">http://SMZDM.COM</a>｜网友 <a href="//link.zhihu.com/?target=https%3A//zhiyou.smzdm.com/member/1302135205/">唐挑挑</a></strong></p>
+<p><strong>原文链接：<a href="//link.zhihu.com/?target=https%3A//post.smzdm.com/p/655271/">春节聚会不尬聊，这些好玩的桌游任你High！</a><em>购物攻略</em>什么值得买</strong></p>
+<p><strong>想知道更多专业购物攻略，请关注微信：什么值得买研究所（smzdm_zhenzhidao）</strong></p>
+<p>来源：知乎 www.zhihu.com</p>
+<p>作者：<a href="http://www.zhihu.com/people/shen-me-zhi-de-mai-76-83?utm_campaign=rss&amp;utm_medium=rss&amp;utm_source=rss&amp;utm_content=author" target="_blank" rel="noopener">什么值得买</a></p>
+<p>【知乎日报】千万用户的选择，做朋友圈里的新鲜事分享大牛。<br>        <a href="http://daily.zhihu.com?utm_source=rssyanwenzi&amp;utm_campaign=tuijian&amp;utm_medium=rssnormal" target="_blank" rel="noopener">点击下载</a></p>
+<p>此问题还有 <a href="http://www.zhihu.com/question/266463444/answer/308788840?utm_campaign=rss&amp;utm_medium=rss&amp;utm_source=rss&amp;utm_content=title" target="_blank" rel="noopener">111 个回答，查看全部。</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/02/02/快过年了，可以买些什么让过年变得更有意思？/" data-id="cjd63ql2g001a84fhc7nyn9g9" class="article-share-link">Teilen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-这个只有1000块奖金的比赛，为啥吸引了十几位世界冠军？" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/02/02/这个只有1000块奖金的比赛，为啥吸引了十几位世界冠军？/" class="article-date">
+  <time datetime="2018-02-01T16:16:11.000Z" itemprop="datePublished">2018-02-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/02/02/这个只有1000块奖金的比赛，为啥吸引了十几位世界冠军？/">这个只有1000块奖金的比赛，为啥吸引了十几位世界冠军？</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure><img src="https://pic4.zhimg.com/v2-4612329adfeebf604d149cc3f34c385e_b.jpg" alt=""></figure><figure><img src="https://pic2.zhimg.com/v2-9449e4ebf18d6d423e8b14eeaeedae64_b.jpg" alt=""></figure>
+
+<p>在电子竞技中，同样遵循成王败寇的道理，赢了的选手激动地语无伦次，输了的选手只能尴尬地站在旁边当陪衬。</p>
+<figure><img src="https://pic3.zhimg.com/v2-b4b6c3511adcfce7f4a2837481965b52_b.jpg" alt=""></figure>
+
+<p>这或许有些残忍，但却也是电子竞技的魅力所在，没有失败的痛苦，哪里知道胜利的喜悦来之不易。</p>
+<figure><img src="https://pic1.zhimg.com/v2-c242e1e66ad34b2215456b911c54ef55_b.jpg" alt=""></figure>
+
+<p><strong>最近，这样的场景，一遍遍地在各大DOTA2主播的直播间上演着。</strong></p>
+<p>这些主播们并不是闲着无聊，参加了什么活动，而是自己举办了一个“比赛”。</p>
+<figure><img src="https://pic1.zhimg.com/v2-bae5c2d523bb0656a521dbd7b37bd6b0_b.jpg" alt=""></figure>
+
+<p>每天晚上，每个BO3，随着屏幕上一个个ROLL点数字滚动、定格，决定众人命运的两位“选马人”也就定了下来。</p>
+<figure><img src="https://pic3.zhimg.com/v2-4c2f32075e8e75029b22f1a2400f7575_b.jpg" alt=""></figure>
+
+<p>当看到自己又成了圈里的马，被别人挑时，有几人唉声叹气了起来，嘴里还含糊不清地说着什么“又要当赠品马”的怪话。</p>
+<figure><img src="https://pic3.zhimg.com/v2-e8dcdacb0d5cfaa8751d58f7f69bfacd_b.jpg" alt=""></figure>
+
+<p>其余有点本事的，则自持身份，默不作声，等待着“选马人”的临幸。</p>
+<p>虽然有些“选马人”不太清楚场下的选手们谁是上、中、下等马，但只要谨遵坊间传言<strong>“OB几雄，得一可得天下”</strong>即可确保万无一失。</p>
+<figure><img src="https://pic3.zhimg.com/v2-b156c6363eb5bb543f15e0cd81904e33_b.jpg" alt=""></figure>
+
+<p>“选马人”自然不知道这句话的道理在哪，反正照做就是能赢。</p>
+<p>其实，坊间传言还有后半句，<strong>OB几雄，得一可得天下，因为剩下的都在对面。</strong></p>
+<p>当然，这是玩笑话，即使菜如OB几雄，也在这一场场对黑中拿着自己最熟悉的英雄，玩着他们最熟悉的位置。</p>
+<figure><img src="https://pic3.zhimg.com/v2-b4e180ff922c6252085f1162d0b15023_b.jpg" alt=""></figure>
+
+<p>倒不是他们胆子变小了，不敢玩花样了，而是只有这样，才能表现出对对手的尊敬。</p>
+<p><strong>要知道，这十几人中，连Ti冠军都能凑出个双数来</strong>，对对手的轻视，简直就是对自己的侮辱。</p>
+<figure><img src="https://pic3.zhimg.com/v2-e105aab5d8412aecdb0d461b21db6812_b.jpg" alt=""></figure>
+
+<p>做过“选马人”的皮鞋杨，对此感触颇深。</p>
+<p>“什么，三号位毒狗？皮鞋你疯了？选的什么JB阵容？”</p>
+<p>“皮鞋你踏马是不是来报复社会的，不想赢啊？”</p>
+<figure><img src="https://pic2.zhimg.com/v2-264b4dfbb7cf6bfea182f1fe3203a243_b.jpg" alt=""></figure>
+
+<p>作为国服第一喷子的皮鞋，第一次看到喷得比他还凶的队友，竟然不知道该如何反驳，不过他能感觉到，队友是真的很想赢，不是简单对黑的赢，是那种赢了就是Ti冠军的赢。</p>
+<p><strong>有意思的是，即使有3个曾经的Ti冠军当队友，这场BO3还是1:2输了，更有意思的是，这种近乎是职业赛事水平的“比赛”，只有1000块奖金。</strong></p>
+<figure><img src="https://pic3.zhimg.com/v2-cd00373bde465eec1c861a9906f3cb8b_b.jpg" alt=""></figure>
+
+<p>“老板请~”</p>
+<p>“老板大方~！”</p>
+<p>1000块奖金来自输了“比赛”的五个人，一人200，以礼物或微信红包的形式，一对一付给赢了的五个人。</p>
+<p>这时各大DOTA2直播间的画面，就如我们开头讲那样，赢了的笑嘻嘻，输了的MMP。</p>
+<figure><img src="https://pic2.zhimg.com/v2-582877f8e2027bbce3bca515cbb6bdbe_b.jpg" alt=""></figure>
+
+<p>当然，输了的选手们并不在乎这几百块钱，他们说MMP的原因是，除了上场的10人，还有没上场的选手，他们就名正言顺当上了“比赛解说”，从开始选人到游戏结束，会把他们黑上一整场。</p>
+<figure><img src="https://pic4.zhimg.com/v2-34eca225e1766dca3527468d0e08d63c_b.jpg" alt=""></figure>
+
+<p>比如Ti4冠军核桃，连老黄历都能被这群“损友”们翻出来。</p>
+<p>“核桃飞机绝活，打职业就很厉害。”</p>
+<p>“是啊，核桃飞机的确很厉害，Ti3带盾飞机被屠夫泉水钩。”</p>
+<figure><img src="https://pic3.zhimg.com/v2-b6bff7f8ee0192364b4c7cd9e8a4f533_b.gif" alt=""></figure>
+
+<p><strong>你要问观众们看得爽不爽，那当然爽啊，既有精彩的比赛，还有各种猛料的解说，那感觉，都快赶上看真正的大比赛了~</strong></p>
+<p><strong>但如果你要问参与的选手们爽不爽，那答案也是确定的，十分不爽。</strong></p>
+<p>虽然大家都很喜欢打这种质量局，也都觉得很刺激，可没有一个人开心，因为弹幕和水友喷得太踏马凶了。</p>
+<figure><img src="https://pic1.zhimg.com/v2-b45e58223465f9f73c2175661c6890f2_b.jpg" alt=""></figure>
+
+<p>退役的老逼们脸皮厚，都被喷子们喷得谨言慎行，现役选手就更惨了，打不好什么冷嘲热讽都能出现，喷到最后，都感觉跟输了Ti总决赛似的。</p>
+<p>再加上解说台上还有几个老逼，一直在竹筒倒豆子给观众们科普黑历史，再开心的局，听到这些，都能黑下脸来。</p>
+<figure><img src="https://pic1.zhimg.com/v2-50d552dec7ceaee3c773fa90dacaf57f_b.jpg" alt=""></figure>
+
+<p>结果呢，过来参加“巨龙Major”的选手们，一个个搞两天就溜了，隔几天就得换一批，就连组织者OB几雄，都被气得要轮换休息。</p>
+<p>可即便这样，“巨龙Major”也没有中断，一直坚持搞了很多天，据说年前还会有第二季。</p>
+<figure><img src="https://pic4.zhimg.com/v2-8c8e428747ae5c06583698d9ffddf94d_b.jpg" alt=""><figcaption>国外媒体也报道了“巨龙Major”的事情</figcaption></figure>
+
+<p><strong>那么问题来了，既然这么累，这群老逼们到底图什么？</strong></p>
+<p>有人说，无非因为DOTA2是个Dead Game，再加上直播行业也在走下坡路，他们不得不抱团群暖赚钱。</p>
+<figure><img src="https://pic4.zhimg.com/v2-c9c2408ca27534220c9a70ab43693746_b.jpg" alt=""></figure>
+
+<p>这句话要是放在当年的《风暴英雄》身上，我是信的，但放在DOTA2这儿，未免有点太小看这款全世界依然有数千万人支持的游戏。</p>
+<p>退一万步讲，几个刀圈主播玩吃鸡的人气不比打DOTA2低，甚至有的时候还会更高，他们为了赚钱，转行打吃鸡不就行了？</p>
+<figure><img src="https://pic3.zhimg.com/v2-7395a4a42d3b7dbea36f51b072768add_b.jpg" alt=""></figure>
+
+<p>可他们还是在吃鸡最火的时候，分出时间播DOTA2，虽然他们确实比隔壁某些转吃鸡的天才LOL主播笨，但节目效果做得还算不错，水友们也能美滋滋理财，那为啥他们就是不转行呢？</p>
+<p><strong>除了他们本身对DOTA的热爱，另一个原因，就得说说这群老逼们搞“巨龙Major”的根本目的了。</strong></p>
+<p>不知道看过前些天对黑的老哥们注意到没，不管参与的人怎样变，有个叫无敌的选手总是在对黑中。</p>
+<figure><img src="https://pic4.zhimg.com/v2-729b42a09c7f9e17091a5fd48b86c20f_b.jpg" alt=""></figure>
+
+<p>半年从0到8000分，新天梯系统出分就在前100名，可以说这位名叫无敌的新人，绝对拥有很高的天赋。</p>
+<p>而他正是八师傅准备培养的三号位，甚至可以说，BG2.0，就是八师傅为他组建的。</p>
+<figure><img src="https://pic1.zhimg.com/v2-2d3f193d4c059dbef29fed8a1c126225_b.jpg" alt=""></figure>
+
+<p><strong>或许这样的目标太过伟大，状态已经不如以前的几位老逼，可能也没法将无敌送多远，但只要在做了，在努力了，总比什么都不做好一点。</strong></p>
+<p>除了无敌，还有那些被喊来参加“巨龙Major”的现役职业选手们。</p>
+<figure><img src="https://pic3.zhimg.com/v2-5073bef6bae6118833b4e709c0bdcc5c_b.jpg" alt=""></figure>
+
+<p>他们缺这几场高质量比赛的经验么？</p>
+<p>我想并不，他们缺的是几百场几千场。</p>
+<figure><img src="https://pic1.zhimg.com/v2-413444d57414ea9bacd6305aaa43f881_b.jpg" alt=""></figure>
+
+<p>比起已经退役的老逼们，新一代的选手们虽然也拿到过不错的成绩，但总是让大家觉得不放心，完全没有当年统治力。</p>
+<figure><img src="https://pic1.zhimg.com/v2-80184ec33d87c22061dd2351940995c3_b.jpg" alt=""></figure>
+
+<p>造成这种感觉的很大一部分原因，就是新一代的选手们天赋够，但经验不够，从BP上就被套路，打得时候也时常出现幼稚的判断。</p>
+<p>他们需要吸收这群老逼们用青春换来的经验，他们需要将这些转化成自己的东西，他们更需要在未来的赛场上，证明自己有资格代表CN DOTA。</p>
+<figure><img src="https://pic3.zhimg.com/v2-2bca7cf85828524d3bb97ea5671ec374_b.jpg" alt=""></figure>
+
+<p><strong>当他们再次捧起不朽盾时，我相信没有人会比这群老逼们更高兴，因为台上站着的年轻人，是在续写他们的传奇。</strong></p>
+<figure><img src="https://pic4.zhimg.com/v2-4612329adfeebf604d149cc3f34c385e_b.jpg" alt=""></figure>
+
+<p><strong>-END-</strong></p>
+<p>微博：<a href="https://link.zhihu.com/?target=http%3A//weibo.com/5938544491/profile%3Ftopnav%3D1%26wvr%3D6" target="_blank" rel="noopener">BB姬Studio</a></p>
+<p>微信公众号：BB姬</p>
+<figure><img src="https://pic2.zhimg.com/v2-0434f1cb04380402a52c35778da92f13_b.jpg" alt=""></figure>
+
+<p>来源：知乎 www.zhihu.com</p>
+<p>作者：<a href="http://www.zhihu.com/people/bbji-43?utm_campaign=rss&amp;utm_medium=rss&amp;utm_source=rss&amp;utm_content=author" target="_blank" rel="noopener">BB姬</a></p>
+<p>【知乎日报】千万用户的选择，做朋友圈里的新鲜事分享大牛。<br>        <a href="http://daily.zhihu.com?utm_source=rssyanwenzi&amp;utm_campaign=tuijian&amp;utm_medium=rssnormal" target="_blank" rel="noopener">点击下载</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/02/02/这个只有1000块奖金的比赛，为啥吸引了十几位世界冠军？/" data-id="cjd63ql2v001q84fhtu71ag43" class="article-share-link">Teilen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-中国特色知识付费：39-元买成功秘诀，顺便赚点回扣" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/02/02/中国特色知识付费：39-元买成功秘诀，顺便赚点回扣/" class="article-date">
+  <time datetime="2018-02-01T16:00:17.000Z" itemprop="datePublished">2018-02-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/02/02/中国特色知识付费：39-元买成功秘诀，顺便赚点回扣/">中国特色知识付费：39 元买成功秘诀，顺便赚点回扣</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure><img src="https://pic4.zhimg.com/v2-61fa4bf8d114a2d6a76a7944f157dcc4_b.jpg" alt=""></figure>&gt; 你初入职场，经验不足。行业竞争压力大，刷屏案例频出，但想做出成功的爆款却越来越难。你希望能在短时间内获得快速提升，却苦于没有老司机手把手带……知识付费了解一下？—— 推销员冬菇<br><br>刚进入 2018 年，几位网易人在荔枝微课平台办的开年大课「网易运营方法论」就刷屏朋友圈了。<br><figure><img src="https://pic4.zhimg.com/v2-8ec5147318d5e1ec95a5b55e66dfc42e_b.jpg" alt=""></figure>
+
+<p>刷屏的原因有二。一是卖课时的宣传文案写得非常诱人，「提供企业内部的底层运营方法论，教大家洞察用户心理，掌握运营本质」；二是平台采用了二级分销机制，转发朋友圈并成功邀请朋友购买课程后，自己也能获得相应比例收益。</p>
+<p>只要花 39.9 元，就能学到大厂的内部工作经验，走上人生巅峰。如果朋友圈有人扫了我的码，还能回本甚至小赚一笔，岂不是美滋滋？</p>
+<p>靠着对人心理的掌握，这套课程的邀请海报图在新媒体运营圈刷屏了一整天，最后以「诱导分享」被微信禁止访问告终。</p>
+<p>尽管邀请海报导向的网页被封，不能再继续分销，但课程依然能正常听。从参与人数、传播现象、最终结果看，这都是一次成功的营销。卖点来自网易，而用户和现金流则留给了荔枝微课。</p>
+<figure><img src="https://pic3.zhimg.com/v2-48120e47aa624d7b5f140731c7bbf8de_b.jpg" alt=""></figure>
+
+<p>有成功案例就有模仿。1 月 31 日千聊推出「千聊创始人 2018 年唯一大讲：一年获客 2000W，知识付费的营销增长全部方法论」，原价 199，特价优惠 49，晚上七点之前限时特价 1 元。转发分销海报至朋友圈可赚取收益，甚至还可以组队 PK…</p>
+<figure><img src="https://pic2.zhimg.com/v2-905abb35f8c46d1ff5be196471ba6cf7_b.jpg" alt=""></figure>
+
+<p>海报是大红色的，转发文案官方也帮你准备好了，咋一看完全没发现这是知识付费，还以为是某商家降价促销大甩卖，而且是微商直销。</p>
+<p>裂变分销活动开始不到一个小时，千聊，卒。</p>
+<p>平台内所有网页均无法访问，app 被 App Store 下架，连带着本应在该时段开课的其他微课也受到了影响。随后，本已消停了两周的荔枝微课网页突然也被查封。</p>
+<p>截至 2 月 1 日中午，两平台页面均已恢复正常，只是原价 199 元的千聊创始人大讲变成了对所有人免费。</p>
+<p>这场知识付费分销裂变大戏到此就告一段落了，经过微信的这一番铁腕，相信其他微课平台应该不会再侥幸地试图在被查封之前仿造一波刷屏了。只是原本以学习为出发点的知识付费被玩成了这副模样，甚至和传销搭上关系，不免令人失望。</p>
+<h2 id="几十块钱的含金量有多重"><a href="#几十块钱的含金量有多重" class="headerlink" title="几十块钱的含金量有多重"></a>几十块钱的含金量有多重</h2><p>抛开这些擦边球般的推广形式不论，课程本身的质量也受到了许多人的质疑。《网易运营方法论》开课后我采访了购买课程的几位朋友，比较正面客观的评价有：</p>
+<blockquote>
+<p>对小白了解基本内容可能不错<br>没有很新鲜的运营方法和太多深入细节的探讨，更多的是提供整体思路和框架<br>干货很多，在活动细节的把控做得挺好<br>流程很全面</p>
+</blockquote>
+<p>但与此同时也有负面的评价：</p>
+<blockquote>
+<p>水，非常水，就是一个活动策划框架，没有案例论述没有重难点分析<br>太基础了，很多需要深入的地方都讲得不清不楚，只有框架</p>
+</blockquote>
+<p>看似非常两极化的评价，其实都指向同一个事实：课程主要内容就是活动思路和策划框架的简单梳理。同一个内容却引发了截然相反的两种评价，这与「理论经验类知识质量难以评定」离不开关系，但背后还有一个更为深层的原因：听众对这 39.9 元成本所带来的收获预期不同。</p>
+<p>39.9 元意味着什么？一份麦当劳牛堡套餐、一场普通 2D 电影、两杯奶茶、一支 DHC 唇膏。大部分人在花 40 块购买上述商品服务时一般不会太心疼，即使难吃难用也不会过分吐槽。但买一份课程，却可能会觉得「有点小贵」，甚至在听后悲愤地表示亏了。</p>
+<p>一个问题，对于购买这类职业教程的听众们来说，几十块钱应该买到多少信息，才算划算？</p>
+<p>这两年知识付费的概念吹得很响，但放眼望去，贯彻落实得最多的付费内容却是这样的：</p>
+<ul>
+<li>互联网行业营销技巧，从入门到高手</li>
+<li>100 天养成文案大师</li>
+<li>转行一年成为行业精英，他是如何做到的</li>
+<li>北大才子：如何一年读 500 本书</li>
+<li>我是如何从二本大学考上复旦研究生的</li>
+</ul>
+<p>以上课程，通常标价 9.9 元、19.9 元，超过 40 元的非常少。如果价格还能往高了走的，多半是因为主讲人本人的影响力大，粉丝忠诚度高。</p>
+<figure><img src="https://pic1.zhimg.com/v2-bff0517681e04b49694d5de3b0d58b9d_b.jpg" alt=""></figure>
+
+<p>这类课程传授的信息其实并不是传统意义上的知识，说是个人经验、学习计划可能更为贴切。而它们有一大共同特点在于：非即时性，难以在短时间内按照理想标准操作，且课程效果无法检验。</p>
+<p>其实经验类知识付费也分很多种，像《如何修理电器》《养猪知识大全》其实都是。但它们和上述例子最大的区别在于：《养猪知识大全》有扎实的理论知识基础，参考于大量实际操作例子，读者按照教程能够明确清晰地按部就班，且能够预估不同操作带来的不同反馈效果；而《100 天养成文案大师》呢？理论基础来自于个人经验总结，参考例子受太多其他因素影响，且其成功案例不可复制。</p>
+<figure><img src="https://pic4.zhimg.com/v2-3b7050372be7bfc53c17a0768e12ab3e_b.jpg" alt=""><figcaption>（写文案不如养猪）</figcaption></figure>
+
+<p>许多听过文案营销类课程的基层运营者都有过这样的苦恼：</p>
+<blockquote>
+<p>我知道标题要加入数字效果更好，我知道利用人的分享欲望更能刺激转发，但在面对不一样的题材时，这些规则真的很难一个个直接套上去。<br>前几天还很有效的套路，怎么今天就变成 UC 体的梗了？<br>为什么同样的标题，我这篇没人看，隔壁爱范儿家的阅读数那么高？</p>
+</blockquote>
+<p>主讲人当然不会告诉你，他们的成功并不完全来自这部分课程内容，更多的因素是他们聪明，暗地里花了很多时间和功夫去积累，和运气好。即使你按着他告诉你的操作方法去那么练习了，你依然无法达到像对方一样的成就，或是一半的成就。</p>
+<p>听众们难道不明白这回事吗？实际上，即使他们心里清楚成功不可复制，但在看到标题和主讲人时，看到购买人数时，看到共同圈子里好友转发时，他们依然会想要跟上去，按下支付键。</p>
+<p>「大家都在学，万一真的有有用的知识点怎么办？别人都知道了，只有我不知道，那我岂不是落后了？」</p>
+<p>促使听众们簇拥上去争抢听课的因素，不止是他们对快速提升能力的渴望，更是害怕落后的焦虑。</p>
+<figure><img src="https://pic3.zhimg.com/v2-39142b6fd74cc49267a5f5628c058cc0_b.jpg" alt=""></figure>
+
+<p>开放的互联网把不同层级的人放在了同样的平台。人与人之间的差距被放大，无论你怎样努力，总有人比你更优秀，而且那个人就在你身旁。一大批互联网人正在焦虑，还有剩下的另一批在为「自己为什么没有别人那么焦虑」而焦虑。</p>
+<p>你有焦虑我有良药，本是难以触及的前辈们上了在行和知乎 Live，职场新人们只要花几十块钱就能听到他们解惑答疑。再后面，但凡有几万个粉丝的人都能来讲课了。罗列出一大堆唬人的数据，告诉你自己是如何把一个新号做成大号，如何形成粉丝矩阵每天接广告走上人生巅峰， 告诉你只需要花一点时间听完这些课就能涨薪、当大 V。</p>
+<p>这，不就是用上了互联网概念做包装的成功学么？</p>
+<p>坐在国贸落地窗前码字的 Vivian，跟几十年前坐在纺织厂流水线旁的女工差别并不大；用着微课平台听咪蒙教月薪五万的时髦互联网人，跟手捧着成功学盗版书的中年人也没有什么区别。</p>
+<p>想提升想学习没有错，但教人上天的捷径见多了，也别忘了路还是要一步步走的。</p>
+<blockquote>
+<p>题图来自：Pixabay</p>
+</blockquote>
+<p>来源：知乎 www.zhihu.com</p>
+<p>作者：<a href="http://www.zhihu.com/people/chitazheng?utm_campaign=rss&amp;utm_medium=rss&amp;utm_source=rss&amp;utm_content=author" target="_blank" rel="noopener">巫冬</a></p>
+<p>【知乎日报】千万用户的选择，做朋友圈里的新鲜事分享大牛。<br>        <a href="http://daily.zhihu.com?utm_source=rssyanwenzi&amp;utm_campaign=tuijian&amp;utm_medium=rssnormal" target="_blank" rel="noopener">点击下载</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/02/02/中国特色知识付费：39-元买成功秘诀，顺便赚点回扣/" data-id="cjd63ql1l000f84fhp1cj5jc4" class="article-share-link">Teilen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-如何评价《永远消失的幻想乡》完整版" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/02/01/如何评价《永远消失的幻想乡》完整版/" class="article-date">
+  <time datetime="2018-02-01T15:46:14.000Z" itemprop="datePublished">2018-02-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/02/01/如何评价《永远消失的幻想乡》完整版/">如何评价《永远消失的幻想乡》完整版?</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>如今游戏已经更新到了3.0.0版本，并登陆了steam平台，这件事在国内的东方同人圈也惊起了不小的波澜。</p>
+<p>作为和HJ交流比较多的玩家之一，在这里详细地谈一下游戏本体，以及关于登陆steam后的一些感想吧。</p>
+<p>（长文预警，暂时没配图。可能包含令部分人不适的负面评价）</p>
+<p>提纲：</p>
+<ol>
+<li><strong>游戏本体评价</strong></li>
+<li><strong>关于《永幻》登陆steam的评价（重点）</strong></li>
+<li><strong>对制作组的话</strong></li>
+<li><strong>个人感受与综合推荐</strong></li>
+</ol>
+<hr>
+<ul>
+<li><strong>游戏本体评价</strong></li>
+</ul>
+<p>1、游戏性</p>
+<p>《永远消失的幻想乡》是一款<strong>带有大量stg要素的arpg游戏</strong>，其中act的元素占主导地位（成长系统有，但是比较简单），个人操作水平的差距对游戏体验的影响非常大。</p>
+<p>游戏主要是玩家通过俯视视角，操纵主角（天子等）的移动、攻击方向和方式，进行躲避、攻击、物品收集，击败敌人并提升角色属性来完成游戏任务。操作中的act要素非常明显，有着生命值、冲刺体力、攻击硬直、受伤害硬直等一系列设定，无论是boss还是小怪都有鲜明的攻击招式，并且在高难度下敌人有很高的伤害，对玩家的操作技巧有一定要求（黑魂/血源玩家一定会非常熟悉这些）；同时游戏还融合了stg中的避弹要素，敌人会释放各种较为密集的远程攻击弹幕，需要玩家仔细躲避。</p>
+<p>游戏目前有十几个可用角色，部分需要购买dlc，每个角色都有非常独特的攻击方式（每个角色有两种平A，以及强力的bomb）和操作特性（硬直、速度、冲刺性能、体力恢复等都有差别）；这些角色的设计是十分出彩的，极大地还原了一设，并且操作上也均有一定实用性（都能玩下去）。相应的，敌方杂兵和boss的设计也非常特殊：杂兵并不是简单设计成只会近身平A的稻草人，他们会释放各种不同的弹幕（小玉、大玉、激光、连续喷火等），还有的会进行特殊近战动作（瞬移突进、自爆、横扫攻击等）；boss则使用了依据血量判定的攻击阶段设定，每个阶段会释放不同的符卡，符卡的攻略也需要相应的技巧（难度越高容错率越低，背板要求越高）。因此，游戏的趣味性主要是体现在使用各种方式，解析敌人的弱点，寻找突破口击败敌人；但考虑到并不是所有玩家都有act游戏的基础，制作组设置了难度分级，在低难度下只要使用简单的攻击、躲避操作就能过关，并且相较其他难度拥有更多的存档点。</p>
+<p>游戏的成长系统很简单，有技能树系统（通过收集符文解锁）和人物属性购买升级系统（一个人物有两类升级，一般是攻击硬直、伤害、移速等，一类只能升级两次）。符文和属性点的收集中规中矩，需要刷一定的时间，但也不至于太久。除此之外，游戏还有多周目设定，新的周目难度会增大（一般来说，L1=H3=N5=E7），敌人的血量和攻击力都有一定提升，最高难度L10（基本上一碰就死，除了某些小玉和近身攻击之外）。</p>
+<p>值得一提的是，目前游戏还是存在很多bug，比如在某些地方会莫名其妙卡关和击破撞，希望作者能接受反馈并尽快修复。</p>
+<p>游戏性的优缺点如下：</p>
+<p>优点：</p>
+<ul>
+<li>对于act玩家而言有着比较好的操作手感</li>
+<li>角色设计出彩，攻击方式和操作独特，很好地还原了东方原作设定</li>
+<li>对敌方角色的设计比较到位，有着鲜明的特点，通过思考并不是很难攻略，同时能获得较大的快感</li>
+<li>较为成功地融合了act和stg要素，在市场上是一种不错的尝试</li>
+<li>同人游戏中难得的arpg作品</li>
+<li>多周目设定，加上不同的难度设定，有重复体验的价值</li>
+</ul>
+<p>缺点：</p>
+<ul>
+<li>对于新人的操作友善度不够，没有特别友好的新手act基本功教程</li>
+<li>键位设置不是很友善，并且对手柄的支持不太好</li>
+<li>bug还是比较多，并且可能影响到游戏体验</li>
+<li>难度设计有些混乱（虽然已经削弱过很多次了），一方面即使是在低难度下也存在新人难以通关的情况，而另一方面某些难度对于熟练玩家来说又太过无趣</li>
+<li>实际上玩家需要同时具备stg和act基础才能有较好的游戏体验</li>
+</ul>
+<p>2、画面与配乐</p>
+<p>游戏的画面还是比较出色的，使用3d建模，高画质下的场景渲染也非常到位。在东方同人游戏中，《永幻》的画面水平可以说是数一数二的，并且到目前为止优化已经有了一定改善（个人体验960m+i7跑高画质1080p能全程60帧）。但是某些细节可能做得还不够好，比如放大之后，能感受到人物建模并不是那么精细（当然对于同人游戏来说很难得了）</p>
+<p>在配乐上，制作组请到了Signal-E等一系列国内原创音乐人制作BGM。除此之外，游戏还和幽闭星光、少女分形两个知名日本社团有合作，在游戏中能听到它们的配乐。整个ost的水平可以说是非常高的，单独拿music box听歌也很不错。</p>
+<p>优点：</p>
+<ul>
+<li>同人游戏难得的高画质与建模水平</li>
+<li>优化相比以前有改善</li>
+<li>配乐十分出色</li>
+</ul>
+<p>缺点：</p>
+<ul>
+<li>比上不足比下有余，虽然在同人游戏中很出众，但是在美工细节上还是需要改进（其实这个缺点是我强行想出来的，没必要再苛刻要求了，画面和同人游戏比完全没有对手，在小工作室独立游戏里算非常出色，打不过3A而已）</li>
+</ul>
+<p>3、剧情</p>
+<p>《永幻》是一个单线剧情游戏，仅仅在终章的最后一个boss的选择上有分支，并且影响最终结局。游戏没有太多选择，即使是选择了不同的分支也不会在体验上有什么差别。</p>
+<p>游戏的剧情前期比较轻松，大多是一些口水话（这个特点和东方stg作品的电波系剧情对话有点类似），玩家如果想要体验一个认真严肃的剧情很可能会失望。不过，如果把注意力放在游戏操作本身，不那么在意剧情深度的话，还是不会有太多问题的，至少剧情对话能做到合理自洽。</p>
+<p>但到了后期（特别是最后一关），剧情强度突然有了较大的提升，特别是黑灵梦线的结局能让同人创作者有相当程度的共鸣。但是对话上依旧是中二且不怎么严肃的风格，并不是所有人都喜欢。</p>
+<p>剧情方面大家可以在b站搜索相关的视频流程，或者亲自在游戏中体验，这里就不剧透了。</p>
+<p>优点：</p>
+<ul>
+<li>自洽且有一定内容和深度的剧情</li>
+</ul>
+<p>缺点：</p>
+<ul>
+<li>剧情十分电波，对话里不够严肃和中二的内容太多</li>
+</ul>
+<p>关于游戏本体，上面已经介绍很详细了，至于这个游戏到底优不优秀，我只能给出“完成度很高”这样的综合评价，因为从目前来看每个人的游戏体验差距非常大，好评和差评都是满天飞（之后会谈这个问题）。购买建议放到文章最后，这里暂时不谈。</p>
+<hr>
+<ul>
+<li><strong>关于《永幻》登陆steam的评价</strong></li>
+</ul>
+<p>游戏本体的评价在上面已经给出了很详细的说明，这里只针对<strong>“登陆steam”</strong>这一件事进行评论。</p>
+<p>《永幻》是<strong>第一部</strong>登陆steam平台的<strong>东方二次同人收费游戏。</strong>注意“二次”和“收费”，目前为止登陆steam平台相关的东方游戏，除了《天空璋》和《凭依华》这两部<strong>正作</strong>之外，其他的就只有一个免费试玩版的《Nitorlnc》。在这方面《永幻》的成就是开创性的，并且作为国内（非日本）的东方二次同人，更是显得难能可贵。而且和《天空璋》及《凭依华》相比，《永幻》的制作组对于“登陆steam”的态度更为认真，这从他们精心设置了质量较为出色的成就系统、集换式卡牌、背景、表情等内容即可见一斑。（值得一提的是《永幻》是目前唯一个能掉落东方主题背景的steam游戏）</p>
+<p>关于永幻登陆steam这件事情做的好的地方我就不多说了，上面一段话就能概括完。</p>
+<p>这里我要重点谈一下制作组在这件事上出现的问题：</p>
+<ol>
+<li>上架实在是<strong>太急了。</strong>上架后续过程并不是很顺利，制作组首先是放出了3.0.0版本，并且只能游玩本体，没有dlc（但是在游戏中购买角色的时候，可以发现是能选择dlc人物甚至选择配色的，说明数据完整）。而且这个版本一下子就暴露出了大量严重问题，比如琪露诺关卡因为捡不到油库里会卡关，秦心关卡前不能选择角色（这个bug反映过很多次了直到上架还没修改），英文翻译的质量也非常粗糙。既然要上架steam，有一件事情是要保证的，就是游戏不能有较大的bug和瑕疵，不然会引起玩家极大的不满。</li>
+<li>对于老玩家的考虑不够。在上架steam之前，游戏本体的价格是120¥，而现在的价格是66¥（-13%后，原价78￥），dlc的差别更大，原价72¥，现价15¥。虽然HJ给每个曾经购买游戏的老玩家提供了激活码（包括本体和dlc），但是steam上架前后价格的巨大差异足以使人愤怒（尤其是dlc72→15的变化真的很难理解），并且承诺的“老玩家奖励”也没有下文。依据现在的进度，dlc的上架又需要很长时间，另一方面实体版特典怎么在steam上实现也是一个很大的问题。</li>
+<li><strong>定价策略有非常严重的问题。</strong>除了刚刚说的老版与steam版价格差异过大的问题，还出现了国区价格比外区高的情况，这个真的是无法理解………………</li>
+<li><strong>与玩家的沟通交流实在是不够好</strong>。一直以来，大部分粉丝想要联系制作组是一件非常困难的事情，虽然有粉丝群，但是粉丝的意见和建议基本上反馈不到制作组那边去（由于群聊基本上都是群众吹水），平时作者在社交平台上与外界的交流也没多少（偶尔在有大事的时候发一下微博）。关键是，这是一个“<strong>同人游戏</strong>”，如果缺少爱好者的热情参与，交流上不注意，就会引起粉丝很大的意见；仅仅是“埋头做游戏”，又不与大家交流，却又想卖出好的销量是容易出现问题的……这方面可以说是急需改善。</li>
+<li><strong>最大的问题是宣传上失误太严重</strong>。这是游戏遭遇差评的最重要原因，主要是两个方面：</li>
+</ol>
+<p>（1）steam上的宣传和游戏“目标受众”的期待差异是很大的。先看一下steam商品页面上的“评测”：</p>
+<p><img src="https://pic4.zhimg.com/v2-16d64cfc0b5d066cddb4292652c689cf_b.jpg?rss" alt=""></p>
+<p>从这几句话上看，这属于一个“东方爱好者”都适合购买的游戏，而玩家实际体验下来却会发现游戏存在众多不足。</p>
+<ul>
+<li>游戏的难度设置和本身操作特点对于很多“东方众”来说是难以接受的，因为并不是所有东方爱好者都能熟练游玩ACT，加上游戏的引导不够，导致了许多新人抱怨“游戏很难”甚至被劝退。（这和“并不是所有东方厨都玩STG”是一个道理）</li>
+<li>这个游戏需要花钱才能购买，并且不像ZUN的原作有着特殊的地位，从这一步开始“同人游戏”和“商业游戏”这种宣传就见不到效果了，大家会更关注“质量”而不是“东方”这个ip。考虑到这一点，如果游戏还有比较严重的bug，剧情还存在各种问题，那就实在是不应该。这和制作组事前宣传给玩家带来的期待有很大的落差。</li>
+</ul>
+<p>（2）作者实际上没注意怎么宣传。没错，“<strong>没注意怎么宣传</strong>”</p>
+<p>我和制作组接触比较多，他们给我的感觉就是专心做游戏，并没有在意宣传上的问题，没有请大佬宣传，没有做营销，基本上是靠爱好者“口口相传”。</p>
+<p><strong>这个过程实际上会产生非常严重的偏差</strong>。从steam的大多数好评就能看出好评的理由都是“东方”，“同人”，“好玩，吹爆”，这其中重要的原因是它原来是一个没有做太多宣传的同人游戏，大多数评价都是靠热情的粉丝支撑，基本上是感性发泄，理性分析极少。久而久之整个粉丝群和制作组可能有一种错觉，就是“开心就好，不要太在意缺点，也能获得大家支持”。但上了steam之后，大家关心的是“游戏好不好玩”，粉丝再怎么吹也没用。</p>
+<p>要命的是作者把“<strong>任何</strong>东方爱好者都值得购买的程度”这句话都挂上去了，这就是没有理性分析游戏特点的典型……</p>
+<hr>
+<ul>
+<li><strong>对制作组的话</strong></li>
+</ul>
+<p>作者能做出《永幻》这样的游戏是非常不易的，并且游戏的质量在东方同人创作中已经是十分精良了。这里我想谈一个关于自己的小故事。</p>
+<p>我接触永幻是17年的2月左右，当时直接购买了实体版的通贩。由于自己也比较擅长ACT，很快过了L难度，感觉游戏质量还不错，但也没重复刷周目之类的。到了5月的时候，我从北京跑到上海来看cp20同人展，发现制作组在开展现场试玩活动，于是展会两天基本上都跑到他们摊位做试玩员（x。展会结束之后，和他们简单地聚餐，也参观了作者的工作室，其实能感觉到制作组是非常不容易的，五六个人在一个小房间里工作，作为同人社团作者们也很难有正式的编制，稳定的收入也不好说。（这里有个彩蛋，在作者工作室窗边向外张望，所看到的场景正好就是黑灵梦结局的CG。）</p>
+<p>在那之后我和作者便结下了缘分。九月份HJ来到北京参展，我和 <a href="https://www.zhihu.com/people/zhang-run-xiang-52" target="_blank" rel="noopener">@Steinsbun兄貴</a> 一起报名做了《永幻》北京地区的代理，之后在北京的展会上我们两位基本上也会去摆摊。从某种意义上说，接触《永幻》是我开始参与东方同人活动的契机。</p>
+<p>HJ给我最大的感受就是对做游戏很专注，但是不太擅长应付其他的事务，比如宣传、沟通等。这引起了很多的麻烦，以前游戏知名度不够的问题，现在玩家抱怨沟通不足的问题，甚至还有“盈利”相关的问题。</p>
+<p>制作组仓促地把《永幻》搬到了steam上售卖，对于这件事我心里产生了很多的疑问。steam版上架后线下的实体销售策略会变成什么样子？作者这么仓促会不会是为了急切“盈利”，而淡化了对“同人”的爱？《永幻》上架这件事又会引起什么讨论风波？</p>
+<ul>
+<li><strong>个人感受与综合推荐</strong></li>
+</ul>
+<p>《永远消失的幻想乡》是一部非常出色的东方二次同人游戏，但是这种出色也暂时限于“东方同人”——这款游戏和商业化作品相比，还不至于有“太大的优势”。它作为第一款上架steam的东方二次同人收费游戏，在东方同人圈的意义是开创性的。但是略显仓促的上架过程，游戏本身的素质问题，以及宣传上的偏差，体现出这款游戏乃至其制作组还有很多需要改进的地方。</p>
+<p>以下是我个人的购买建议：</p>
+<p><strong>这款游戏适合“对act感兴趣的东方爱好者”、“对萌系画风act感兴趣的玩家”、“喜欢用steam收藏游戏的东方爱好者”、“纯粹只是想支持同人创作的爱好者”购买。</strong></p>
+<p><strong>如果把范围扩展到“大多数东方众”，其实是不合适的。这也是大部分差评的原因。但是这并不是游戏本身质量的问题，问题是宣传的偏差导致一些不适合游玩act游戏的受众也购买了游戏——当你用E难度上来被暴打是什么感受？这属于个人实力差异的问题，难以在设计上满足所有人的需求，最后的结果只能是“留下喜欢act的玩家”。</strong></p>
+<p><strong>至于“用于安利新人入坑”，我很推荐各位把这个游戏给喜欢act的新人玩一下，效果还是很不错的。如果不考虑受众（是否擅长ACT，是否喜欢ACG文化），强行推荐给别人，效果可能大打折扣。这个问题涉及到“怎么安利东方”，这里简略地谈估计也不会有什么意义，我只希望安利的时候大家一定要思考这方面的问题。</strong></p>
+<p>我对这个游戏有很深的感情。我希望这游戏能良好的发展下去，不要让爱好者们失望；同时我也希望大家能够对“同人游戏上架steam”这个事情有更多的思考，而不是仅仅关注游戏本身难度如何，素质如何，多一些有意义的讨论而不是随便发好评差评吹水。steam本质是个商业平台，东方相关游戏上架对于“同人”这个概念是一个巨大的考验。《永幻》登陆steam的影响可能比想象中要深远许多。</p>
+<p><strong>至于要求创作者“保持初心”和“爱”，我不想讨论什么，这两样事物的代价是十分高昂的，但是这又是“同人”精神的核心，坚持很辛苦，抛弃很可耻。我相信作者只是暂时急功近利，让部分人产生了理解偏差，现在已经能看到不少人对于上架steam的不满了。我期待着制作组能在这一系列工作中学习更多的经验，在“商业”与“同人”的关系上把握好关系，做出更好的游戏。</strong></p>
+<p><strong>当然，更不要忘记了守护幻想乡的初心。</strong></p>
+<p>来源：知乎 www.zhihu.com</p>
+<p>作者：<a href="http://www.zhihu.com/people/liang-ya-jian?utm_campaign=rss&amp;utm_medium=rss&amp;utm_source=rss&amp;utm_content=author" target="_blank" rel="noopener">Mc Alawn</a></p>
+<p>【知乎日报】千万用户的选择，做朋友圈里的新鲜事分享大牛。<br>        <a href="http://daily.zhihu.com?utm_source=rssyanwenzi&amp;utm_campaign=tuijian&amp;utm_medium=rssnormal" target="_blank" rel="noopener">点击下载</a></p>
+<p>此问题还有 <a href="http://www.zhihu.com/question/64245228/answer/297965904?utm_campaign=rss&amp;utm_medium=rss&amp;utm_source=rss&amp;utm_content=title" target="_blank" rel="noopener">38 个回答，查看全部。</a></p>
+<pre><code>延伸阅读：
+</code></pre><p><a href="http://www.zhihu.com/question/22953785?utm_campaign=rss&amp;utm_medium=rss&amp;utm_source=rss&amp;utm_content=title" target="_blank" rel="noopener">什么是实时光线追踪技术？它可能出现在当前的次世代主机上吗？</a></p>
+<p><a href="http://www.zhihu.com/question/25273709?utm_campaign=rss&amp;utm_medium=rss&amp;utm_source=rss&amp;utm_content=title" target="_blank" rel="noopener">你玩过的最丧心病狂的游戏是什么？</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/02/01/如何评价《永远消失的幻想乡》完整版/" data-id="cjd63ql2g001084fhmlqthu6l" class="article-share-link">Teilen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-你见过最惊艳的舞蹈是什么？" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/02/01/你见过最惊艳的舞蹈是什么？/" class="article-date">
+  <time datetime="2018-02-01T15:30:10.000Z" itemprop="datePublished">2018-02-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/02/01/你见过最惊艳的舞蹈是什么？/">你见过最惊艳的舞蹈是什么？</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>在由1958年的仓储厂房改造的Lens 空间里，穿过高高的书架和能够自由转换的展览厅，舞者陶冶用身体连接着空间里的线条和光。他说，当人与空间真正融合，“杜绝掉所有的外界的事物，没有任何干扰，而专注于在那一个当下”时，那一刻是“纯透干净的”。<a href="https://www.zhihu.com/video/942355625779351552" target="_blank" rel="noopener"></a></p>
+</blockquote>
+<p>陶冶的自由不仅是突破时间和肢体的，也是突破空间的。</p>
+<p>因此，我们得以看到陶冶在Lens空间逼仄的书架间舞蹈。 </p>
+<p><img src="https://pic2.zhimg.com/v2-1555034d1bc5a25645f960dc8262bced_b.jpg?rss" alt=""></p>
+<p>在这个由仓储厂房改造的Lens 空间里，陶冶需要准确地捕捉到空间里所有的线条和角落，要用身体把所有的点线面由内向外连接起来。</p>
+<p>膝盖被擦破，脚磨出血，陶冶并不会结束下一个动作。   </p>
+<p><img src="https://pic4.zhimg.com/v2-0392f0a4efe79c13e95c225673ebd08b_b.jpg?rss" alt=""></p>
+<p><img src="https://pic2.zhimg.com/v2-102f82fb9de89995f5a26dd42b46e149_b.gif?rss" alt=""></p>
+<p>“会跳舞的人每一刻都感觉到恐惧，因为时刻会受伤，时刻你自己的身体不可控。但是下一刻如果摆脱它，面对恐惧的反义词它就能面对它，就是希望。”</p>
+<p>更多有趣内容欢迎</p>
+<p><u><a href="https://www.zhihu.com/org/lens-27/activities" target="_blank" rel="noopener">Lens-知乎</a></u>、<u><a href="https://zhuanlan.zhihu.com/welens" target="_blank" rel="noopener">Lens-专栏</a></u></p>
+<p><a href="//link.zhihu.com/?target=https%3A//mp.weixin.qq.com/s/0Gd8oRNTYxEATrzP8AEeMQ">微信、</a><u><a href="//link.zhihu.com/?target=http%3A//weibo.com/yourlens%3Fc%3Dspr_qdhz_bd_baidusmt_weibo_s%26nick%3DWeLens%26is_hot%3D1">微博</a></u>  “WeLens”</p>
+<p>Lens旗下包括出版、新媒体、重逢岛视频、沙龙等业务，是一个致力于发现创造与美、探求生活价值、传递人性温暖的文化传播品牌。</p>
+<p>来源：知乎 www.zhihu.com</p>
+<p>作者：<a href="http://www.zhihu.com/people/lens-27?utm_campaign=rss&amp;utm_medium=rss&amp;utm_source=rss&amp;utm_content=author" target="_blank" rel="noopener">Lens</a></p>
+<p>【知乎日报】千万用户的选择，做朋友圈里的新鲜事分享大牛。<br>        <a href="http://daily.zhihu.com?utm_source=rssyanwenzi&amp;utm_campaign=tuijian&amp;utm_medium=rssnormal" target="_blank" rel="noopener">点击下载</a></p>
+<p>此问题还有 <a href="http://www.zhihu.com/question/24826582/answer/308775232?utm_campaign=rss&amp;utm_medium=rss&amp;utm_source=rss&amp;utm_content=title" target="_blank" rel="noopener">59 个回答，查看全部。</a></p>
+<pre><code>延伸阅读：
+</code></pre><p><a href="http://www.zhihu.com/question/25025196?utm_campaign=rss&amp;utm_medium=rss&amp;utm_source=rss&amp;utm_content=title" target="_blank" rel="noopener">为什么芭蕾舞和一些其它舞蹈有把底裤刻意暴露给观众看的一些动作？</a></p>
+<p><a href="http://www.zhihu.com/question/28641536?utm_campaign=rss&amp;utm_medium=rss&amp;utm_source=rss&amp;utm_content=title" target="_blank" rel="noopener">究竟什么是现代舞？</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/02/01/你见过最惊艳的舞蹈是什么？/" data-id="cjd63ql20000o84fhde025hxe" class="article-share-link">Teilen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-萧深讲古：爱国者在超级碗决赛的历史故事" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/02/01/萧深讲古：爱国者在超级碗决赛的历史故事/" class="article-date">
+  <time datetime="2018-02-01T13:30:32.000Z" itemprop="datePublished">2018-02-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/02/01/萧深讲古：爱国者在超级碗决赛的历史故事/">萧深讲古：爱国者在超级碗决赛的历史故事</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure><img src="https://pic2.zhimg.com/v2-e9a5b141c58b9950a6cf90317d7ce1e6_b.jpg" alt=""></figure><a href="http://link.zhihu.com/?target=https%3A//www.zhihu.com/video/942402428944003072" target="_blank" rel="noopener">              <img src="https://pic2.zhimg.com/80/v2-bf58017ee6202e0ef05f98ad56bb6139_b.jpg" alt="">              <span class="content">                <span class="title"><span class="z-ico-extern-gray"></span><span class="z-ico-extern-blue"></span></span>                <span class="url"><span class="z-ico-video"></span><a href="https://www.zhihu.com/video/942402428944003072" target="_blank" rel="noopener">https://www.zhihu.com/video/942402428944003072</a></span>              </span>            </a><br><br>很多人爱上NFL，喜欢美式橄榄球，都是因为超级碗。很多新球迷喜欢上这个联盟是因为刚刚结束的第51届超级碗爱国者与猎鹰之间的、火星撞地球般的史诗对决。这场比赛当中爱国者队一度是3:28的分差进入第三节，但是最后生生实现了25分的逆转，完成了队史又一次超级碗夺冠。让很多到现在为止记忆犹新。但是，爱国者队这场比赛6分的获胜优势是他们拿到超级碗冠军历史上获胜分差最大的一次。<br><br>讲述人 I 萧深<br><br>出品 I 爆棚视频<br><figure><img src="https://pic4.zhimg.com/v2-eb74a905b52843bfd833d93ceff9aaf7_b.jpg" alt=""></figure>
+
+<p>爱国者在历史上9次打进超级碗，在NFL排名第一。而他们超级碗的征程是先悲后喜。1986年输给了防守极其强大的芝加哥熊队，1997年又输给了布雷特-法夫领衔的绿湾包装工队。但是到了比利切克和布雷迪这对师徒的治下，爱国者队成为整个NFL的代名词。</p>
+<figure><img src="https://pic3.zhimg.com/v2-b35f358e19b81c1745766af00b55730a_b.jpg" alt=""></figure>
+
+<p>王朝的开始是在2002年的第36届超级碗，爱国者对阵圣路易斯公羊队。当时没有人看好爱国者，更没有人看好布雷迪，因为公羊队的实力实在是太过强大。公羊队当时的绰号是“草坪上最华丽的演出”，用来形容他们非常强大的进攻。另 外，这支公羊队参加超级碗的首发球员有四个人之后都进了职业橄榄球的名人堂，还不算那些全明星的球员。</p>
+<figure><img src="https://pic4.zhimg.com/v2-c576320cabb26764d5bf35e3ba473f7b_b.jpg" alt=""></figure>
+
+<p> 这么强大的阵容，爱国者生生把它拖到了最后一刻。尽管丢掉了将近500码的码数，但是凭借亚当-维纳特里的任意球绝杀，爱国者队三分险胜。这是爱国者王朝的开始，也是维纳特里这个传奇踢球手他一生辉煌的开始。</p>
+<figure><img src="https://pic2.zhimg.com/v2-5bd3a2bd0f0d325cdb774406a0bd850d_b.jpg" alt=""></figure>
+
+<p>第36届超级碗，爱国者队爆冷夺冠。到了第38届超级碗，在休斯顿对阵卡罗莱纳黑豹的时候，爱国者队已经成为当之无愧的热门，但是这场比赛打得依然是非常的胶着。双方的比分交替上升，双方不断地交换比赛的主动权，比赛一直打到了最后的1分08秒，卡罗莱纳黑豹队扳平了比分。</p>
+<figure><img src="https://pic3.zhimg.com/v2-7bb5f6c942c50b9b841881fc3fb29c25_b.jpg" alt=""></figure>
+
+<p>扳平比分以后，附加分命中应该来开球，但是谁都没有想到，这个开球居然出界了。如果这个开球不出界的话，爱国者队从本方半场的20码线发起进攻，很有可能我们就会迎来超级碗历史上的第一个加时赛。</p>
+<figure><img src="https://pic1.zhimg.com/v2-5105492cdbcda9f1fc90e6f8a457929d_b.jpg" alt=""></figure>
+
+<p>但是没有如果。开球出界，爱国者队直接从本方半场的40码线发起进攻，一举推进到可以射门的范围之内，再次由亚当-维纳特里完成了任意球绝杀，实现了他们第二次超级碗的夺冠。而我们已经等待已久的超级碗加时赛要再等整整13年以后，也就是今年在休斯顿，才终于等来了超级碗历史上第一次加时赛。</p>
+<figure><img src="https://pic3.zhimg.com/v2-74f31a8b932c910a457b3a9728566a98_b.jpg" alt=""></figure>
+
+<p>爱国者队在第38届超级碗拿到了第二座冠军，转年又杀进超级碗，面对费城老鹰队，爱国者队又是打到了最后一刻。比赛直到打到最后的9秒钟，爱国者队才通过一次防守组的抄截锁定了胜局。这场比赛也是汤姆-布雷迪参加超级碗这么多次，唯一夺冠却没有拿到MVP的一次比赛。这场比赛爱国者队是通过防守组最后时刻的努力，再次以三分的优势击败了对手，击败了费城老鹰队。</p>
+<figure><img src="https://pic2.zhimg.com/v2-47eecf0f0dd9e0bf357076ac017982ca_b.jpg" alt=""></figure>
+
+<p>所以，爱国者队前三次拿到超级碗冠军，分差都仅仅是三分。两次任意球绝杀，一次关键时刻的致胜抄截。但是说起致胜抄截，没有哪次比第49届超级碗的抄截更加惊心动魄，更加让人记忆深刻。</p>
+<figure><img src="https://pic2.zhimg.com/v2-606e92c2ea09263cb7480b5e2c54c4fb_b.jpg" alt=""></figure>
+
+<p>2005年夺冠之后，爱国者队经历了起起伏伏，之后两次打进超级碗，两次输给伊莱曼宁和苦主纽约巨人队。直到2015年第49届超级碗，爱国者队遇到了防守强大、地面进攻非常强悍的西雅图海鹰队。这场比赛如爱国者往常的超级碗一样，打到了最后时刻。</p>
+<figure><img src="https://pic4.zhimg.com/v2-9bad1049da1a4feeaf4a9044a52ecbfc_b.jpg" alt=""></figure>
+
+<p>比赛的最后半分钟，海鹰队握有球权，推进到爱国者队的一码线之前，他们拥有联盟当中的野兽跑卫马肖恩-林奇，只要把球交给他，走入到端区，就很有可能锁定胜局。然而，海鹰队选择了传球。这样一个传球被之前谁都没有听说过的爱国者队的角卫马尔科姆-巴特勒准确地阅读、准确地抄截。通过一个抄截，继十年之后再次完成了防守组绝杀。</p>
+<figure><img src="https://pic1.zhimg.com/v2-9ffedb18f990da0ad55ccfdb4a0f11d1_b.jpg" alt=""></figure>
+
+<p>这场比赛，爱国者队表面来看赢了四分，但是赢得过程、惊险程度、难度，甚至要超过之前的三届超级碗。这就是爱国者队，虽然是NFL的王朝球队，虽然9次打进最后超级碗的决赛，但是他们四次夺冠的过程都是如此的惊险。而到了第五次，到了今年，他们再一次让我们感受到了什么是NFL，什么是美式橄榄球。</p>
+<p>来源：知乎 www.zhihu.com</p>
+<p>作者：<a href="http://www.zhihu.com/people/bao-peng-shi-pin-69?utm_campaign=rss&amp;utm_medium=rss&amp;utm_source=rss&amp;utm_content=author" target="_blank" rel="noopener">爆棚视频</a></p>
+<p>【知乎日报】千万用户的选择，做朋友圈里的新鲜事分享大牛。<br>        <a href="http://daily.zhihu.com?utm_source=rssyanwenzi&amp;utm_campaign=tuijian&amp;utm_medium=rssnormal" target="_blank" rel="noopener">点击下载</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/02/01/萧深讲古：爱国者在超级碗决赛的历史故事/" data-id="cjd63ql2v001k84fh7mcvh5y8" class="article-share-link">Teilen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-如何评价腾讯新推出的-APP「立知」？" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/02/01/如何评价腾讯新推出的-APP「立知」？/" class="article-date">
+  <time datetime="2018-02-01T13:16:17.000Z" itemprop="datePublished">2018-02-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/02/01/如何评价腾讯新推出的-APP「立知」？/">如何评价腾讯新推出的 APP「立知」？</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="腾讯推出阅读软件「立知」，这是我见过最像「即刻」的产品"><a href="#腾讯推出阅读软件「立知」，这是我见过最像「即刻」的产品" class="headerlink" title="腾讯推出阅读软件「立知」，这是我见过最像「即刻」的产品"></a>腾讯推出阅读软件「立知」，这是我见过最像「即刻」的产品</h2><p><img src="https://pic1.zhimg.com/v2-e2fa17fdb0e46b5716703a35b9e18df8_b.jpg?rss" alt=""></p>
+<blockquote>
+<p>或许对于 App 本身来说没有一个明确的抄袭界限，但还是不得不说，立知和即刻太像了。</p>
+</blockquote>
+<p>今天腾讯开放了一款小产品的内测，本以为这是终于要和今日头条分庭抗礼了，可这产品本身却立刻引发了不小的争议。</p>
+<p>信息过载时代如何阅读？今日头条用的是机器推荐，让信息流推送更精准；微信推出了公众号，让每个人订阅自己感兴趣的内容；即刻、轻芒基于兴趣来定制内容…… 最近，腾讯也推出了首款效率阅读软件「立知」。</p>
+<p>立知的内容分两种形式呈现，一种是「大事」，另一种是「小情」。</p>
+<h2 id="大事：基于热点精选新闻"><a href="#大事：基于热点精选新闻" class="headerlink" title="大事：基于热点精选新闻"></a><strong>大事：基于热点精选新闻</strong></h2><p>「大事」类似新闻资讯 App 中的热点，基于新闻热度推荐，科技、娱乐、财经、体育、社会几大栏目中各提供 10-20 条资讯，首页列表展示标题和图片，点击后是新闻的简单概括，再次点击就是新闻原文，很明显能看出，这就是即刻的主题模式。</p>
+<p><img src="https://pic3.zhimg.com/v2-f1674ce1ebe2b2df3d761997cc923d62_b.jpg?rss" alt=""></p>
+<p>不过和即刻相对分散的主题不同，「大事」中的新闻并非基于用户订阅和用户兴趣推荐，而是紧跟新闻热点，类似常见的门户新闻 App。在最顶端，还提供实时的热点分享，很像最近暂时下架的微博热搜，只是来源更多，有百度热搜、门户头条、微信热文等。</p>
+<p><img src="https://pic3.zhimg.com/v2-00628bad5c81639a792633a0293cbaf6_b.jpg?rss" alt=""></p>
+<p>「大事」中最有特色的是「事件进展」，在首页每个标题右下角就有显示。事件进展会将某个事件的发展动态以时间轴的形式呈现，让用户了解事件的来龙去脉，如果想持续关注此事件，可以点击订阅来追踪动态。除此之外，用户还可以看到针对同一事件，各方媒体的不同观点。</p>
+<p><img src="https://pic1.zhimg.com/v2-adb1544e2920afe96e7ca7a500f10a90_b.gif?rss" alt=""></p>
+<p>据立知的介绍，这些热门事件的筛选除了靠专业编辑，还运用了大数据和 AI 技术。</p>
+<h2 id="小情：类似「即刻」的主题订阅"><a href="#小情：类似「即刻」的主题订阅" class="headerlink" title="小情：类似「即刻」的主题订阅"></a><strong>小情：类似「即刻」的主题订阅</strong></h2><p>「小情」中就是类似即刻的主题订阅，用户订阅的主题消息会在这里按时间排序呈现，完全基于兴趣订阅，类似即刻，每个主题同样也可以选择推送。消息下面可以进行留言、点赞、分享的操作，和即刻不同的是，立知现在用户还不够多，所以社区属性较少。</p>
+<p><img src="https://pic3.zhimg.com/v2-c9200f5974bbe9c3b1a419abef7d55ee_b.jpg?rss" alt=""></p>
+<p>即刻已经从单纯的工具产品转型社交，既然立知是腾讯的产品，未来社交属性想必也不会缺失。主题只靠编辑策划远远不够，UGC 才能丰富内容。就像以主题为单位聚焦垂直内容一样，当关注的人足够多，足够符合个人兴趣，资讯的获取也会更丰富、更有效率。</p>
+<p>一个内容平台想丰富内容、提升活跃、扩大用户覆盖，追热点是最快的方式，知乎、即刻没有传统的新闻展示方式，都开始在搜索框里做文章，而立知则是把主题用热点新闻的形式做了结合。</p>
+<p>在立知中，每条资讯是最小单位，同类资讯聚合起来就是主题，主题基于热点推送就成了新闻。这实际上就是几种新闻呈现方式的组合，兴趣+热点，保证作为工具的精准性，又有内容分发平台的传播性。「大事」中的新闻数量目前还算克制，和无尽的信息流有所区别。</p>
+<p>「每一分钟都不该辜负」，这是立知在产品介绍中提到的一句话，兴趣加热点的组合方式的确符合这个口号，如果在技术的帮助下找到精准和丰富的平衡，也许会是一个不错的阅读工具。</p>
+<p>立知的产品现在还在内测当中，功能不够完善，比如用户无法创建主题、社交属性不足、搜索功能不好用等。</p>
+<h2 id="「立知」或许能成功，但它确实让人失望"><a href="#「立知」或许能成功，但它确实让人失望" class="headerlink" title="「立知」或许能成功，但它确实让人失望"></a><strong>「立知」或许能成功，但它确实让人失望</strong></h2><p>或许对于 App 本身来说没有一个明确的抄袭界限，但还是不得不说，立知和即刻太像了。</p>
+<p>内容呈现还是以主题为主，很多主题也都类似。作为一个「腾讯出品」的产品，立知拥有的渠道资源和优势远不是即刻的创业团队所能比拟的，未来如果依靠腾讯强大的渠道铺量，立知很可能会成功，甚至让人们忘却还有一个即刻。</p>
+<p>而对于即刻来说，从去年开始，即刻开始了自己从内容分发向趣味内容社交的方向转变，刚刚有些不错的成绩，这时如果需要直接面对这样一个和自身产品不分伯仲的腾讯系产品，前景可能并不会太乐观。一方面，腾讯手握大量社交关系链，一旦通过社交帐号关联，从而直接碾压即刻几年的社交积累，完成弯道超车是大概率事件；另一方面，在细颗粒度推送这样一个较垂直的领域，腾讯这样的庞然大物突然入局，几乎堵死了即刻的未来可能性。</p>
+<p>不得不说，在拥有众多优秀的团队和开发资源的情况下，最终产出了这样一个在创业小团队成果的基础上没有什么实质创新和进步的「复制品」，这的确是一件让人有些失望的事。</p>
+<p>而上个月即刻刚在极客公园 InnoAwards 评选中获得了「年度用户体验」大奖，没想到我领的橘子还没吃，橘子树就被人盯上了。</p>
+<p><em>编辑：早优夫斯基</em> ■</p>
+<p><strong>本文出自刘丢丢，源自<a href="//link.zhihu.com/?target=https%3A//mp.weixin.qq.com/s%3F__biz%3DMTMwNDMwODQ0MQ%3D%3D%26mid%3D2652853048%26idx%3D1%26sn%3D067403147faebbbe68aed25dab910e98%26chksm%3D7e6a2e8e491da79833b6f44e6fdd96dbfc80c3766e768595e8524f29a3ff5166f6e100887be3%23rd">极客公园</a>。</strong></p>
+<p>来源：知乎 www.zhihu.com</p>
+<p>作者：<a href="http://www.zhihu.com/people/geekpark-16?utm_campaign=rss&amp;utm_medium=rss&amp;utm_source=rss&amp;utm_content=author" target="_blank" rel="noopener">极客公园</a></p>
+<p>【知乎日报】千万用户的选择，做朋友圈里的新鲜事分享大牛。<br>        <a href="http://daily.zhihu.com?utm_source=rssyanwenzi&amp;utm_campaign=tuijian&amp;utm_medium=rssnormal" target="_blank" rel="noopener">点击下载</a></p>
+<p>此问题还有 <a href="http://www.zhihu.com/question/266485668/answer/309034061?utm_campaign=rss&amp;utm_medium=rss&amp;utm_source=rss&amp;utm_content=title" target="_blank" rel="noopener">271 个回答，查看全部。</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/02/01/如何评价腾讯新推出的-APP「立知」？/" data-id="cjd63ql2g001184fh7l67rwmr" class="article-share-link">Teilen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-如何看待「北大留美学生写万字长文数落父母‘过度关爱’，12年春节不归」？" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/02/01/如何看待「北大留美学生写万字长文数落父母‘过度关爱’，12年春节不归」？/" class="article-date">
+  <time datetime="2018-02-01T12:46:22.000Z" itemprop="datePublished">2018-02-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/02/01/如何看待「北大留美学生写万字长文数落父母‘过度关爱’，12年春节不归」？/">如何看待「北大留美学生写万字长文数落父母‘过度关爱’，12年春节不归」？</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>看到这个新闻的时候，我的心情相当复杂。一部分是因为我受过心理学的训练，完全理解这位博士的心情。而另外一部分，是因为我当了父母，立场没办法再像当年只是做子女一样单纯，只要跟着附和「没错！他们真的不配做父母」就好了。父亲跟儿子打架，我现在又是儿子，又开始做了父亲。这些年来，常常陷入自我的纠结。</p>
+<p>伴随着这种纠结，我看完了这封万字长信。</p>
+<p>这位化名叫王猛的博士详细讲述了从小到大的成长历程，他试图让父母理解，他们「过度控制」的养育方式给自己造成了多大的伤害。在我做心理咨询的经验里，我常听到来访者有同样的怨念。而怨念的核心在于，父母完全不觉得自己有什么错。我理解子女一方的感受，但是又很容易站在父母的立场上思考。我没有那么生气，甚至有点同情：「他们不理解这一点，好像也情有可原。」</p>
+<p>对这件事，知友Jack 的回答说得很到位：</p>
+<blockquote>
+<p>王猛心里面苦恼的不是自己现在面临的心理问题——因为他自己已经认识到，并在努力解决。<br>他心里埋怨的甚至也不是文中那些父母所谓的伤害——因为那些伤害已经过去了。<br>真正的原因是父母到现在，也仍然没有觉得自己做得有任何不对的地方——这是持续伤害，现在还在继续。</p>
+</blockquote>
+<p>网上的争论，也都是围绕这个矛盾展开的。站在子女这一边的，会越来越激烈：「我们这么痛苦，为什么你们就是不承认！」站在父母那一边，也可以有相应的反击：「大家不都是这样的吗？还是多找找你自己的原因！」可以把它归结为认知上的差异。但这个结论还不够，还承载不起「12年不回家」这样强烈的恨意。我认真思考了这件事，也看了网上各种讨论，我想补充几点意见。</p>
+<p>站在一个相当超脱的立场上，我认为，这件事反映出<strong>社会的一种进步</strong>。</p>
+<p>年轻人掌握了更多的主动权，可以12年不回家。能够有权利做这种选择，决绝地独自生活，甚至收获到主流舆论的同情，在过去都是无法想象的。子女和父母埋下了这样深重的矛盾，隐忍了很多年，这当然是十足的悲剧。但这个悲剧这样表达出来，总比每年都被迫回家，表面上还要强撑着微笑要好。</p>
+<p>所以我把它叫做进步。在个体层面上的痛楚，是因为整体上在酝酿着更大的蜕变。无论如何，多一种选择总是好的。像王猛父母一样的行为，不是第一个，过去没有孩子做得像王猛这么「绝」，是因为过去没有这样的条件。</p>
+<p>如果再要说得多一点，社会从老年人掌权，渐渐过渡到年轻人掌权了。这是不可逆的趋势。再冒昧假设一句，它与生产力挂钩。因为最先进的生产力，已经掌握在年轻人手里。每年过年，我们带着尽力克制的优越（和某种程度的不耐烦）回到老家，都体会得很清楚——老一辈不再是至高无上的存在了。</p>
+<p>这是我对这件事的核心结论：<strong>时代变了</strong>。在过去，遇到断绝亲子关系的事，主流的意见多半是孩子不孝：「毕竟是你的父母！再怎么说也不能那样吧。」现在这种声音小得多，说明话语权已经在年轻人这边了，至少在网络上。</p>
+<p>但绝大多数人，对这件事情关心的焦点不在这里。他们关心的是：到底怎么解决这个问题？父母应该承认自己的错误吗？还是孩子过度敏感了？</p>
+<p>要解决这个问题，首先要回答：<strong>父母错了吗？错在哪？</strong></p>
+<p>你觉得这一点毫无疑问：父母当然错了，只是他们自己不知道。但我有不同的想法。我认为这件事情里，没有截然区分的黑白。我说「话语权在年轻人这边」的时候，我的意思是所谓对错，取决于我们站在谁那一边。</p>
+<p>我不认为自己没有是非观念。诚实地说，我看到王猛父母的一些做法，觉得很痛心。譬如硬要孩子穿什么衣服，譬如对孩子的贬低，而对于孩子的敏感性，父母居然毫无觉察，这也是我无法认同的。我个人把它们看作严重的错误，并且相信，自己作为父母不至于做同样的事。但要我得出结论说：这么做就是十恶不赦。或者说，孩子就该跟这种父母断绝关系。——我也说不出这种话。</p>
+<p>因为我知道，我也<strong>可能</strong>伤害孩子。</p>
+<p>父母可能伤害孩子，这是无可否认的事实。有些伤害，就会造成一辈子不能磨灭的印痕。小孩子碰到桌角，流血了，伤好之后可能留下永远的伤疤，那就是持续终身的影响。但是回到受伤这件事本身，也存在不同性质：有些是故意的，抓住孩子的头往桌上撞，这是绝无疑问的罪恶。但也可能是无心之失，因为一时的疏忽，似乎就可以谅解。虽然伤害也产生了，而且持续存在着。</p>
+<p>还有更麻烦的情况，就是介于有意和无意之间。在孩子看来，父母是不值得原谅的，而父母却辩称，自己只是出于无知或惯性，不知道有那么严重的后果。这种时候，断绝关系是一个合理的选择吗？没有那么容易判断。</p>
+<p>但无论如何，不管有心还是无意，父母会对孩子造成<strong>一辈子的影响，负面的影响</strong>。但真的很难判定其中的对错，就算错，谁又能说清错到什么程度？</p>
+<p>这种说法，当然有不负责任之嫌。但在这个案例上，我的判断只能到这里了。大是大非的问题上容易说的清，比如虐待或是遗弃。但很多是像王猛父母这样，在我看来属于「不大对劲，但也不足以立法禁止」的灰色地带。</p>
+<p>这样的结论有什么意义呢？</p>
+<p>所以这个时代也有让人头疼的地方。很多事你觉得没错，我觉得错了，然后我们又找不到一个公允的裁判，或者，裁判不出一个统一的结果。所有态度都是偏见，我们活在各自的偏见中，相互碰撞，争执，决裂和怨怼。</p>
+<p>我女儿今年六岁。有时也会冲我生气，因为她说一些故作老成的话，我觉得好玩，会当成一件有趣的事记下来，跟身边的人说。——我自以为，我说这些话是出自对她的喜爱。有时候她听到也很开心，但有时候她会很生气，觉得我是在嘲笑她。我也摸不清其中的规律，似乎也跟她的瞌睡程度有关。</p>
+<p>我告诉她：「我不是在嘲笑你。」</p>
+<p>她更生气：「你是在嘲笑我！」</p>
+<p>我说：「我真的没有在嘲笑你！」</p>
+<p>这就是我前面说的困境了，跟王猛和他父母的冲突何其相似。我意识到，我越是解释自己行为的正当性，她越是不依不饶，好像在说：「我这么不爽，难道你不负责吗！」最让她生气的并不是「嘲笑」这件事，而是我对「嘲笑」这件事的否认。打个不太恰当的比方，就像我踩了她的脚，我却在说：「我不是在故意踩你。」<strong>我对这件事的态度，是比疼痛本身更让人生气的一件事。</strong></p>
+<p>我对她说：「好吧，这让你不舒服，爸爸知道了。」</p>
+<p>换到以前，哪怕一代人以前，这件事有完全不同的处理方法，就是对她说：「大人聊这些很正常啊，没有嘲笑你！麻烦收起你的玻璃心！」</p>
+<p>那时候大人是权威，孩子没有权力定义大人的行为。算不算伤害，大人说了算。但正如前面所说，时代变了，话语权转移到年轻那一代了。他们的感受越发成为不容忽视的声音：「不管你怎么说，我就是感觉被嘲笑了！」</p>
+<p>「可是我……」</p>
+<p>「不要再可是了！我更生气了！」</p>
+<p>某种意义上，父母的角色越来越不好做，如果你要照顾孩子的感受，就只能面对自己的无能为力。你不理解那是什么，但我会选择承认它。</p>
+<p>承认不一定可以解决问题。我女儿会像王猛一样，在这件事——或者别的什么事上，我还没意识到的——感受到很深的伤害吗？有可能。说不定她会记一辈子，二十年后也写了一封信，血泪控诉。她会不会十年二十年不回家呢？如果真是那样，我也不能用孝道的大旗控制她。我在这篇文章里这么说人家，假如被她看到，会不会已经让她很伤心或者生气？可能性不大，但也有可能。我自认为不是一个坏父母，但我必须接受，人家有不同意的可能。</p>
+<p>我只能接受对方的指控，哪怕我心里不服。</p>
+<p>我接受的，是孩子有自己的感受。认可她感受的真实性（即使冒犯了父母的权威），是亲子关系的大势所趋。我承认自己可能会无心犯错。</p>
+<p>甚至不一定是犯错。说得准确一点，「孩子受到了伤害」和「父母伤害他」，两个表述是不同的。在一方「受到伤害」的控诉里，另一方或许毫无意识，甚至可能真的没犯任何错。「父母没有做错什么」和「孩子受伤」是完全不同的两件事，是可以平行存在，没有任何矛盾的。你摔破了一个瓷碗，你说，我以为它是塑料的，没想到它那么不经摔。OK，你没有犯错，但它受伤了。</p>
+<p>有时候想想，这真是世界上距离最近又最远的鸿沟。两个人的主观视角无法真正重合。那些说「一个碗不应该这么脆弱」的声音，固然是无理取闹。但要说「你早知道它会碎，干嘛要去摔它」，说得对，但谁又知道呢？</p>
+<p><strong>你也没有错，但我受伤了</strong>。</p>
+<p>如果说有什么结论的话，这就是我的结论。</p>
+<p>这个结论怎么用呢？对我来说，是作为父母，承认自己有可能会让孩子受伤这一事实。孩子的感受没有错，我也没有错。这样在面对子女的控诉的时候，可以多一分同理心，可以说：「我没有想伤害你，这是真的，同时我也理解你被伤害的感觉。」</p>
+<p>子女也可以说：「你们是无意的，而我被伤害是真的。」</p>
+<p>把两个人的感觉分开，我的感觉是这样，你的感觉是那样。我们各自活在自己的偏见里，没有谁是错的。</p>
+<p>这大概是最照顾父母权威的一种表达了吧。——他们不至于为了自我辩护，而强撑着说：「我没有错！所以你没有被伤害！」你感觉被伤害，是真的。我觉得自己没错，也是真的。算不上什么和解，但可以同时存在。我理解你的想法，我也想让你知道我是怎么想的。也许我们需要的只是让不同的感受被看见。</p>
+<p>也许吧。这样会有真正的沟通产生。</p>
+<p>我想，如果早一点承认，也许孩子和父母不至于12年不相见。但也说不准，毕竟谁都无法预料孩子的感受。不过，如果我是王猛的父母，我就会告诉孩子：「我想你了。我理解你对我非常生气，我就是感觉很想你。」</p>
+<p>来源：知乎 www.zhihu.com</p>
+<p>作者：<a href="http://www.zhihu.com/people/lisongwei?utm_campaign=rss&amp;utm_medium=rss&amp;utm_source=rss&amp;utm_content=author" target="_blank" rel="noopener">李松蔚</a></p>
+<p>【知乎日报】千万用户的选择，做朋友圈里的新鲜事分享大牛。<br>        <a href="http://daily.zhihu.com?utm_source=rssyanwenzi&amp;utm_campaign=tuijian&amp;utm_medium=rssnormal" target="_blank" rel="noopener">点击下载</a></p>
+<p>此问题还有 <a href="http://www.zhihu.com/question/266320691/answer/307597124?utm_campaign=rss&amp;utm_medium=rss&amp;utm_source=rss&amp;utm_content=title" target="_blank" rel="noopener">1884 个回答，查看全部。</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/02/01/如何看待「北大留美学生写万字长文数落父母‘过度关爱’，12年春节不归」？/" data-id="cjd63ql2g000w84fhawfuh1kb" class="article-share-link">Teilen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/page/4/">&laquo; zurück</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/6/">weiter &raquo;</a>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">letzter Beitrag</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/02/02/test/">test</a>
+          </li>
+        
+          <li>
+            <a href="/2018/02/02/p1/">p1</a>
+          </li>
+        
+          <li>
+            <a href="/2018/02/02/para1/">para1</a>
+          </li>
+        
+          <li>
+            <a href="/2018/02/02/do/">do111</a>
+          </li>
+        
+          <li>
+            <a href="/2018/02/02/第52届超级碗费城老鹰队VS新英格兰爱国者队，有大神预测一下比赛吗？/">第52届超级碗费城老鹰队VS新英格兰爱国者队，有大神预测一下比赛吗？</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 L<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

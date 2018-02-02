@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>实分析|笔记整理（3）——可测函数 | 个人博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="大家好！ 不知道有多少人关注到了先发的第三篇的笔记并不是实分析而是拓扑学。调整顺序的原因是书上后面的内容要用很多集合论的概念和知识，然而好像似乎作者假设我们知道？所以为了更好的理解，在自学的时候调整了一下顺序，嗯，就是这样。 这一节我们会关注一些测度相关的例子和可测函数的知识。 提供之前的笔记：  实分析|笔记整理（1）——概念引入，外测度 实分析|笔记整理（2）——勒贝格测度及相关举例  我">
+<meta property="og:type" content="article">
+<meta property="og:title" content="实分析|笔记整理（3）——可测函数">
+<meta property="og:url" content="http://yoursite.com/2018/02/02/实分析-笔记整理（3）——可测函数/index.html">
+<meta property="og:site_name" content="个人博客">
+<meta property="og:description" content="大家好！ 不知道有多少人关注到了先发的第三篇的笔记并不是实分析而是拓扑学。调整顺序的原因是书上后面的内容要用很多集合论的概念和知识，然而好像似乎作者假设我们知道？所以为了更好的理解，在自学的时候调整了一下顺序，嗯，就是这样。 这一节我们会关注一些测度相关的例子和可测函数的知识。 提供之前的笔记：  实分析|笔记整理（1）——概念引入，外测度 实分析|笔记整理（2）——勒贝格测度及相关举例  我">
+<meta property="og:image" content="https://pic1.zhimg.com/v2-100b1d81ee4d27a8f9db1163e8e742bf_b.jpg">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Csigma-algebra">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=R%5Ed">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Csigma-algebra">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Csigma-algebra">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Csigma-algebra">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Csigma-algebra">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=R%5Ed">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Cmathcal%7BB%7D_%7BR%5Ed%7D">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=R%5Ed">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Csigma-algebra">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Csigma-algebra">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Csigma-algebra">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Csigma-algebra">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=G_%5Cdelta">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=F_%5Csigma">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=R%5Ed">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=E">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=E">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=G_%5Cdelta">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=E">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=F_%5Csigma">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=E">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=n+%5Cge+1">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Cmathcal%7BO%7D_n">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=E+%5Csubset+%5Cmathcal%7BO%7D_n%2Cm%28%5Cmathcal%7BO%7D_n-E%29+%5Cle+1%2Fn">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=S%3D%5Cbigcup_%7Bi%3D1%7D%5E%7B%5Cinfty%7D+%5Cmathcal%7BO%7D_i">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=S-E">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=S">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Cepsilon">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=1%2Fn">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=E">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Cchi_E%28x%29%3D%5Cbegin%7Bcases%7D1+%26+if+%7E+x+%5Cin+E+%5C%5C+0+%26+if+%7E+x+%5Cnot+%5Cin+E%5Cend%7Bcases%7D">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=f%3D%5Csum_%7Bk%3D1%7D%5E%7BN%7Da_k+%5Cchi+_%7BR_k%7D">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=R_k">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=f%3D%5Csum_%7Bk%3D1%7D%5E%7BN%7Da_k+%5Cchi+_%7BE_k%7D">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=a_k">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=R%5Ed">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=E">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=a+%5Cin+R">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=a">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=-%5Cinfty+%3C+f%28x%29+%3C+%5Cinfty">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=a">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5C%7Bf+%5Cle+a%5C%7D%3D%5Cbigcap_%7Bk%3D1%7D%5E%7B%5Cinfty%7D%5C%7Bf%3Ca%2B1%2Fk%5C%7D%2C%5C%7Bf%3Ca%5C%7D%3D%5Cbigcup_%7Bk%3D1%7D%5E%7B%5Cinfty%7D%5C%7Bf+%5Cle+a-1%2Fk%5C%7D">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=f">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Cmathcal%7BO%7D">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=f%5E%7B-1%7D%28%5Cmathcal%7BO%7D%29">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=F">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=f%5E%7B-1%7D%28F%29">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=R%5Ed">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=f">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5CPhi">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5CPhi+%5Ccirc+f">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5CPhi">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5CPhi%5E%7B-1%7D%28%28-%5Cinfty%2Ca%29%29">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%28%5CPhi+%5Ccirc+f%29%5E%7B-1%7D%28%28-%5Cinfty%2Ca%29%29">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5C%7Bf_n%5C%7D_%7Bn%3D1%7D%5E%7B%5Cinfty%7D">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Csup_nf_n%28x%29%2C%5Cinf_nf_n%28x%29%2C%5Clim_%7Bn+%5Cto+%5Cinfty%7D+%5Csup+f_n%28x%29%2C%5Clim_%7Bn+%5Cto+%5Cinfty%7D+%5Cinf+f_n%28x%29">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5C%7B%5Csup_nf_n%3Ea%5C%7D%3D%5Cbigcup_%7Bn%7D%5C%7Bf_n+%3Ea%5C%7D">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=f_n">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=a">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=a">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=a">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Cinf">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=-f">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=f">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Clim_%7Bn+%5Cto+%5Cinfty%7D+%5Csup+f_n%28x%29%3D%5Cinf_k%5C%7B%5Csup_%7Bn+%5Cge+k%7Df_n+%5C%7D">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Clim_%7Bn+%5Cto+%5Cinfty%7D+%5Cinf+f_n%28x%29%3D%5Csup_k%5C%7B%5Cinf_%7Bn+%5Cge+k%7Df_n+%5C%7D">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5C%7Bf_n%5C%7D_%7Bn%3D1%7D%5E%7B%5Cinfty%7D">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Clim_%7Bn+%5Cto+%5Cinfty%7Df_n%28x%29%3Df%28x%29">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=f">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=f%28x%29%3D%5Clim_%7Bn+%5Cto+%5Cinfty%7D+%5Csup+f_n%28x%29%3D%5Clim_%7Bn+%5Cto+%5Cinfty%7D+%5Cinf+f_n%28x%29">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=f%2Cg">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=f%5Ek%2Ck+%5Cge+1%2Ck+%5Cin+%5Cmathbb%7BZ%7D">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=f%2Cg">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=fg%2Cf%2Bg">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5C%7Bf%5Ek%3Ea+%5C%7D%3D%5C%7Bf%3Ea%5E%7B1%2Fk%7D%5C%7D">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=k">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5C%7Bf%5Ek%3Ea+%5C%7D%3D%5C%7Bf%3Ea%5E%7B1%2Fk%7D%5C%7D+%5Ccup+%5C%7Bf+%3C+-a%5E%7B1%2Fk%7D%5C%7D">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=k">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=f%2Bg">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5C%7Bf%2Bg+%3E+a%5C%7D%3D%5Cbigcup_%7Br+%5Cin+%5Cmathbb%7BQ%7D%7D%5C%7Bf%3Ea-r%5C%7D+%5Ccap+%5C%7Bg+%3Er%5C%7D">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=fg">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=fg%3D%5Cfrac14%5B%28f%2Bg%29%5E2-%28f-g%29%5E2%5D">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=f%2Cg">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=E">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5C%7Bx+%5Cin+E+%2C+f%28x%29+%5Cne+g%28x%29%5C%7D">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=f%28x%29%2Cg%28x%29">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=f%28x%29%3Dg%28x%29+%5Cquad+%5Cmathrm%7Ba.e.%7D+%5Cquad+x+%5Cin+E">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=f%28x%29%3Dg%28x%29+%5Cquad+%5Cmathrm%7Ba.e.%7D">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=f">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=f%28x%29%3Dg%28x%29+%5Cquad+%5Cmathrm%7Ba.e.%7D%5Cquad+x">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=g">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5C%7Bf%3Ca%5C%7D%2C%5C%7Bg%3Ca%5C%7D">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=f">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=R%5Ed">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5C%7B%5Cphi_k%5C%7D_%7Bk%3D1%7D%5E%7B%5Cinfty%7D">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Cphi_k%28x%29+%5Cle+%5Cphi_%7Bk%2B1%7D%28x%29">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=x">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Clim_%7Bk+%5Cto+%5Cinfty%7D%5Cphi_k%28x%29+%3Df%28x%29">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=F_N%28x%29%3D%5Cbegin%7Bcases%7Df%28x%29+%26+if+%7Ex+%5Cin+Q_n%2Cf%28x%29+%5Cle+N+%5C%5C+N+%26+if+%7E+x+%5Cin+Q_n%2Cf%28x%29+%3E+N+%5C%5C+0+%26+otherwise+%5Cend%7Bcases%7D">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=Q_n">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=n">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=F_N%28x%29+%5Cto+f%28x%29">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=f%28x%29">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=F_N%28x%29">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5B0%2CN%5D">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=E_%7Bl%2Cm%7D%3D%5C%7Bx+%5Cin+Q_n%3A+%5Cfrac%7Bl%7D%7BM%7D+%3C+F_N%28x%29+%5Cle+%5Cfrac%7Bl%2B1%7D%7BM%7D%5C%7D%2C0+%5Cle+l%3CMN">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5B0%2CN%5D">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=N">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=1">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5B0%2C1%5D">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=M">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=F_%7BN%2CM%7D%28x%29%3D%5Csum_%7Bl%7D%5Cfrac%7Bl%7D%7BM%7D%5Cchi_%7BE_%7Bl%2Cm%7D%7D%28x%29">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=0+%5Cle+F_N%28x%29-F_%7BN%2CM%7D%28x%29+%5Cle+1%2FM">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=1%2FM">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Cphi_k%28x%29%3DF_%7B2%5Ek%2C2%5Ek%7D">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=k">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Cphi_k%28x%29">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=0+%5Cle+F_N%28x%29-%5Cphi_k%28x%29+%5Cle+1%2F2%5Ek">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=f">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=R%5Ed">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5C%7B%5Cphi_k%5C%7D_%7Bk%3D1%7D%5E%7B%5Cinfty%7D">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%7C%5Cphi_k%28x%29%7C+%5Cle+%7C%5Cphi_%7Bk%2B1%7D%28x%29%7C">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=x">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Clim_%7Bk+%5Cto+%5Cinfty%7D%5Cphi_k%28x%29+%3Df%28x%29">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%7C%5Cphi_k%28x%29%7C+%5Cle+%7Cf%28x%29%7C">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=f%28x%29%3Df%5E%2B%28x%29-f%5E-%28x%29">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=f%5E%2B%28x%29%3Dmax%28f%28x%29%2C0%29%2Cf%5E-%28x%29%3Dmax%28-f%28x%29%2C0%29">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5C%7B%5Cphi_k%5E%7B%281%29%7D%5C%7D_%7Bk%3D1%7D%5E%7B%5Cinfty%7D%2C%5C%7B%5Cphi_k%5E%7B%282%29%7D%5C%7D_%7Bk%3D1%7D%5E%7B%5Cinfty%7D">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Cphi_k%28x%29%3D%5Cphi_k%5E%7B%281%29%7D%28x%29-%5Cphi_k%5E%7B%282%29%7D%28x%29">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%7C%5Cphi_k%28x%29%7C%3D%5Cphi_k%5E%7B%281%29%7D%28x%29%2B%5Cphi_k%5E%7B%282%29%7D%28x%29">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=f">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=R%5Ed">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5C%7B%5Cpsi_k%5C%7D_%7Bk%3D1%7D%5E%7B%5Cinfty%7D">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Cpsi_k%28x%29+%5Cle+%5Cpsi_%7Bk%2B1%7D%28x%29">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=x">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Clim_%7Bk+%5Cto+%5Cinfty%7D%5Cpsi_k%28x%29+%3Df%28x%29">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=f%3D%5Cchi_E">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=E">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=F">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=m%28E+%5Ctriangle+F%29+%5Cle+%5Cepsilon">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=F%3D%5Cbigcup_%7Bi%3D1%7D%5E%7BN%7DQ_i">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Ctilde%7BR%7D_i">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Cbigcup_%7Bi%3D1%7D%5E%7BN%7DQ_i%3D%5Cbigcup_%7Bi%3D1%7D%5E%7BM%7D%5Ctilde%7BR%7D_i">
+<meta property="og:image" content="https://pic2.zhimg.com/v2-e90ce0e87023f304273754b8166a68cd_b.jpg">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=m%28E+%5Ctriangle+%5Cbigcup_%7Bi%3D1%7D%5E%7BM%7DR_i%29+%5Cle+2%5Cepsilon">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=f%28x%29%3D%5Csum_%7Bj%3D1%7D%5E%7BM%7D%5Cchi_%7BR_j%7D%28x%29">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Cle+2%5Cepsilon">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=E">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=R_j">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Cepsilon">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Cpsi_k%28x%29">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=E_k%3D%5C%7Bx%3Af%28x%29+%5Cne+%5Cpsi_k%28x%29%5C%7D">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=m%28E_k%29+%5Cle+2%5E%7B-k%7D">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=F_K%3D%5Cbigcup_%7Bj%3DK%2B1%7D%5E%7B%5Cinfty%7DE_j%2CF%3D%5Cbigcap_%7Bi%3D1%7D%5E%7B%5Cinfty%7DF_i">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=m%28F%29%3D0%2Cm%28F_K%29+%5Cle+2%5E%7B-K%7D">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Cpsi_k%28x%29+%5Cto+f%28x%29">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=F">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=F_1+%5Csupset+F_2+%5Csupset+F_3+%5Csupset+...">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=F">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=F_k">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5C%7Bf_k%5C%7D_%7Bk%3D1%7D%5E%7B%5Cinfty%7D">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=E">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=m%28E%29+%3C+%5Cinfty">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=E">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=f_k+%5Cto+f+%5Cquad+%5Cmathrm%7Ba.e.%7D+">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Cepsilon">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=A_%5Cepsilon">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=A_%5Cepsilon+%5Csubset+E%2Cm%28E-A_%5Cepsilon%29%3C%5Cepsilon">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=f_k+">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=A_%5Cepsilon">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=f">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=x+%5Cin+E">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=f_k%28x%29+%5Cto+f%28x%29">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=n%2Ck">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=E_k%5En%3D%5C%7Bx+%5Cin+E+%3A%7Cf_j%28x%29+-f%28x%29%7C%3C+1%2Fn%2C+%5Cforall+j%3Ek%5C%7D">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=f%28x%29">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=E_k%5En+%5Csubset+E_%7Bk%2B1%7D%5En%2CE_k%5En+%5Cnearrow+E">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=k_n">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=m%28E-E_%7Bk_n%7D%5En%29+%3C1%2F2%5En">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=j%3Ek_n%2Cx+%5Cin+E%5En_%7Bk_n%7D">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%7Cf_j%28x%29-f%28x%29%7C%3C1%2Fn">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=N">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Csum_%7Bn%3DN%7D%5E%7B%5Cinfty%7D2%5E%7B-n%7D+%3C+%5Cepsilon%2F2">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Ctilde%7BA_%5Cepsilon%7D%3D%5Cbigcap_%7Bn+%5Cge+N%7DE_%7Bk_n%7D%5En">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=m%28E-%5Ctilde%7BA_%5Cepsilon%7D%29+%5Cle+%5Csum_%7Bn%3DN%7D%5E%7B%5Cinfty%7Dm%28E-E_%7Bk_n%7D%5E%7Bn%7D%29%3C%5Cepsilon%2F2">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Cdelta%3E0">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=N">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=n%3EN">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%7Cf_n%28x%29-f%28x%29%7C%3C%5Cdelta">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Cdelta%3E0">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=n">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Cdelta+%3E+1%2Fn">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=x+%5Cin+%5Ctilde%7BA_%5Cepsilon%7D">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=x+%5Cin+E_%7Bk_n%7D%5En">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=j%3Ek_n">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%7Cf_j%28x%29-f%28x%29%7C%3C%5Cdelta">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=A_%5Cepsilon">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=A_%5Cepsilon+%5Csubset+%5Ctilde%7BA_%5Cepsilon%7D%2Cm%28%5Ctilde%7BA_%5Cepsilon%7D-A_%5Cepsilon%29%3C%5Cepsilon%2F2">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=m%28E-A_%5Cepsilon%29%3C%5Cepsilon">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=f">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=E">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Cepsilon%3E0">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=F_%5Cepsilon">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=F_%5Cepsilon+%5Csubset+E">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=m%28E-F_%5Cepsilon%29+%5Cle+%5Cepsilon">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=f+%7C+_%7BF_%5Cepsilon%7D">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=f_n">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=f_n+%5Cto+f+%5Cquad+%5Cmathrm%7Ba.e.%7D">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=E_n">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=m%28E_n%29+%3C1%2F2%5En">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=f_n">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=E_n">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=A_%7B%5Cepsilon%2F3%7D">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=f_n">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=f">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=m%28E-A_%7B%5Cepsilon%2F3%7D%29%5Cle+%5Cepsilon%2F3">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=F%27%3DA_%7B%5Cepsilon%2F3%7D-%5Cbigcup_%7Bn+%5Cge+N%7DE_n">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Csum_%7Bn+%5Cge+N%7D1%2F2%5En%3C%5Cepsilon%2F3">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=n+%5Cge+N">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=f_n">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=F%27">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=f">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=F_%5Cepsilon">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=F_%5Cepsilon+%5Csubset+F%27%2Cm%28F%27-F_%5Cepsilon%29%3C%5Cepsilon%2F3">
+<meta property="og:image" content="https://pic2.zhimg.com/v2-7f82417b5c54bfe9ffc8f4e1706bcedf_b.jpg">
+<meta property="og:updated_time" content="2018-02-02T13:48:46.240Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="实分析|笔记整理（3）——可测函数">
+<meta name="twitter:description" content="大家好！ 不知道有多少人关注到了先发的第三篇的笔记并不是实分析而是拓扑学。调整顺序的原因是书上后面的内容要用很多集合论的概念和知识，然而好像似乎作者假设我们知道？所以为了更好的理解，在自学的时候调整了一下顺序，嗯，就是这样。 这一节我们会关注一些测度相关的例子和可测函数的知识。 提供之前的笔记：  实分析|笔记整理（1）——概念引入，外测度 实分析|笔记整理（2）——勒贝格测度及相关举例  我">
+<meta name="twitter:image" content="https://pic1.zhimg.com/v2-100b1d81ee4d27a8f9db1163e8e742bf_b.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="个人博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">个人博客</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-实分析-笔记整理（3）——可测函数" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/02/02/实分析-笔记整理（3）——可测函数/" class="article-date">
+  <time datetime="2018-02-02T05:00:46.000Z" itemprop="datePublished">2018-02-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      实分析|笔记整理（3）——可测函数
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure><img src="https://pic1.zhimg.com/v2-100b1d81ee4d27a8f9db1163e8e742bf_b.jpg" alt=""></figure>
+
+<p>大家好！</p>
+<p>不知道有多少人关注到了先发的第三篇的笔记并不是实分析而是拓扑学。调整顺序的原因是书上后面的内容要用很多集合论的概念和知识，然而好像似乎作者假设我们知道？所以为了更好的理解，在自学的时候调整了一下顺序，嗯，就是这样。</p>
+<p>这一节我们会关注一些测度相关的例子和可测函数的知识。</p>
+<p>提供之前的笔记：</p>
+<ul>
+<li><a href="https://zhuanlan.zhihu.com/p/31982152" target="_blank" rel="noopener">实分析|笔记整理（1）——概念引入，外测度</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/33180264" target="_blank" rel="noopener">实分析|笔记整理（2）——勒贝格测度及相关举例</a></li>
+</ul>
+<p>我们开始本节的内容。</p>
+<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul>
+<li>西格玛代数和博涅尔集</li>
+<li>可测函数</li>
+<li>用简单函数和阶梯函数估计</li>
+<li>李特尔伍德三原则</li>
+</ul>
+<h2 id="西格玛代数和博涅尔集-Borel-Sets"><a href="#西格玛代数和博涅尔集-Borel-Sets" class="headerlink" title="西格玛代数和博涅尔集(  ,Borel Sets)"></a>西格玛代数和博涅尔集( <img src="https://www.zhihu.com/equation?tex=%5Csigma-algebra" alt="\sigma-algebra"> ,Borel Sets)</h2><p>这是在测度中定义的概念，前者更是高等概率论的理论基础。用这些例子去理解测度，有的时候会有更好的效果。</p>
+<p>先来看看定义吧。</p>
+<blockquote>
+<p>Definition:sigma-algebra,Borel Sets<br>定义一系列由 <img src="https://www.zhihu.com/equation?tex=R%5Ed" alt="R^d"> 的子集组成的集合为集合的 <img src="https://www.zhihu.com/equation?tex=%5Csigma-algebra" alt="\sigma-algebra"> ，如果它们在可数并，可数交和补集运算意义下封闭。其中定义最小的包含所有开集的 <img src="https://www.zhihu.com/equation?tex=%5Csigma-algebra" alt="\sigma-algebra"> 为博涅尔 <img src="https://www.zhihu.com/equation?tex=%5Csigma-algebra" alt="\sigma-algebra"> ，这个代数下的所有元素为博涅尔集。</p>
+</blockquote>
+<p>特别地，如果一个博涅尔 <img src="https://www.zhihu.com/equation?tex=%5Csigma-algebra" alt="\sigma-algebra"> 定义在了 <img src="https://www.zhihu.com/equation?tex=R%5Ed" alt="R^d"> 上，那么记为 <img src="https://www.zhihu.com/equation?tex=%5Cmathcal%7BB%7D_%7BR%5Ed%7D" alt="\mathcal{B}_{R^d}"> 。</p>
+<p>另外，我相信你知道一个“代数”究竟是如何定义的，这是高等代数的东西。</p>
+<p>一个很直接的例子就是在 <img src="https://www.zhihu.com/equation?tex=R%5Ed" alt="R^d"> 上所有的可测集。我相信你明白，它为什么构成了一个 <img src="https://www.zhihu.com/equation?tex=%5Csigma-algebra" alt="\sigma-algebra"> 。</p>
+<p>还有，为了突出这个“最小”，在集合论中一般定义为“所有包含开集的 <img src="https://www.zhihu.com/equation?tex=%5Csigma-algebra" alt="\sigma-algebra"> 的交集”。如果看过了拓扑学第三节的笔记，我相信你并不陌生。</p>
+<p>所以，因为开集可测，所以对于任意的包含所有开集的 <img src="https://www.zhihu.com/equation?tex=%5Csigma-algebra" alt="\sigma-algebra"> ，它都是包含博涅尔 <img src="https://www.zhihu.com/equation?tex=%5Csigma-algebra" alt="\sigma-algebra"> 的。另外还需要注意的是，这个是严格包含。也就是说存在一个可测集，它并不是博涅尔集。当然为什么，书上给了个例子，篇幅允许再讨论这些内容（或许会出现在之后的习题里？）。</p>
+<p>从博涅尔集的角度来看呢，可测集就是博涅尔集的进一步推广。这个部分可以由下面的结论得到。在这之前先给两个定义。</p>
+<blockquote>
+<p>Definition:G-delta sets,F-sigma sets<br>定义可数个开集的交为 <img src="https://www.zhihu.com/equation?tex=G_%5Cdelta" alt="G_\delta"> 集，可数个闭集的并为 <img src="https://www.zhihu.com/equation?tex=F_%5Csigma" alt="F_\sigma"> 集。</p>
+</blockquote>
+<p>所以这个结论是这样的。</p>
+<blockquote>
+<p>Corollary:<br>一个 <img src="https://www.zhihu.com/equation?tex=R%5Ed" alt="R^d"> 的子集 <img src="https://www.zhihu.com/equation?tex=E" alt="E"> 可测<br>(1)当且仅当 <img src="https://www.zhihu.com/equation?tex=E" alt="E"> 与 <img src="https://www.zhihu.com/equation?tex=G_%5Cdelta" alt="G_\delta"> 的差集为一个测度为0的集合。<br>(2)当且仅当 <img src="https://www.zhihu.com/equation?tex=E" alt="E"> 与 <img src="https://www.zhihu.com/equation?tex=F_%5Csigma" alt="F_\sigma"> 的差集为一个测度为0的集合。</p>
+</blockquote>
+<p>我们证明一下这个结论。</p>
+<p>有一个方向是很显然的，因为测度本身是具有可列可加性的。关键是另一个方向。</p>
+<p>对于第一个论断，如果 <img src="https://www.zhihu.com/equation?tex=E" alt="E"> 是一个可测集，那么对于每一个 <img src="https://www.zhihu.com/equation?tex=n+%5Cge+1" alt="n \ge 1"> ，都存在一个开集 <img src="https://www.zhihu.com/equation?tex=%5Cmathcal%7BO%7D_n" alt="\mathcal{O}_n"> ，满足 <img src="https://www.zhihu.com/equation?tex=E+%5Csubset+%5Cmathcal%7BO%7D_n%2Cm%28%5Cmathcal%7BO%7D_n-E%29+%5Cle+1%2Fn" alt="E \subset \mathcal{O}_n,m(\mathcal{O}_n-E) \le 1/n"> （请务必很熟悉这个构造），考虑 <img src="https://www.zhihu.com/equation?tex=S%3D%5Cbigcup_%7Bi%3D1%7D%5E%7B%5Cinfty%7D+%5Cmathcal%7BO%7D_i" alt="S=\bigcup_{i=1}^{\infty} \mathcal{O}_i"> ，那么 <img src="https://www.zhihu.com/equation?tex=S-E" alt="S-E"> 就是我们要的测度为0的集合，而 <img src="https://www.zhihu.com/equation?tex=S" alt="S"> 就是所要的开集。</p>
+<p>而对于第二个论断，只需要考虑上一节中后半段一个四个分论点的第二个结论“可测集可以由闭集在内部逼近”，把 <img src="https://www.zhihu.com/equation?tex=%5Cepsilon" alt="\epsilon"> 改为 <img src="https://www.zhihu.com/equation?tex=1%2Fn" alt="1/n"> 即可。我相信你自己可以完成相关的证明。</p>
+<h2 id="可测函数-measurable-functions"><a href="#可测函数-measurable-functions" class="headerlink" title="可测函数(measurable functions)"></a>可测函数(measurable functions)</h2><p>这一块可以说是下面要说的积分理论的核心了哦。重要性也不言而喻（虽然目前来看，还没有啥证明是不重要的……）。</p>
+<p>从特征函数开始吧。</p>
+<blockquote>
+<p>Definition:characteristic function<br>定义一个集合 <img src="https://www.zhihu.com/equation?tex=E" alt="E"> 的特征函数表示为 <img src="https://www.zhihu.com/equation?tex=%5Cchi_E%28x%29%3D%5Cbegin%7Bcases%7D1+%26+if+%7E+x+%5Cin+E+%5C%5C+0+%26+if+%7E+x+%5Cnot+%5Cin+E%5Cend%7Bcases%7D" alt="\chi_E(x)=\begin{cases}1 &amp; if ~ x \in E \\ 0 &amp; if ~ x \not \in E\end{cases}"></p>
+</blockquote>
+<p>不知道大家是否还记得定积分的定义。我们在数分中学过的定积分一般是黎曼积分，它的积分原理就是不断的作分割，再使用极限的思想去逼近。比方说在一维定积分里，就是对长度不断的分割，而在二重积分里就是对面积进行分割，分割成为一个又一个的矩形。</p>
+<p>如果我们应用特征函数的标记，其实它相当于是 <img src="https://www.zhihu.com/equation?tex=f%3D%5Csum_%7Bk%3D1%7D%5E%7BN%7Da_k+%5Cchi+_%7BR_k%7D" alt="f=\sum_{k=1}^{N}a_k \chi _{R_k}"> （它有一个名字叫<strong>阶梯函数</strong>(step function)）（请注意，没有取极限的步骤）。其中每一个 <img src="https://www.zhihu.com/equation?tex=R_k" alt="R_k"> 都是矩形。但是，我们在之后学习勒贝格积分的时候就会明白，这个时候积分就要定义为 <img src="https://www.zhihu.com/equation?tex=f%3D%5Csum_%7Bk%3D1%7D%5E%7BN%7Da_k+%5Cchi+_%7BE_k%7D" alt="f=\sum_{k=1}^{N}a_k \chi _{E_k}"> （我们还给了它一个名字叫<strong>简单函数</strong>(simple function)）。另外有必要多提一句的是， <img src="https://www.zhihu.com/equation?tex=a_k" alt="a_k"> 只是某个常数而已。这就是勒贝格积分的本源定义。</p>
+<p>从头开始吧，来看看怎么定义一个函数可测。</p>
+<blockquote>
+<p>Definition:measurable<br>如果定义在一个可测的 <img src="https://www.zhihu.com/equation?tex=R%5Ed" alt="R^d"> 的子集 <img src="https://www.zhihu.com/equation?tex=E" alt="E"> 上的函数满足 ![f^{-1}(<a href="https://www.zhihu.com/equation?tex=f%5E%7B-1%7D%28%5B-%5Cinfty%2Ca%29%29%3D%5C%7Bx+%5Cin+E%3Af%28x%29+%3Ca%5C%7D%3D%5C%7Bf%3Ca%5C%7D" target="_blank" rel="noopener">-\infty,a))={x \in E:f(x) &lt;a}={f&lt;a}</a> 对于所有的 <img src="https://www.zhihu.com/equation?tex=a+%5Cin+R" alt="a \in R"> 都是一个可测集，就称函数可测。</p>
+</blockquote>
+<p>我觉得，大家第一眼看到无穷的一边是闭区间，想必就要骂人了吧？这里提一下，我们在这里的环境下，允许你取到无穷大的值，包括这里的值 <img src="https://www.zhihu.com/equation?tex=a" alt="a"> 。具体的应用场景之后会说到。所以如果说这个函数是有界的，那我们指的还是 <img src="https://www.zhihu.com/equation?tex=-%5Cinfty+%3C+f%28x%29+%3C+%5Cinfty" alt="-\infty &lt; f(x) &lt; \infty"> 。</p>
+<p>当然，如果给 <img src="https://www.zhihu.com/equation?tex=a" alt="a"> 的这个方向取等号，也是无伤大雅的。这是因为有构造 <img src="https://www.zhihu.com/equation?tex=%5C%7Bf+%5Cle+a%5C%7D%3D%5Cbigcap_%7Bk%3D1%7D%5E%7B%5Cinfty%7D%5C%7Bf%3Ca%2B1%2Fk%5C%7D%2C%5C%7Bf%3Ca%5C%7D%3D%5Cbigcup_%7Bk%3D1%7D%5E%7B%5Cinfty%7D%5C%7Bf+%5Cle+a-1%2Fk%5C%7D" alt="\{f \le a\}=\bigcap_{k=1}^{\infty}\{f&lt;a+1/k\},\{f&lt;a\}=\bigcup_{k=1}^{\infty}\{f \le a-1/k\}"> 所支撑。</p>
+<p>关于可测函数的几个性质如下</p>
+<blockquote>
+<p>Property 1:<br>有界函数 <img src="https://www.zhihu.com/equation?tex=f" alt="f"> 可测当且仅当对于所有的开集 <img src="https://www.zhihu.com/equation?tex=%5Cmathcal%7BO%7D" alt="\mathcal{O}"> , <img src="https://www.zhihu.com/equation?tex=f%5E%7B-1%7D%28%5Cmathcal%7BO%7D%29" alt="f^{-1}(\mathcal{O})"> 可测。且对于所有的闭集 <img src="https://www.zhihu.com/equation?tex=F" alt="F"> , <img src="https://www.zhihu.com/equation?tex=f%5E%7B-1%7D%28F%29" alt="f^{-1}(F)"> 可测。</p>
+</blockquote>
+<p>当然了，如果对于一个无界函数，如果我们在两个特殊的点多加了两条可测的假设的话，结论仍然是对的。</p>
+<blockquote>
+<p>Property 2<br> <img src="https://www.zhihu.com/equation?tex=R%5Ed" alt="R^d"> 上的连续函数均可测。且若对于一个有限可测的函数 <img src="https://www.zhihu.com/equation?tex=f" alt="f"> 和一个连续函数 <img src="https://www.zhihu.com/equation?tex=%5CPhi" alt="\Phi"> , <img src="https://www.zhihu.com/equation?tex=%5CPhi+%5Ccirc+f" alt="\Phi \circ f"> 是可测的。</p>
+</blockquote>
+<p>由于 <img src="https://www.zhihu.com/equation?tex=%5CPhi" alt="\Phi"> 是一个连续函数，所以 <img src="https://www.zhihu.com/equation?tex=%5CPhi%5E%7B-1%7D%28%28-%5Cinfty%2Ca%29%29" alt="\Phi^{-1}((-\infty,a))"> 是一个开集，那么 <img src="https://www.zhihu.com/equation?tex=%28%5CPhi+%5Ccirc+f%29%5E%7B-1%7D%28%28-%5Cinfty%2Ca%29%29" alt="(\Phi \circ f)^{-1}((-\infty,a))"> 就是一个开集的逆函数，上面的定理告诉我们这是可测的。</p>
+<blockquote>
+<p>Property 3<br>假设 <img src="https://www.zhihu.com/equation?tex=%5C%7Bf_n%5C%7D_%7Bn%3D1%7D%5E%7B%5Cinfty%7D" alt="\{f_n\}_{n=1}^{\infty}"> 是一个可测函数序列，那么 <img src="https://www.zhihu.com/equation?tex=%5Csup_nf_n%28x%29%2C%5Cinf_nf_n%28x%29%2C%5Clim_%7Bn+%5Cto+%5Cinfty%7D+%5Csup+f_n%28x%29%2C%5Clim_%7Bn+%5Cto+%5Cinfty%7D+%5Cinf+f_n%28x%29" alt="\sup_nf_n(x),\inf_nf_n(x),\lim_{n \to \infty} \sup f_n(x),\lim_{n \to \infty} \inf f_n(x)"> 都是可测的。</p>
+</blockquote>
+<p>需要注意到的事实是： <img src="https://www.zhihu.com/equation?tex=%5C%7B%5Csup_nf_n%3Ea%5C%7D%3D%5Cbigcup_%7Bn%7D%5C%7Bf_n+%3Ea%5C%7D" alt="\{\sup_nf_n&gt;a\}=\bigcup_{n}\{f_n &gt;a\}"> （因为要求是所有的 <img src="https://www.zhihu.com/equation?tex=f_n" alt="f_n"> 满足上确界大于 <img src="https://www.zhihu.com/equation?tex=a" alt="a"> 的取值集合，因为上确界肯定是上界，所以如果函数在某一个点取值是大于 <img src="https://www.zhihu.com/equation?tex=a" alt="a"> 的，那么肯定它的上确界取值也大于 <img src="https://www.zhihu.com/equation?tex=a" alt="a"> 。但是我不知道这样的理解是否正确，我自己之前没有见过类似的表示，<strong>这里求个征解</strong>。），所以是可数个开集的并，那自然是一个可测集。而对于 <img src="https://www.zhihu.com/equation?tex=%5Cinf" alt="\inf"> 的情况是同理的，只要注意到 <img src="https://www.zhihu.com/equation?tex=-f" alt="-f"> 和 <img src="https://www.zhihu.com/equation?tex=f" alt="f"> 同时为可测集即可。</p>
+<p>至于后两个地方，注意到 <img src="https://www.zhihu.com/equation?tex=%5Clim_%7Bn+%5Cto+%5Cinfty%7D+%5Csup+f_n%28x%29%3D%5Cinf_k%5C%7B%5Csup_%7Bn+%5Cge+k%7Df_n+%5C%7D" alt="\lim_{n \to \infty} \sup f_n(x)=\inf_k\{\sup_{n \ge k}f_n \}"> ， <img src="https://www.zhihu.com/equation?tex=%5Clim_%7Bn+%5Cto+%5Cinfty%7D+%5Cinf+f_n%28x%29%3D%5Csup_k%5C%7B%5Cinf_%7Bn+%5Cge+k%7Df_n+%5C%7D" alt="\lim_{n \to \infty} \inf f_n(x)=\sup_k\{\inf_{n \ge k}f_n \}"> 即可。</p>
+<p>这个性质的理解难度在于这些标记的等价表示。至少我自己是想了半天……</p>
+<blockquote>
+<p>Property 4<br>如果 <img src="https://www.zhihu.com/equation?tex=%5C%7Bf_n%5C%7D_%7Bn%3D1%7D%5E%7B%5Cinfty%7D" alt="\{f_n\}_{n=1}^{\infty}"> 是一个可测函数序列，并且 <img src="https://www.zhihu.com/equation?tex=%5Clim_%7Bn+%5Cto+%5Cinfty%7Df_n%28x%29%3Df%28x%29" alt="\lim_{n \to \infty}f_n(x)=f(x)"> ，则 <img src="https://www.zhihu.com/equation?tex=f" alt="f"> 是可测的。</p>
+</blockquote>
+<p>如何得到？只需要注意到 <img src="https://www.zhihu.com/equation?tex=f%28x%29%3D%5Clim_%7Bn+%5Cto+%5Cinfty%7D+%5Csup+f_n%28x%29%3D%5Clim_%7Bn+%5Cto+%5Cinfty%7D+%5Cinf+f_n%28x%29" alt="f(x)=\lim_{n \to \infty} \sup f_n(x)=\lim_{n \to \infty} \inf f_n(x)"> 即可。这是上面这个性质的直接推论。</p>
+<blockquote>
+<p>Property 5<br>如果 <img src="https://www.zhihu.com/equation?tex=f%2Cg" alt="f,g"> 可测，那么<br>(1) <img src="https://www.zhihu.com/equation?tex=f%5Ek%2Ck+%5Cge+1%2Ck+%5Cin+%5Cmathbb%7BZ%7D" alt="f^k,k \ge 1,k \in \mathbb{Z}"> 是可测的。<br>(2)当且仅当 <img src="https://www.zhihu.com/equation?tex=f%2Cg" alt="f,g"> 是有界函数时， <img src="https://www.zhihu.com/equation?tex=fg%2Cf%2Bg" alt="fg,f+g"> 可测。</p>
+</blockquote>
+<p>第一个挺显然的，这是因为， <img src="https://www.zhihu.com/equation?tex=%5C%7Bf%5Ek%3Ea+%5C%7D%3D%5C%7Bf%3Ea%5E%7B1%2Fk%7D%5C%7D" alt="\{f^k&gt;a \}=\{f&gt;a^{1/k}\}"> 在 <img src="https://www.zhihu.com/equation?tex=k" alt="k"> 为奇数的时候成立，而 <img src="https://www.zhihu.com/equation?tex=%5C%7Bf%5Ek%3Ea+%5C%7D%3D%5C%7Bf%3Ea%5E%7B1%2Fk%7D%5C%7D+%5Ccup+%5C%7Bf+%3C+-a%5E%7B1%2Fk%7D%5C%7D" alt="\{f^k&gt;a \}=\{f&gt;a^{1/k}\} \cup \{f &lt; -a^{1/k}\}"> 在 <img src="https://www.zhihu.com/equation?tex=k" alt="k"> 为偶数的时候成立。</p>
+<p>第二个的话，对于 <img src="https://www.zhihu.com/equation?tex=f%2Bg" alt="f+g"> 的情况，注意下 <img src="https://www.zhihu.com/equation?tex=%5C%7Bf%2Bg+%3E+a%5C%7D%3D%5Cbigcup_%7Br+%5Cin+%5Cmathbb%7BQ%7D%7D%5C%7Bf%3Ea-r%5C%7D+%5Ccap+%5C%7Bg+%3Er%5C%7D" alt="\{f+g &gt; a\}=\bigcup_{r \in \mathbb{Q}}\{f&gt;a-r\} \cap \{g &gt;r\}"> 。对于 <img src="https://www.zhihu.com/equation?tex=fg" alt="fg"> 的情况，注意下 <img src="https://www.zhihu.com/equation?tex=fg%3D%5Cfrac14%5B%28f%2Bg%29%5E2-%28f-g%29%5E2%5D" alt="fg=\frac14[(f+g)^2-(f-g)^2]"> 即可。</p>
+<p>如果你看上面的性质不能够很好的顺下来，而是走一步卡一步的话，说明在上一节中，关于可测的性质掌握的很不熟练哦，还需要回去再好好的翻翻看。</p>
+<p>下面介绍的性质，也是实分析中特有的。</p>
+<blockquote>
+<p>Definition:almost everywhere<br>对于两个函数 <img src="https://www.zhihu.com/equation?tex=f%2Cg" alt="f,g"> ，给定集合 <img src="https://www.zhihu.com/equation?tex=E" alt="E"> ，如果 <img src="https://www.zhihu.com/equation?tex=%5C%7Bx+%5Cin+E+%2C+f%28x%29+%5Cne+g%28x%29%5C%7D" alt="\{x \in E , f(x) \ne g(x)\}"> 这个集合的测度为0，那么称 <img src="https://www.zhihu.com/equation?tex=f%28x%29%2Cg%28x%29" alt="f(x),g(x)"> 几乎处处相等。并记为 <img src="https://www.zhihu.com/equation?tex=f%28x%29%3Dg%28x%29+%5Cquad+%5Cmathrm%7Ba.e.%7D+%5Cquad+x+%5Cin+E" alt="f(x)=g(x) \quad \mathrm{a.e.} \quad x \in E"> ，或者简写为 <img src="https://www.zhihu.com/equation?tex=f%28x%29%3Dg%28x%29+%5Cquad+%5Cmathrm%7Ba.e.%7D" alt="f(x)=g(x) \quad \mathrm{a.e.}"> 。</p>
+</blockquote>
+<p>一个直接的性质如下</p>
+<blockquote>
+<p>Property 6<br>如果 <img src="https://www.zhihu.com/equation?tex=f" alt="f"> 可测， <img src="https://www.zhihu.com/equation?tex=f%28x%29%3Dg%28x%29+%5Cquad+%5Cmathrm%7Ba.e.%7D%5Cquad+x" alt="f(x)=g(x) \quad \mathrm{a.e.}\quad x"> ，那么 <img src="https://www.zhihu.com/equation?tex=g" alt="g"> 可测</p>
+</blockquote>
+<p>这是因为， <img src="https://www.zhihu.com/equation?tex=%5C%7Bf%3Ca%5C%7D%2C%5C%7Bg%3Ca%5C%7D" alt="\{f&lt;a\},\{g&lt;a\}"> 两个集合相差一个测度为0的集合。我相信你很容易想出证明。</p>
+<p>需要注意到的是，介绍的所有性质，将结论拓宽到“几乎处处相等”，依然是成立的。我不再给出具体的重述，希望大家能够自己想一想，这些为什么可以推广。</p>
+<h2 id="用简单函数和阶梯函数估计"><a href="#用简单函数和阶梯函数估计" class="headerlink" title="用简单函数和阶梯函数估计"></a>用简单函数和阶梯函数估计</h2><p>这一部分主要是探究可测函数的更深层次的应用，用一些定理来说明它们的意义。</p>
+<blockquote>
+<p>Theorem:<br>设 <img src="https://www.zhihu.com/equation?tex=f" alt="f"> 为一个非负的在 <img src="https://www.zhihu.com/equation?tex=R%5Ed" alt="R^d"> 上的可测函数，则存在一个单增的简单函数序列 <img src="https://www.zhihu.com/equation?tex=%5C%7B%5Cphi_k%5C%7D_%7Bk%3D1%7D%5E%7B%5Cinfty%7D" alt="\{\phi_k\}_{k=1}^{\infty}"> ，满足 <img src="https://www.zhihu.com/equation?tex=%5Cphi_k%28x%29+%5Cle+%5Cphi_%7Bk%2B1%7D%28x%29" alt="\phi_k(x) \le \phi_{k+1}(x)"> ，且对任意的 <img src="https://www.zhihu.com/equation?tex=x" alt="x"> 有 <img src="https://www.zhihu.com/equation?tex=%5Clim_%7Bk+%5Cto+%5Cinfty%7D%5Cphi_k%28x%29+%3Df%28x%29" alt="\lim_{k \to \infty}\phi_k(x) =f(x)"> 。</p>
+</blockquote>
+<p>请注意简单函数序列一般用在哪里？如果我们采用最开始的思路去理解，是不是应该是定积分的定义里？定积分的定义中，是不是相当于对积分区间做划分，在每个划分的区域中选择一个值计算“面积”，再求和，取划分组数的极限，得到积分值？</p>
+<p>本身的证明是非常难懂的（我自己理解就花了很长时间），但是这里的证明思想其实是和那个证明类似的。</p>
+<p>首先构造一个函数 <img src="https://www.zhihu.com/equation?tex=F_N%28x%29%3D%5Cbegin%7Bcases%7Df%28x%29+%26+if+%7Ex+%5Cin+Q_n%2Cf%28x%29+%5Cle+N+%5C%5C+N+%26+if+%7E+x+%5Cin+Q_n%2Cf%28x%29+%3E+N+%5C%5C+0+%26+otherwise+%5Cend%7Bcases%7D" alt="F_N(x)=\begin{cases}f(x) &amp; if ~x \in Q_n,f(x) \le N \\ N &amp; if ~ x \in Q_n,f(x) &gt; N \\ 0 &amp; otherwise \end{cases}"> ，其中 <img src="https://www.zhihu.com/equation?tex=Q_n" alt="Q_n"> 表示一个中心在原点，边长为 <img src="https://www.zhihu.com/equation?tex=n" alt="n"> 的闭正方体。这个时候，当正方体不断变大的时候，就会产生不同的截断函数。所以很容易得到的一个论断是 <img src="https://www.zhihu.com/equation?tex=F_N%28x%29+%5Cto+f%28x%29" alt="F_N(x) \to f(x)"> 。换句话说，先构造一系列函数去把 <img src="https://www.zhihu.com/equation?tex=f%28x%29" alt="f(x)"> 的取值范围什么的限制掉，这构造也是数分一中常见的。</p>
+<p>之后，考虑对 <img src="https://www.zhihu.com/equation?tex=F_N%28x%29" alt="F_N(x)"> 的值域（自然是 <img src="https://www.zhihu.com/equation?tex=%5B0%2CN%5D" alt="[0,N]"> ）做一个划分，我们考虑构造集合为 <img src="https://www.zhihu.com/equation?tex=E_%7Bl%2Cm%7D%3D%5C%7Bx+%5Cin+Q_n%3A+%5Cfrac%7Bl%7D%7BM%7D+%3C+F_N%28x%29+%5Cle+%5Cfrac%7Bl%2B1%7D%7BM%7D%5C%7D%2C0+%5Cle+l%3CMN" alt="E_{l,m}=\{x \in Q_n: \frac{l}{M} &lt; F_N(x) \le \frac{l+1}{M}\},0 \le l&lt;MN"> 。这个构造相当于对于 <img src="https://www.zhihu.com/equation?tex=%5B0%2CN%5D" alt="[0,N]"> 中，先划分为 <img src="https://www.zhihu.com/equation?tex=N" alt="N"> 个长度为 <img src="https://www.zhihu.com/equation?tex=1" alt="1"> 的区间，然后对每个诸如 <img src="https://www.zhihu.com/equation?tex=%5B0%2C1%5D" alt="[0,1]"> 的区间，再做一个划分，每次划分都是 <img src="https://www.zhihu.com/equation?tex=M" alt="M"> 段均匀的，就和定积分的定义一样的道理。</p>
+<p>这样的话，定义 <img src="https://www.zhihu.com/equation?tex=F_%7BN%2CM%7D%28x%29%3D%5Csum_%7Bl%7D%5Cfrac%7Bl%7D%7BM%7D%5Cchi_%7BE_%7Bl%2Cm%7D%7D%28x%29" alt="F_{N,M}(x)=\sum_{l}\frac{l}{M}\chi_{E_{l,m}}(x)"> ，这个时候，就有不等式 <img src="https://www.zhihu.com/equation?tex=0+%5Cle+F_N%28x%29-F_%7BN%2CM%7D%28x%29+%5Cle+1%2FM" alt="0 \le F_N(x)-F_{N,M}(x) \le 1/M"> ，这是因为，我们定义的函数其实就是一种类似的积分。只不过我们在每一段中采用的估计值都是最小值，而在这个区间中，值的变化范围是 <img src="https://www.zhihu.com/equation?tex=1%2FM" alt="1/M"> 。</p>
+<p>然后呢？这个时候如果考虑设 <img src="https://www.zhihu.com/equation?tex=%5Cphi_k%28x%29%3DF_%7B2%5Ek%2C2%5Ek%7D" alt="\phi_k(x)=F_{2^k,2^k}"> ，你考虑考虑，这个时候，随着 <img src="https://www.zhihu.com/equation?tex=k" alt="k"> 的增大，这个分割就越来越细（相当于，每次在最小的一段中再对半切）。因为每次估计值都是取一段的最小值，相当于定积分意义中的Darboux小和，会越来越大（至少是不减）。所以函数 <img src="https://www.zhihu.com/equation?tex=%5Cphi_k%28x%29" alt="\phi_k(x)"> 自然就满足所要的不减性质，并且因为有不等式 <img src="https://www.zhihu.com/equation?tex=0+%5Cle+F_N%28x%29-%5Cphi_k%28x%29+%5Cle+1%2F2%5Ek" alt="0 \le F_N(x)-\phi_k(x) \le 1/2^k"> ，所以这就是我们的结论。</p>
+<p>这个证明是不是构造意味很浓？是的，如果不再拿语言润色一下，估计学习的兴趣就没了233。最后一段的叙述，其实是可以通过不等式夹逼得到的，不过我这里就不给出严谨的说理了，希望读者能够自己发现出它们。</p>
+<p>有了这个定理，下面的一些定理就稍微容易说一些了。</p>
+<blockquote>
+<p>Theorem:<br>设 <img src="https://www.zhihu.com/equation?tex=f" alt="f"> 为一个在 <img src="https://www.zhihu.com/equation?tex=R%5Ed" alt="R^d"> 上的可测函数，则存在一个单增的简单函数序列 <img src="https://www.zhihu.com/equation?tex=%5C%7B%5Cphi_k%5C%7D_%7Bk%3D1%7D%5E%7B%5Cinfty%7D" alt="\{\phi_k\}_{k=1}^{\infty}"> ，满足 <img src="https://www.zhihu.com/equation?tex=%7C%5Cphi_k%28x%29%7C+%5Cle+%7C%5Cphi_%7Bk%2B1%7D%28x%29%7C" alt="|\phi_k(x)| \le |\phi_{k+1}(x)|"> ，且对任意的 <img src="https://www.zhihu.com/equation?tex=x" alt="x"> 有 <img src="https://www.zhihu.com/equation?tex=%5Clim_%7Bk+%5Cto+%5Cinfty%7D%5Cphi_k%28x%29+%3Df%28x%29" alt="\lim_{k \to \infty}\phi_k(x) =f(x)"> 。特别的有 <img src="https://www.zhihu.com/equation?tex=%7C%5Cphi_k%28x%29%7C+%5Cle+%7Cf%28x%29%7C" alt="|\phi_k(x)| \le |f(x)|"></p>
+</blockquote>
+<p>首先要注意的是 <img src="https://www.zhihu.com/equation?tex=f%28x%29%3Df%5E%2B%28x%29-f%5E-%28x%29" alt="f(x)=f^+(x)-f^-(x)"> ，其中 <img src="https://www.zhihu.com/equation?tex=f%5E%2B%28x%29%3Dmax%28f%28x%29%2C0%29%2Cf%5E-%28x%29%3Dmax%28-f%28x%29%2C0%29" alt="f^+(x)=max(f(x),0),f^-(x)=max(-f(x),0)"> 。所以这两个分解后的函数都变成了非负的可测函数，这样就存在两个简单函数序列 <img src="https://www.zhihu.com/equation?tex=%5C%7B%5Cphi_k%5E%7B%281%29%7D%5C%7D_%7Bk%3D1%7D%5E%7B%5Cinfty%7D%2C%5C%7B%5Cphi_k%5E%7B%282%29%7D%5C%7D_%7Bk%3D1%7D%5E%7B%5Cinfty%7D" alt="\{\phi_k^{(1)}\}_{k=1}^{\infty},\{\phi_k^{(2)}\}_{k=1}^{\infty}"> 满足上面那个定理的条件，所以可以考虑构造的函数为 <img src="https://www.zhihu.com/equation?tex=%5Cphi_k%28x%29%3D%5Cphi_k%5E%7B%281%29%7D%28x%29-%5Cphi_k%5E%7B%282%29%7D%28x%29" alt="\phi_k(x)=\phi_k^{(1)}(x)-\phi_k^{(2)}(x)"> （这是最直接的满足逼近的构造思路），并且可以推出， <img src="https://www.zhihu.com/equation?tex=%7C%5Cphi_k%28x%29%7C%3D%5Cphi_k%5E%7B%281%29%7D%28x%29%2B%5Cphi_k%5E%7B%282%29%7D%28x%29" alt="|\phi_k(x)|=\phi_k^{(1)}(x)+\phi_k^{(2)}(x)"> （想想为什么），这其实就足够证明结论了。</p>
+<p>这个定理抛弃了“非负的结论”，事实上做了一步深化。</p>
+<blockquote>
+<p>Theorem:<br>设 <img src="https://www.zhihu.com/equation?tex=f" alt="f"> 为一个在 <img src="https://www.zhihu.com/equation?tex=R%5Ed" alt="R^d"> 上的可测函数，则存在一个单增的阶梯函数序列 <img src="https://www.zhihu.com/equation?tex=%5C%7B%5Cpsi_k%5C%7D_%7Bk%3D1%7D%5E%7B%5Cinfty%7D" alt="\{\psi_k\}_{k=1}^{\infty}"> ，满足 <img src="https://www.zhihu.com/equation?tex=%5Cpsi_k%28x%29+%5Cle+%5Cpsi_%7Bk%2B1%7D%28x%29" alt="\psi_k(x) \le \psi_{k+1}(x)"> ，且对几乎处处 <img src="https://www.zhihu.com/equation?tex=x" alt="x"> 有 <img src="https://www.zhihu.com/equation?tex=%5Clim_%7Bk+%5Cto+%5Cinfty%7D%5Cpsi_k%28x%29+%3Df%28x%29" alt="\lim_{k \to \infty}\psi_k(x) =f(x)"> 。</p>
+</blockquote>
+<p>这里我们把简单函数变成了阶梯函数，重新观察这个定理。</p>
+<p>考虑一下使用之前在简单函数上做的一些讨论。事实上，因为我们之前证明了可测函数可以用简单函数去点对点(pointwise)的估计。这样的话，只要证明，简单函数 <img src="https://www.zhihu.com/equation?tex=f%3D%5Cchi_E" alt="f=\chi_E"> 本身又可以用阶梯函数去逼近就可以了（考虑讨论这个特征函数的原因是，所有的简单函数都可以由对应的特征函数表示出来。而这个特征函数本身根据定义，当然也是个简单函数）。</p>
+<p>我们考虑一下上一节最后的关于勒贝格测度定理的第四个结论。第四个结论说，对于一个可测且测度有限的集合 <img src="https://www.zhihu.com/equation?tex=E" alt="E"> ，存在一系列闭正方体的并 <img src="https://www.zhihu.com/equation?tex=F" alt="F"> 使得 <img src="https://www.zhihu.com/equation?tex=m%28E+%5Ctriangle+F%29+%5Cle+%5Cepsilon" alt="m(E \triangle F) \le \epsilon"> 。所以不妨设这一系列闭正方体的并为 <img src="https://www.zhihu.com/equation?tex=F%3D%5Cbigcup_%7Bi%3D1%7D%5E%7BN%7DQ_i" alt="F=\bigcup_{i=1}^{N}Q_i"> 。</p>
+<p>有了它们就好操作了。因为我们可以通过延长每个正方体的边去做分割，所以可以找到一系列矩形 <img src="https://www.zhihu.com/equation?tex=%5Ctilde%7BR%7D_i" alt="\tilde{R}_i"> ，满足 <img src="https://www.zhihu.com/equation?tex=%5Cbigcup_%7Bi%3D1%7D%5E%7BN%7DQ_i%3D%5Cbigcup_%7Bi%3D1%7D%5E%7BM%7D%5Ctilde%7BR%7D_i" alt="\bigcup_{i=1}^{N}Q_i=\bigcup_{i=1}^{M}\tilde{R}_i"> 。</p>
+<figure><img src="https://pic2.zhimg.com/v2-e90ce0e87023f304273754b8166a68cd_b.jpg" alt=""><figcaption>图解构造</figcaption></figure>
+
+<p>然后，再做一步。就是考虑一下把每一个矩形再“略微缩小一点”，这样就可以得到 <img src="https://www.zhihu.com/equation?tex=m%28E+%5Ctriangle+%5Cbigcup_%7Bi%3D1%7D%5E%7BM%7DR_i%29+%5Cle+2%5Cepsilon" alt="m(E \triangle \bigcup_{i=1}^{M}R_i) \le 2\epsilon"> 。所以 <img src="https://www.zhihu.com/equation?tex=f%28x%29%3D%5Csum_%7Bj%3D1%7D%5E%7BM%7D%5Cchi_%7BR_j%7D%28x%29" alt="f(x)=\sum_{j=1}^{M}\chi_{R_j}(x)"> 只有在一个测度为 <img src="https://www.zhihu.com/equation?tex=%5Cle+2%5Cepsilon" alt="\le 2\epsilon"> 的集合定义域上不成立。这是因为对于任意一个点和 <img src="https://www.zhihu.com/equation?tex=E" alt="E"> 和 <img src="https://www.zhihu.com/equation?tex=R_j" alt="R_j"> 这两个集合。只有这个点只属于这两个集合中的一个的时候，函数才会不相等（这是特征函数的定义）。</p>
+<p>推到上面那一步，其实就已经可以说明简单函数的特征函数，可以用阶梯函数的特征函数来无限逼近了。下面要进行的步骤只是为了更好的完善证明。因为 <img src="https://www.zhihu.com/equation?tex=%5Cepsilon" alt="\epsilon"> 是可以任意小的，所以可以下个断言：存在这样的阶梯函数 <img src="https://www.zhihu.com/equation?tex=%5Cpsi_k%28x%29" alt="\psi_k(x)"> ，如果 <img src="https://www.zhihu.com/equation?tex=E_k%3D%5C%7Bx%3Af%28x%29+%5Cne+%5Cpsi_k%28x%29%5C%7D" alt="E_k=\{x:f(x) \ne \psi_k(x)\}"> ，那么 <img src="https://www.zhihu.com/equation?tex=m%28E_k%29+%5Cle+2%5E%7B-k%7D" alt="m(E_k) \le 2^{-k}"> ，所以如果令 <img src="https://www.zhihu.com/equation?tex=F_K%3D%5Cbigcup_%7Bj%3DK%2B1%7D%5E%7B%5Cinfty%7DE_j%2CF%3D%5Cbigcap_%7Bi%3D1%7D%5E%7B%5Cinfty%7DF_i" alt="F_K=\bigcup_{j=K+1}^{\infty}E_j,F=\bigcap_{i=1}^{\infty}F_i"> ，就可以得到 <img src="https://www.zhihu.com/equation?tex=m%28F%29%3D0%2Cm%28F_K%29+%5Cle+2%5E%7B-K%7D" alt="m(F)=0,m(F_K) \le 2^{-K}"> 。</p>
+<p>事实上这个时候就有 <img src="https://www.zhihu.com/equation?tex=%5Cpsi_k%28x%29+%5Cto+f%28x%29" alt="\psi_k(x) \to f(x)"> 在所有的 <img src="https://www.zhihu.com/equation?tex=F" alt="F"> 的补集上成立，这是因为根据写法可以得到 <img src="https://www.zhihu.com/equation?tex=F_1+%5Csupset+F_2+%5Csupset+F_3+%5Csupset+..." alt="F_1 \supset F_2 \supset F_3 \supset ..."> ，所以 <img src="https://www.zhihu.com/equation?tex=F" alt="F"> 就相当于是这无限序列集合中每个集合都共有的元素。如果排除掉它们，剩下的那些特例（比如包含在某一个 <img src="https://www.zhihu.com/equation?tex=F_k" alt="F_k"> 内的点），都无法对取极限的过程产生影响，所以可以得到最后的结果。这就是我们要的结论。</p>
+<p>这个定理同样也是非常难懂的。关于最后一段不知道有没有更好的理解或严格的数理证明方法（主要是最后一个论断），<strong>这里再一次求个征解</strong>。如果之后学到这个证明，有更好的理解方法，我再回来更新。</p>
+<h2 id="李特尔伍德三原则-Littlewood’s-three-principles"><a href="#李特尔伍德三原则-Littlewood’s-three-principles" class="headerlink" title="李特尔伍德三原则(Littlewood’s three principles)"></a>李特尔伍德三原则(Littlewood’s three principles)</h2><p>我们先展示这三原则（请注意，所有的对象都是可测的），再来说明这一节的目的</p>
+<blockquote>
+<p>Definition:Littlewoods’ three principles<br>(1)每个集合都几乎是有限的区间的并。<br>(2)每个函数都几乎连续。<br>(3)每个收敛序列都几乎一致收敛。</p>
+</blockquote>
+<p>什么玩意？</p>
+<p>我们可以看出这三个原则，可以说把我们研究的可测函数的对象，又重新链接回了我们在数分中已经接触过的连续，区间和收敛的概念。这三个原则当然不是空穴来风，但是也饶有趣味。比方说，什么叫“几乎”？要说明好这个概念，需要下面的一些定理，我们慢慢来看。</p>
+<blockquote>
+<p>Theorem:Egorov<br>设 <img src="https://www.zhihu.com/equation?tex=%5C%7Bf_k%5C%7D_%7Bk%3D1%7D%5E%7B%5Cinfty%7D" alt="\{f_k\}_{k=1}^{\infty}"> 是一系列定义在可测集 <img src="https://www.zhihu.com/equation?tex=E" alt="E"> 且满足 <img src="https://www.zhihu.com/equation?tex=m%28E%29+%3C+%5Cinfty" alt="m(E) &lt; \infty"> 的可测函数，且满足在 <img src="https://www.zhihu.com/equation?tex=E" alt="E"> 上有 <img src="https://www.zhihu.com/equation?tex=f_k+%5Cto+f+%5Cquad+%5Cmathrm%7Ba.e.%7D+" alt="f_k \to f \quad \mathrm{a.e.} "> 。给定 <img src="https://www.zhihu.com/equation?tex=%5Cepsilon" alt="\epsilon"> ，则可以找到一个闭集合 <img src="https://www.zhihu.com/equation?tex=A_%5Cepsilon" alt="A_\epsilon"> 满足 <img src="https://www.zhihu.com/equation?tex=A_%5Cepsilon+%5Csubset+E%2Cm%28E-A_%5Cepsilon%29%3C%5Cepsilon" alt="A_\epsilon \subset E,m(E-A_\epsilon)&lt;\epsilon"> ，且 <img src="https://www.zhihu.com/equation?tex=f_k+" alt="f_k "> 在 <img src="https://www.zhihu.com/equation?tex=A_%5Cepsilon" alt="A_\epsilon"> 上是一致收敛于 <img src="https://www.zhihu.com/equation?tex=f" alt="f"> 的。</p>
+</blockquote>
+<p>我们证明一下这个结论。首先不失一般性，可以假设在每一个 <img src="https://www.zhihu.com/equation?tex=x+%5Cin+E" alt="x \in E"> 上都满足 <img src="https://www.zhihu.com/equation?tex=f_k%28x%29+%5Cto+f%28x%29" alt="f_k(x) \to f(x)"> 。然后再考虑对每一对的非负整数 <img src="https://www.zhihu.com/equation?tex=n%2Ck" alt="n,k"> ，令 <img src="https://www.zhihu.com/equation?tex=E_k%5En%3D%5C%7Bx+%5Cin+E+%3A%7Cf_j%28x%29+-f%28x%29%7C%3C+1%2Fn%2C+%5Cforall+j%3Ek%5C%7D" alt="E_k^n=\{x \in E :|f_j(x) -f(x)|&lt; 1/n, \forall j&gt;k\}"> （定义这个集合，相当于把定义域中所有与实际的 <img src="https://www.zhihu.com/equation?tex=f%28x%29" alt="f(x)"> 的值相差很小的用集合分类了起来，当然了，它肯定是可测的），这样就有的性质是 <img src="https://www.zhihu.com/equation?tex=E_k%5En+%5Csubset+E_%7Bk%2B1%7D%5En%2CE_k%5En+%5Cnearrow+E" alt="E_k^n \subset E_{k+1}^n,E_k^n \nearrow E"> 。那么根据上一节的推论可以得到，存在一个数 <img src="https://www.zhihu.com/equation?tex=k_n" alt="k_n"> 满足 <img src="https://www.zhihu.com/equation?tex=m%28E-E_%7Bk_n%7D%5En%29+%3C1%2F2%5En" alt="m(E-E_{k_n}^n) &lt;1/2^n"> 。</p>
+<p>通过这样的构造，就可以得到下面一个断言：只要 <img src="https://www.zhihu.com/equation?tex=j%3Ek_n%2Cx+%5Cin+E%5En_%7Bk_n%7D" alt="j&gt;k_n,x \in E^n_{k_n}"> ，就有 <img src="https://www.zhihu.com/equation?tex=%7Cf_j%28x%29-f%28x%29%7C%3C1%2Fn" alt="|f_j(x)-f(x)|&lt;1/n"> 。</p>
+<p>现在，可以找到一个 <img src="https://www.zhihu.com/equation?tex=N" alt="N"> 使得 <img src="https://www.zhihu.com/equation?tex=%5Csum_%7Bn%3DN%7D%5E%7B%5Cinfty%7D2%5E%7B-n%7D+%3C+%5Cepsilon%2F2" alt="\sum_{n=N}^{\infty}2^{-n} &lt; \epsilon/2"> ，令 <img src="https://www.zhihu.com/equation?tex=%5Ctilde%7BA_%5Cepsilon%7D%3D%5Cbigcap_%7Bn+%5Cge+N%7DE_%7Bk_n%7D%5En" alt="\tilde{A_\epsilon}=\bigcap_{n \ge N}E_{k_n}^n"> （这么定义的目的是让满足所有条件的点都被筛选出来，这些点会满足在对函数序列取极限的时候，在它们上面取的值都不变的保持与原函数的一个较小的绝对差。换句话说，它们是可能满足一致收敛的条件的。），首先可以观察到的是 <img src="https://www.zhihu.com/equation?tex=m%28E-%5Ctilde%7BA_%5Cepsilon%7D%29+%5Cle+%5Csum_%7Bn%3DN%7D%5E%7B%5Cinfty%7Dm%28E-E_%7Bk_n%7D%5E%7Bn%7D%29%3C%5Cepsilon%2F2" alt="m(E-\tilde{A_\epsilon}) \le \sum_{n=N}^{\infty}m(E-E_{k_n}^{n})&lt;\epsilon/2"> 。事实上看到这个，就应该会有一些感觉了，下面就是在这些点上做一致收敛的文章了。</p>
+<p>一致收敛的定义是，对于任意的 <img src="https://www.zhihu.com/equation?tex=%5Cdelta%3E0" alt="\delta&gt;0"> ，存在 <img src="https://www.zhihu.com/equation?tex=N" alt="N"> ，当 <img src="https://www.zhihu.com/equation?tex=n%3EN" alt="n&gt;N"> 时有 <img src="https://www.zhihu.com/equation?tex=%7Cf_n%28x%29-f%28x%29%7C%3C%5Cdelta" alt="|f_n(x)-f(x)|&lt;\delta"> 。所以回到这里，因为对于任意的 <img src="https://www.zhihu.com/equation?tex=%5Cdelta%3E0" alt="\delta&gt;0"> ，我可以找到 <img src="https://www.zhihu.com/equation?tex=n" alt="n"> 使得 <img src="https://www.zhihu.com/equation?tex=%5Cdelta+%3E+1%2Fn" alt="\delta &gt; 1/n"> 。而且 <img src="https://www.zhihu.com/equation?tex=x+%5Cin+%5Ctilde%7BA_%5Cepsilon%7D" alt="x \in \tilde{A_\epsilon}"> 寓意着 <img src="https://www.zhihu.com/equation?tex=x+%5Cin+E_%7Bk_n%7D%5En" alt="x \in E_{k_n}^n"> 。所以只要 <img src="https://www.zhihu.com/equation?tex=j%3Ek_n" alt="j&gt;k_n"> ，就有 <img src="https://www.zhihu.com/equation?tex=%7Cf_j%28x%29-f%28x%29%7C%3C%5Cdelta" alt="|f_j(x)-f(x)|&lt;\delta"> 。满足一致收敛的定义。</p>
+<p>最后，这个满足条件的区间我们找到了，根据上一节最后的定理（四个总结定理的第二条），可以得到存在一个闭的子集合 <img src="https://www.zhihu.com/equation?tex=A_%5Cepsilon" alt="A_\epsilon"> ，满足 <img src="https://www.zhihu.com/equation?tex=A_%5Cepsilon+%5Csubset+%5Ctilde%7BA_%5Cepsilon%7D%2Cm%28%5Ctilde%7BA_%5Cepsilon%7D-A_%5Cepsilon%29%3C%5Cepsilon%2F2" alt="A_\epsilon \subset \tilde{A_\epsilon},m(\tilde{A_\epsilon}-A_\epsilon)&lt;\epsilon/2"> 。所以，综合一下就有 <img src="https://www.zhihu.com/equation?tex=m%28E-A_%5Cepsilon%29%3C%5Cepsilon" alt="m(E-A_\epsilon)&lt;\epsilon"> ，就证明了结论。</p>
+<p>这解释了三原则中的最后一条。再回头来看这个定理，就相当于是在说，如果我们有可测的一系列函数，满足收敛，那么就可以找到一个和原来集合的测度差任意小的集合，满足一致收敛，所以说“几乎”，这里自然就体现在了测度上。</p>
+<blockquote>
+<p>Theorem:Lusin<br>设 <img src="https://www.zhihu.com/equation?tex=f" alt="f"> 为定义在测度有限的可测集 <img src="https://www.zhihu.com/equation?tex=E" alt="E"> 上的可测函数，那么对于每一个 <img src="https://www.zhihu.com/equation?tex=%5Cepsilon%3E0" alt="\epsilon&gt;0"> ，存在一个闭集 <img src="https://www.zhihu.com/equation?tex=F_%5Cepsilon" alt="F_\epsilon"> ，使得 <img src="https://www.zhihu.com/equation?tex=F_%5Cepsilon+%5Csubset+E" alt="F_\epsilon \subset E"> ，且 <img src="https://www.zhihu.com/equation?tex=m%28E-F_%5Cepsilon%29+%5Cle+%5Cepsilon" alt="m(E-F_\epsilon) \le \epsilon"> 。并且 <img src="https://www.zhihu.com/equation?tex=f+%7C+_%7BF_%5Cepsilon%7D" alt="f | _{F_\epsilon}"> 是连续的。</p>
+</blockquote>
+<p>我们证明一下这个结论。设 <img src="https://www.zhihu.com/equation?tex=f_n" alt="f_n"> 为一系列满足 <img src="https://www.zhihu.com/equation?tex=f_n+%5Cto+f+%5Cquad+%5Cmathrm%7Ba.e.%7D" alt="f_n \to f \quad \mathrm{a.e.}"> 的阶梯函数。根据这个，我们可以找到集合 <img src="https://www.zhihu.com/equation?tex=E_n" alt="E_n"> 满足 <img src="https://www.zhihu.com/equation?tex=m%28E_n%29+%3C1%2F2%5En" alt="m(E_n) &lt;1/2^n"> ，且 <img src="https://www.zhihu.com/equation?tex=f_n" alt="f_n"> 在集合 <img src="https://www.zhihu.com/equation?tex=E_n" alt="E_n"> 的补集上是连续的。根据Egorov定理（上面那个），可以找到一个集合 <img src="https://www.zhihu.com/equation?tex=A_%7B%5Cepsilon%2F3%7D" alt="A_{\epsilon/3}"> ，满足 <img src="https://www.zhihu.com/equation?tex=f_n" alt="f_n"> 一致收敛于 <img src="https://www.zhihu.com/equation?tex=f" alt="f"> ，并且 <img src="https://www.zhihu.com/equation?tex=m%28E-A_%7B%5Cepsilon%2F3%7D%29%5Cle+%5Cepsilon%2F3" alt="m(E-A_{\epsilon/3})\le \epsilon/3"> 。再考虑 <img src="https://www.zhihu.com/equation?tex=F%27%3DA_%7B%5Cepsilon%2F3%7D-%5Cbigcup_%7Bn+%5Cge+N%7DE_n" alt="F"> ，其中 <img src="https://www.zhihu.com/equation?tex=%5Csum_%7Bn+%5Cge+N%7D1%2F2%5En%3C%5Cepsilon%2F3" alt="\sum_{n \ge N}1/2^n&lt;\epsilon/3"> 这样对于任意的 <img src="https://www.zhihu.com/equation?tex=n+%5Cge+N" alt="n \ge N"> ，有 <img src="https://www.zhihu.com/equation?tex=f_n" alt="f_n"> 在 <img src="https://www.zhihu.com/equation?tex=F%27" alt="F"> 上连续，那么 <img src="https://www.zhihu.com/equation?tex=f" alt="f"> 自然也是在这上面连续的。</p>
+<p>满足条件的集合找到后，只要再找到一个闭集合 <img src="https://www.zhihu.com/equation?tex=F_%5Cepsilon" alt="F_\epsilon"> ，满足 <img src="https://www.zhihu.com/equation?tex=F_%5Cepsilon+%5Csubset+F%27%2Cm%28F%27-F_%5Cepsilon%29%3C%5Cepsilon%2F3" alt="F_\epsilon \subset F"> 即可。</p>
+<p>这个命题相当于说明，如果如果一个可测函数定义在一个可测集上，那么就存在一个闭集合，在测度上与原来的定义域差距任意小，但是在这个新的定义域上，函数会变成连续函数。这也是“几乎”起作用的地方。</p>
+<p>另外，这篇笔记<strong>第三次求征解</strong>！因为如何严格的说明这个证明的第二句话，其实我还没有把握……</p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>本节的理解难度是非常大的（一个定理研究一个小时还不敢说自己理解思路是对的……），因为可测函数的定义和很多全新的标记都是我们所陌生的。同时证明的思想和方法的跨度也很大。虽然我加了很多自己的理解和备注，但是我在下学期再学这门课的时候，盯着它们看的时候，可能还是要琢磨半天，那做题自然又是另外一回事了。</p>
+<p>另外需要说的是，这份笔记里没有提到有关Cantor集的内容，是因为目前它不是一个特别影响全文思路的例子，并且我们在数分一中已经做了比较好的阐述。所以如果遇到之后很好的相关的Cantor集的内容，我们会再把它拿出来说。</p>
+<p>感谢大家一直以来的支持，为点赞收藏感谢赞赏的看客比心~~</p>
+<p>——————————————————广告——————————————————</p>
+<figure><img src="https://pic2.zhimg.com/v2-7f82417b5c54bfe9ffc8f4e1706bcedf_b.jpg" alt=""></figure>
+
+<p>本专栏为我的个人专栏，也是我学习笔记的主要生产地。<strong>任何笔记都具有著作权，不可随意转载和剽窃</strong>。</p>
+<p>专栏目录：<a href="https://zhuanlan.zhihu.com/p/28617379" target="_blank" rel="noopener">笔记专栏|目录</a></p>
+<p>想要更多方面的知识分享吗？欢迎关注专栏：<a href="https://zhuanlan.zhihu.com/c_119426147" target="_blank" rel="noopener">一个大学生的日常笔记</a>。我鼓励和我相似的同志们投稿于此，增加专栏的多元性，让更多相似的求知者受益~</p>
+<p>来源：知乎 www.zhihu.com</p>
+<p>作者：<a href="http://www.zhihu.com/people/liu-li-94-49?utm_campaign=rss&amp;utm_medium=rss&amp;utm_source=rss&amp;utm_content=author" target="_blank" rel="noopener">刘理</a></p>
+<p>【知乎日报】千万用户的选择，做朋友圈里的新鲜事分享大牛。<br>        <a href="http://daily.zhihu.com?utm_source=rssyanwenzi&amp;utm_campaign=tuijian&amp;utm_medium=rssnormal" target="_blank" rel="noopener">点击下载</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/02/02/实分析-笔记整理（3）——可测函数/" data-id="cjd63ql2g001984fh6ierricu" class="article-share-link">Teilen</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/02/02/【开发者日志】符文重铸的更新/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Neuer</strong>
+      <div class="article-nav-title">
+        
+          【开发者日志】符文重铸的更新
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/02/02/【外观-间接侵权】GUI保护第一案现行法律框架下的探索/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">【外观 间接侵权】GUI保护第一案 现行法律框架下的探索</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">letzter Beitrag</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/02/02/test/">test</a>
+          </li>
+        
+          <li>
+            <a href="/2018/02/02/p1/">p1</a>
+          </li>
+        
+          <li>
+            <a href="/2018/02/02/para1/">para1</a>
+          </li>
+        
+          <li>
+            <a href="/2018/02/02/do/">do111</a>
+          </li>
+        
+          <li>
+            <a href="/2018/02/02/第52届超级碗费城老鹰队VS新英格兰爱国者队，有大神预测一下比赛吗？/">第52届超级碗费城老鹰队VS新英格兰爱国者队，有大神预测一下比赛吗？</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 L<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
